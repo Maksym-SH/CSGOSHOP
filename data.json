@@ -1,0 +1,317 @@
+{
+  "peculiar": {
+    "skins": "100 різних скинів",
+    "Wbt": "Два місяці",
+    "TimeAnswer": "Протягом 30-ти хвилин"
+  },
+  "popular": [
+    {
+      "name": "AK-47 | Червона ліная",
+      "image": "https://s-wiki.cs.money/wiki_KWBmFFP_large_preview.png",
+      "condition": "Поношене",
+      "price": "342"
+    },
+    {
+      "name": "AK-47 | Азимів",
+      "image": "https://s-wiki.cs.money/wiki_JO8H5MF_large_preview.png",
+      "condition": "Поношене",
+      "price": "1032"
+    },
+    {
+      "name": "AK-47 | Неонова революція",
+      "image": "https://s-wiki.cs.money/wiki_lPocyxm_large_preview.png",
+      "condition": "Поношене",
+      "price": "787"
+    },
+    {
+      "name": "Рукавички 'Бладхаунд' | Зола",
+      "image": "https://cs-go.ru/wp-content/uploads/2020/12/360fx360f-4-2.png",
+      "condition": "Трохи поношене",
+      "price": "6320"
+    },
+    {
+      "name": "Ніж-метелик | Африканська сітка",
+      "image": "https://cs-site.ru/uploads/posts/2020-07/1595079984_nozh-babochka-afrikanskaja-setka.png",
+      "condition": "Загартоване у боях",
+      "price": "9302"
+    },
+    {
+      "name": "Штик-ніж | Хвилі фаза 1",
+      "image": "https://s-wiki.cs.money/wiki_yDu6skb_large_preview.png",
+      "condition": "Трохи поношене",
+      "price": "15733"
+    }
+  ],
+  "weapon": [
+    {
+      "type": "knife",
+      "name": "Штик-ніж",
+      "image": "https://s-wiki.cs.money/wiki_yDu6skb_large_preview.png",
+      "skin": "Хвилі фаза 1",
+      "statTrack": "no",
+      "price": "15733",
+      "number": 10,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Штик ніж",
+      "image": "https://s-wiki.cs.money/wiki_yDu6skb_large_preview.png",
+      "skin": "Хвилі фаза 4",
+      "price": "17235",
+      "statrack": "yes",
+      "number": 5,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Штик ніж М9",
+      "image": "https://s-wiki.cs.money/wiki_yDu6skb_large_preview.png",
+      "skin": "Корпус загартований",
+      "price": "22442",
+      "statrack": "yes",
+      "number": 5,
+      "condition": "Загартоване у боях"
+    },
+    {
+      "type": "knife",
+      "name": "Штик ніж М9",
+      "image": "https://s-wiki.cs.money/wiki_yDu6skb_large_preview.png",
+      "skin": "Легенди",
+      "price": "19718",
+      "statrack": "yes",
+      "number": 5,
+      "condition": "Загартоване у боях"
+    },
+    {
+      "type": "knife",
+      "name": "Штик ніж М9",
+      "image": "https://cdn.csgo.com/item/%E2%98%85+%D0%A8%D1%82%D1%8B%D0%BA-%D0%BD%D0%BE%D0%B6+M9+%7C+%D0%92%D0%BE%D0%BB%D0%BD%D1%8B+%28%D0%9F%D1%80%D1%8F%D0%BC%D0%BE+%D1%81+%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0%29/300.png",
+      "skin": "хвилі",
+      "price": "9948",
+      "statrack": "no",
+      "number": 13,
+      "condition": "Прямо із заводу"
+    },
+    {
+      "type": "knife",
+      "name": "Штик ніж М9",
+      "image": "https://cdn.csgo.com/item/%E2%98%85+%D0%A8%D1%82%D1%8B%D0%BA-%D0%BD%D0%BE%D0%B6+M9+%7C+%D0%93%D1%80%D0%B0%D0%B4%D0%B8%D0%B5%D0%BD%D1%82+%28%D0%9F%D1%80%D1%8F%D0%BC%D0%BE+%D1%81+%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0%29/300.png",
+      "skin": "Градієнт",
+      "price": "22068",
+      "statrack": "no",
+      "number": 8,
+      "condition": "Прямо із заводу"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://static.wikia.nocookie.net/counterstrike/images/6/68/Kerlogo.png/revision/latest?cb=20150710100048&path-prefix=ru",
+      "skin": "Звичайний",
+      "price": "9756",
+      "statrack": "no",
+      "number": 13,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0kfjmML7VqWZU7Mxkh9bN9J7yjRqy-EY5NTrwJYSTe1I8ZwzU_QS-yOq8h8K17pzKzSA3u3Ijt33Ulxaxn1gSOW7yFo2m/330x192",
+      "skin": "Патина",
+      "price": "10998",
+      "statrack": "no",
+      "number": 14,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJh4-0mf7zO6_um25V4dB8teXA54vwxgbtrRVqNm_xJdKXcQVqMg7W_lDtl7vq1pe4753KynJqsnZ25n_alxapwUYbStGwX0o",
+      "skin": "Ніч",
+      "price": "10723",
+      "statrack": "no",
+      "number": 8,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJh5C0k_bkI7fUqWZU7Mxkh9bN9J7yjRrm_UdrNW77cdKWdAY7Z1DRrlG9yey80JO7ucudyXY3uXIlt3uMzRe1n1gSOZd2wXJa/360fx360f",
+      "skin": "Сажа",
+      "price": "8908",
+      "statrack": "no",
+      "number": 4,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0mP74Nr_ummJW4NE_37vHrN6n0VDm8kVsNWz2IYHEeg89MFHZqQK4xue5hJe0vc_NwSZqsj5iuyizSJQHPQ",
+      "skin": "Поверхневе загартування",
+      "price": "14930",
+      "statrack": "no",
+      "number": 9,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
+      "skin": "Воронена сталь",
+      "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Фальшіон",
+      "image": "https://static.wikia.nocookie.net/counterstrike/images/f/f6/Falchlogo.png/revision/latest?cb=20150710075321&path-prefix=ru",
+      "skin": "Звичайний",
+      "price": "3409",
+      "statrack": "no",
+      "number": 25,
+      "condition": "Прямо із заводу"
+    },
+    {
+      "type": "knife",
+      "name": "Фальшіон",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf1fLEcjVL49KJh4-0h-LmI7fUqW1Q5MZ5g-bPyoHwjF2hpiwwMiukcZjDclA9ZFqF_VO5lLvtg8W0uJjPwXRg7yVxsXfYyhXl0x8dabNv1qbLVxzAUFFqcRD2",
+      "skin": "Ультрафіолет",
+      "price": "3464",
+      "statrack": "no",
+      "number": 19,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Фальшіон",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf1fLEcjVL49KJlZG0hOPxNrfunWVY7sBOguzA45XKhFWmrBZyamilcofEIQ9oZQrV-1a4k-e5hJLvuZ7IzHIy6XUr4y6JnBS2gUlPOPsv26JcsTvjcQ",
+      "skin": "Пиловник",
+      "price": "2832",
+      "statrack": "no",
+      "number": 16,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
+      "skin": "Воронена сталь",
+      "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
+      "skin": "Воронена сталь",
+      "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
+      "skin": "Воронена сталь",
+      "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
+      "skin": "Воронена сталь",
+      "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
+      "skin": "Воронена сталь",
+      "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
+      "skin": "Воронена сталь",
+      "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
+      "skin": "Воронена сталь",
+      "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
+      "skin": "Воронена сталь",
+      "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
+      "skin": "Воронена сталь",
+      "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
+      "skin": "Воронена сталь",
+      "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
+      "skin": "Воронена сталь",
+      "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Керамбіт",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
+      "skin": "Воронена сталь",
+      "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    }
+  ]
+}
