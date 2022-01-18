@@ -113,7 +113,7 @@ a {
 
 .section-main {
   padding-top: 170px;
-  background: url('../img/background-main.jpeg') no-repeat;
+  background: $dark url('../img/background-main.jpeg') no-repeat;
   background-size: cover;
   padding-bottom: 100px;
   @media (max-width: 980px) {
@@ -541,5 +541,128 @@ a {
     font-size: 13px;
     padding: 12px;
     white-space: nowrap;
+  }
+}
+/* inventory */
+.inventory-section {
+  padding-top: 200px;
+  background: $dark url(../img/bg-inventory.jpg) center center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  @media (max-width: 1000px) {
+    padding-top: 100px;
+  }
+}
+.personal-invent {
+  width: 100%;
+  margin-top: 60px;
+  background-color: #1c1f21;
+  padding: 50px 15px 20px 15px;
+  border-radius: 10px;
+  border: 2px solid #536872;
+  box-shadow: 0 0 10px #536872;
+  color: #fff;
+  h3 {
+    font-size: 30px;
+    font-weight: bold;
+    img {
+      margin-top: -30px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &-wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &-collection {
+    background-color: #000;
+    display: flex;
+    max-width: 530px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  &-item {
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    background-color: #2b3033;
+    img {
+      max-width: 100%;
+    }
+  }
+  &-information {
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    margin-left: 10px;
+    max-width: 500px;
+    background-color: #131617;
+    border: 1px solid $dark;
+    img {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 950px) {
+    &-wrapper {
+      display: block;
+    }
+    &-collection {
+      margin: 0 auto;
+    }
+    &-information {
+      margin: 20px auto;
+      width: 60%;
+    }
+  }
+  @media (max-width: 800px) {
+    h3 {
+      font-size: 22px;
+      img {
+        width: 30px;
+        height: 30px;
+        margin-top: -20px;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    &-item {
+      width: 100px;
+      height: 100px;
+    }
+    &-collection {
+      width: 100%;
+      justify-content: center;
+      min-width: 68%;
+    }
+  }
+  @media (max-width: 500px) {
+    padding-top: 30px;
+    h3 {
+      font-size: 15px;
+      img {
+        width: 22px;
+        height: 22px;
+        margin-top: -10px;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    &-item {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  @media (max-width: 350px) {
+    h3 {
+      font-size: 13px;
+      img {
+        margin-top: -12px;
+      }
+    }
   }
 }

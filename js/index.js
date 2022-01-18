@@ -6,6 +6,7 @@ var first = new Vue({
     popular: [],
     popularAccess: false,
     preloader: true,
+    IsLoginSuccess: false,
   },
   mounted() {
     try {
