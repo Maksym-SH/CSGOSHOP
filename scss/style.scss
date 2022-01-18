@@ -385,12 +385,13 @@ a {
   font-weight: bold;
   text-align: center;
   color: #fff;
-  margin: 100px 0px;
+  margin: 100px 0 220px 0;
   span {
     color: red;
   }
   @media (max-width: 650px) {
     font-size: 15px;
+    margin-bottom: 100px;
   }
 }
 /* footer */
