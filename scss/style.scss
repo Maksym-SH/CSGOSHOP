@@ -483,7 +483,7 @@ a {
     width: 100%;
     border-radius: 10px;
     max-width: 500px;
-    box-shadow: 0 0 10px #fff;
+    animation: shadow 3s linear 0s infinite alternate-reverse none;
   }
   @media (max-width: 750px) {
     display: block;
@@ -498,6 +498,14 @@ a {
     h3 {
       font-size: 17px;
     }
+  }
+}
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 10px #fff;
+  }
+  100% {
+    box-shadow: 0 0 10px #c00;
   }
 }
 .info-item {
