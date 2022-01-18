@@ -49,7 +49,7 @@
                   <a class="nav-link" href="Questions.html">Питання</a>
                 </li>
                 <li>
-                  <a class="nav-link" href="cases.html">Кейси</a>
+                  <a class="nav-link" href="Cases.html">Кейси</a>
                 </li>
                 <li>
                   <a class="nav-link" href="Trade.html">Обмін</a>
@@ -74,26 +74,55 @@
               <hr>
               <div class="personal-invent-wrapper">
                   <div class="personal-invent-collection">
-                    <div class="personal-invent-item">fdsfds</div>
-                    <div class="personal-invent-item">fdsfds</div>
-                    <div class="personal-invent-item">fdsfds</div>
-                    <div class="personal-invent-item">fdsfds</div>
-                    <div class="personal-invent-item">fdsfds</div>
-                    <div class="personal-invent-item">fdsfds</div>
-                    <div class="personal-invent-item">fdsfds</div>
-                    <div class="personal-invent-item">fdsfds</div>
-                    <div class="personal-invent-item">fdsfds</div>
-                    <div class="personal-invent-item">fdsfds</div>
-                    <div class="personal-invent-item">fdsfds</div>
-                    <div class="personal-invent-item">fdsfds</div>
+                    <div class="personal-invent-item"><img src="./img/skins.jpg" alt=""></div>
+                    <div class="personal-invent-item"><img src="./img/ak.png" alt=""></div>
                   </div>
                   <div class="personal-invent-information">
-
                   </div>
               </div>
             </div>
+            <div class="button-func">
+              <button type="button" class=" btn btn-primary" @click="AllSell()">Продати усе</button>
+              <button type="button" class=" btn btn-success" @click="Withdraw()">Вивести до аккаунту</button>
+              <button type="button" class=" btn btn-danger" @click="Delete()">Видалити</button>
+            </div>
+            <div class="more-skins">
+              <h3>Хочеш більше скинів?</h3>
+              <p>Переходьте до сторінки СSGO кейс <a href="Cases.html">натиснувши тут</a></p>
+            </div>
           </div>
         </section>
+        <footer class="footer invenory-footer">
+          <div class="footer-between">
+            <div class="footer-logo">
+              <img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
+                >shop</span
+              >
+            </div>
+            <div class="footer__wrap">
+              <h5>Зв'язатися з нами</h5>
+              <div>
+                <a href="https://vk.com/max185"
+                  ><img src="./img/vk.svg" alt=""
+                /></a>
+                <a href="https://github.com/Maksym-SH/CSGOSHOP"
+                  ><img src="./img/github.svg" alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="footer__pay">
+              <div class="replenishment">
+                Ми приймаємо такі способи <br />поповнення рахунку<br />
+                <img src="./img/mastercard.svg" alt="" />
+                <img src="./img/visa.svg" alt="" />
+              </div>
+              <p>
+                Copyright © 2022 CSGOSHOP.<br />
+                Усі права захищені.
+              </p>
+            </div>
+          </div>
+        </footer>
       </main>
     </div>
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>

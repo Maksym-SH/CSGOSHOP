@@ -159,6 +159,11 @@ a {
       margin-bottom: 50px;
     }
   }
+  @media (max-width: 400px) {
+    & {
+      font-size: 30px;
+    }
+  }
 }
 /* skins */
 .main-info-skins {
@@ -549,6 +554,10 @@ a {
   background: $dark url(../img/bg-inventory.jpg) center center;
   background-size: cover;
   background-blend-mode: multiply;
+  padding-bottom: 50px;
+  @media (min-width: 2500px) {
+    height: 95vh;
+  }
   @media (max-width: 1000px) {
     padding-top: 100px;
   }
@@ -580,18 +589,37 @@ a {
   &-collection {
     background-color: #000;
     display: flex;
-    max-width: 530px;
+    max-width: 550px;
     flex-wrap: wrap;
     border-radius: 10px;
     padding: 5px;
+    max-height: 530px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: #536872;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #a2bcbd;
+      border-radius: 10px;
+    }
   }
   &-item {
     width: 120px;
     height: 120px;
     margin: 5px;
+    position: relative;
+    transition: all 0.5s ease;
     background-color: #2b3033;
+    cursor: pointer;
     img {
+      position: absolute;
+      inset: 0;
+      margin: auto;
       max-width: 100%;
+    }
+    &:hover {
+      background-color: #36363c;
     }
   }
   &-information {
@@ -651,10 +679,13 @@ a {
       }
     }
   }
-  @media (max-width: 400px) {
+  @media (max-width: 410px) {
     &-item {
       width: 70px;
       height: 70px;
+    }
+    &-collection {
+      width: 90%;
     }
   }
   @media (max-width: 350px) {
@@ -664,5 +695,24 @@ a {
         margin-top: -12px;
       }
     }
+  }
+}
+.invenory-footer {
+  background-color: #131617;
+}
+.more-skins {
+  margin-top: 50px;
+  p a {
+    color: #2f87de !important;
+  }
+}
+.button-func {
+  margin-top: 20px;
+  button {
+    margin: 8px;
+  }
+  @media (max-width: 530px) {
+    display: flex;
+    flex-direction: column;
   }
 }

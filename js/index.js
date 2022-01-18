@@ -7,6 +7,12 @@ var first = new Vue({
     popularAccess: false,
     preloader: true,
     IsLoginSuccess: false,
+    errorLoadJson: false,
+  },
+  methods: {
+    AllSell() {},
+    Withdraw() {},
+    Delete() {},
   },
   mounted() {
     try {
@@ -24,6 +30,7 @@ var first = new Vue({
         });
     } catch (error) {
       console.error(error);
+      this.errorLoadJson = true;
     }
   },
 });
