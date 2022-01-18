@@ -456,7 +456,7 @@ a {
     }
   }
 }
-/* About-page */
+/* Question-page */
 .section-about {
   padding-top: 120px;
   background-color: #141c00;
@@ -483,6 +483,7 @@ a {
     width: 100%;
     border-radius: 10px;
     max-width: 500px;
+    box-shadow: 0 0 10px #fff;
   }
   @media (max-width: 750px) {
     display: block;
