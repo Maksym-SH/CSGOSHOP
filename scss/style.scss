@@ -20,6 +20,9 @@ body {
   color: #c2c5cc !important;
   height: 100%;
 }
+main {
+  height: 100vh;
+}
 #app {
   min-height: 100%;
   display: flex;
@@ -413,9 +416,9 @@ a {
     font-size: 40px;
     text-shadow: 0px 0px 5px red;
     img {
-      width: 70px;
-      height: 70px;
-      margin-top: -10px;
+      width: 60px;
+      height: 60px;
+      margin-top: -20px;
     }
   }
   .replenishment {
@@ -715,4 +718,72 @@ a {
     display: flex;
     flex-direction: column;
   }
+}
+/* case-page */
+.section-cases {
+  width: 100%;
+  height: 95vh;
+  padding-top: 95px;
+  background: linear-gradient(#333140, #536872);
+  animation: gradient 3s infinite alternate;
+  @media (max-height: 600px) {
+    height: 400px;
+  }
+  + footer {
+    background: linear-gradient(#536872, #333140);
+  }
+}
+.info-cases {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  img {
+    position: relative;
+    max-width: 200px;
+  }
+  p {
+    position: absolute;
+    top: 30%;
+    right: 12%;
+    font-size: 14px;
+    background-color: #fff;
+    color: #000;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  @media (max-width: 1199px) {
+    p {
+      right: 15%;
+    }
+  }
+  @media (max-width: 800px) {
+    p {
+      right: 20%;
+    }
+  }
+  @media (max-width: 600px) {
+    p {
+      right: 35%;
+    }
+  }
+  @media (max-width: 378px) {
+    p {
+      max-width: 120px;
+      right: 50%;
+      top: 10%;
+      text-align: center;
+    }
+  }
+}
+.container-cases {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  background-color: #1c1f21;
+}
+.container-cases-skins {
+  width: 100%;
+  background-color: #536872;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
 }
