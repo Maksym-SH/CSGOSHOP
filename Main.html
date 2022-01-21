@@ -139,7 +139,7 @@
             <div
               class="popular-skins-item"
               v-for="item in popular"
-              :style="[item.type ==='gloves' ? {borderColor:'#EB0042'} : item.type === 'knife' ? {borderColor: '#F4CA16'} : {borderColor:'#ffffff'}]"
+              :style="[item.type === 'knife' ? {borderColor: '#F4CA16'} : {borderColor:'#ffffff'}]"
             >
               <div class="fix-height">
                 <img :src="item.image" alt="" />
