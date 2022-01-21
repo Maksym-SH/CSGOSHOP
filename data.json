@@ -27,11 +27,11 @@
       "price": "787"
     },
     {
-      "type": "gloves",
-      "name": "Рукавички 'Бладхаунд' | Зола",
-      "image": "https://cs-go.ru/wp-content/uploads/2020/12/360fx360f-4-2.png",
-      "condition": "Трохи поношене",
-      "price": "6320"
+      "type": "knife",
+      "name": "Керамбіт | Ніч",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJh4-0mf7zO6_um25V4dB8teXA54vwxgbtrRVqNm_xJdKXcQVqMg7W_lDtl7vq1pe4753KynJqsnZ25n_alxapwUYbStGwX0o",
+      "condition": "Поношене",
+      "price": "10723"
     },
     {
       "type": "knife",
@@ -315,6 +315,16 @@
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
       "skin": "Воронена сталь",
       "price": "12400",
+      "statrack": "no",
+      "number": 15,
+      "condition": "Поношене"
+    },
+    {
+      "type": "knife",
+      "name": "Ніж-метелик",
+      "image": "https://cs-site.ru/uploads/posts/2020-07/1595079984_nozh-babochka-afrikanskaja-setka.png",
+      "skin": "Африканська сітка",
+      "price": "9302",
       "statrack": "no",
       "number": 15,
       "condition": "Поношене"
@@ -637,7 +647,7 @@
       "price": "13",
       "statrack": "no",
       "number": 16,
-      "condition": "Заратоване у боях"
+      "condition": "Загартоване у боях"
     },
     {
       "type": "shotgun",
@@ -1328,6 +1338,503 @@
       "statrack": "no",
       "number": 28,
       "condition": "Загартоване у боях"
+    },
+    {
+      "type": "rifle",
+      "name": "G3SG1",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposem2LFZf1OD3dm5R642Jh4GdlvDxDLbUkmJE5Ysp0u3D94-i3wXt-BA_ZDilLIaXJFVoZ1_SrFG4l-28h8O0tJzLnXJrpGB8sm8d1GLm",
+      "skin": "Падальщик",
+      "price": "86",
+      "statrack": "yes",
+      "number": 34,
+      "condition": "Прямо із заводу"
+    },
+    {
+      "type": "rifle",
+      "name": "G3SG1",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposem2LFZfwOP3dm5R642JmYmHnuP9MrTDl2VW7fp8j-3I4IG7jgfsqUNtYDqlJteSIVA7N1zQ-le9l7i51sTt7svOzHVluHF04yqMnAv330_agV6dCw",
+      "skin": "Оранжеві уламки",
+      "price": "86",
+      "statrack": "yes",
+      "number": 31,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "rifle",
+      "name": "G3SG1",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposem2LFZf0Ob3dm5R642JloyKlPznMrXVqWdY781lteXA54vwxgy18hFvZW30I4-RewVvNFnZq1m5lLzr0JG_7czNziRnviMgsXyLmxSpwUYbjJfDXCI",
+      "skin": "Чорний пісок",
+      "price": "34",
+      "statrack": "yes",
+      "number": 24,
+      "condition": "Прямо із заводу"
+    },
+    {
+      "type": "rifle",
+      "name": "G3SG1",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposem2LFZf1OD3dm5R642JgombkuXLKr7dmmRG18h0juDU-MKgjQ3sqkRvY2z0JYCQewI5MguD_lXqwe_th5-9tM_AyHU2syAms33agVXp1kZqQZm_",
+      "skin": "Жало",
+      "price": "24",
+      "statrack": "no",
+      "number": 22,
+      "condition": "Поношене"
+    },
+    {
+      "type": "rifle",
+      "name": "G3SG1",
+      "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposem2LFZf0v73cDNB5dm4gL-cnvnxDLfYkWNF18lwmO7Eu4jzjVXj-hc_aj-iItKcJ1M5MAnV-Fnowe7ng8O-vZvKynRjvydx4irD30vgik1W_Wc",
+      "skin": "Древній ритуал",
+      "price": "22",
+      "statrack": "no",
+      "number": 19,
+      "condition": "Загартоване у боях"
+    },
+    {
+      "type": "pistol",
+      "name": "Five-SeveN",
+      "image": "https://cdn.csgo.com//item/Five-SeveN+%7C+Nightshade+%28Factory+New%29/300.png",
+      "skin": "Паслен",
+      "price": "82",
+      "statrack": "yes",
+      "number": 54,
+      "condition": "Поношене"
+    },
+    {
+      "type": "pistol",
+      "name": "Five-SeveN",
+      "image": "https://cdn.csgo.com//item/Five-SeveN+%7C+Kami+%28Factory+New%29/300.png",
+      "skin": "Камі",
+      "price": "37",
+      "statrack": "yes",
+      "number": 51,
+      "condition": "Поношене"
+    },
+    {
+      "type": "pistol",
+      "name": "Five-SeveN",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLOzLhRlxfbGTjxT09O_mIWPqPv9NLPF2G1V6cQh07yVoN-s3gG2-RE5amqlLNfEewZvNFzW8wW3w-i51MW46ZrXiSw0Tr_CS4o",
+      "skin": "Поверхневе загартування",
+      "price": "177",
+      "statrack": "no",
+      "number": 37,
+      "condition": "Поношене"
+    },
+    {
+      "type": "pistol",
+      "name": "Five-SeveN",
+      "image": "https://cdn.csgo.com//item/Five-SeveN+%7C+Contractor+%28Field-Tested%29/300.png",
+      "skin": "Найманець",
+      "price": "13",
+      "statrack": "no",
+      "number": 31,
+      "condition": "Поношене"
+    },
+    {
+      "type": "pistol",
+      "name": "Five-SeveN",
+      "image": "https://cdn.csgo.com//item/Five-SeveN+%7C+Jungle+%28Minimal+Wear%29/300.png",
+      "skin": "Джунглі",
+      "price": "26",
+      "statrack": "no",
+      "number": 44,
+      "condition": "Поношене"
+    },
+    {
+      "type": "automatic",
+      "name": "FAMAS",
+      "image": "https://cdn.csgo.com/item/FAMAS+%7C+%D0%9D%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F+%D1%81%D0%B5%D1%82%D1%8C+%28%D0%9F%D1%80%D1%8F%D0%BC%D0%BE+%D1%81+%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0%29/300.png",
+      "skin": "Нейронна мережа",
+      "price": "156",
+      "statrack": "no",
+      "number": 25,
+      "condition": "Прямо із заводу"
+    },
+    {
+      "type": "automatic",
+      "name": "FAMAS",
+      "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLuoKhRf2-r3ZzxQ5d-3mY-0k_LnNqnFqWdY781lteXA54vwxlbi_kM9YTjzIYfEegY3NV_R_AW6w-fn0ZS_tJrOy3tnvyZz4X_ZzECpwUYbb4g9zwY",
+      "skin": "Макабр",
+      "price": "71",
+      "statrack": "no",
+      "number": 22,
+      "condition": "Загартоване у боях"
+    },
+    {
+      "type": "automatic",
+      "name": "FAMAS",
+      "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLuoKhRf0vL3ZjRQ5dKxq5mOm_v7JITdn2xZ_Pp9i_vG8ML22gfmqkBqNTv7cIDEdA8_aVHT-1K8kO691MC9vpudy3dj7ih25nqIgVXp1hW43Nue",
+      "skin": "Контрасні кольори",
+      "price": "143",
+      "statrack": "no",
+      "number": 24,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "automatic",
+      "name": "FAMAS",
+      "image": "https://cdn.csgo.com//item/FAMAS+%7C+Pulse+%28Minimal+Wear%29/300.png",
+      "skin": "Тиск",
+      "price": "122",
+      "statrack": "no",
+      "number": 30,
+      "condition": "Поношене"
+    },
+    {
+      "type": "automatic",
+      "name": "FAMAS",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLuoKhRf0v33dzxP7c-Jh4efqPv9NLPF2DIAucYniejCodnw3lK1-kJqNz_wLYXGJwc_Y1nTqAW2xOnqh5--uZjXiSw0lXvR31M",
+      "skin": "Сержант",
+      "price": "86",
+      "statrack": "no",
+      "number": 33,
+      "condition": "Поношене"
+    },
+    {
+      "type": "pistol",
+      "name": "Dual Berettas",
+      "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpos7asPwJf0Ob3dShD4OOzmImfkuTLIbrdmnJu5cB1g_zMyoD0mlOx5Uc_a2vycYWSegY2M1GFr1i-wu7pjZW5u5TNyyRluXYl4HuInkOzhBtSLrs4Dc2Zcgg/330x192",
+      "skin": "Турбодвійники",
+      "price": "469",
+      "statrack": "no",
+      "number": 14,
+      "condition": "Прямо із заводу"
+    },
+    {
+      "type": "pistol",
+      "name": "Dual Berettas",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpos7asPwJf1OD3dShD4OO0kZKOg-P1IITWmWdV7ctOnOzP_I_wt1mxrxopPnfyLdXGelQ_ZVnQ_lO8leu-gp-7uJvBwSZmvCkm437emRKxhB9JauZpm7XAHnmddH9j",
+      "skin": "Королівське подружжя",
+      "price": "35",
+      "statrack": "yes",
+      "number": 23,
+      "condition": "Поношене"
+    },
+    {
+      "type": "pistol",
+      "name": "Dual Berettas",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpos7asPwJf1OD3dShD4OOzmImfkuTLN77Ll3hF-sBOhuDG_ZjKhFWmrBZyajv0ddecI1VtNVmF-VDvw-7t15bqvsybz3Q3unN07Svenxa-1E1LOvsv26KRGIX1Dw",
+      "skin": "Катастрофа",
+      "price": "33",
+      "statrack": "no",
+      "number": 27,
+      "condition": "Загартоване у боях"
+    },
+    {
+      "type": "pistol",
+      "name": "Deser Eagle",
+      "image": "https://cdn.csgo.com/item/Desert+Eagle+%7C+%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D0%BE%D0%B9+%D0%BA%D0%B0%D1%80%D0%BF+%28%D0%9F%D1%80%D1%8F%D0%BC%D0%BE+%D1%81+%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0%29/300.png",
+      "skin": "Золотий короп",
+      "price": "1072",
+      "statrack": "no",
+      "number": 23,
+      "condition": "Прямо із заводу"
+    },
+    {
+      "type": "pistol",
+      "name": "Deser Eagle",
+      "image": "https://cdn.csgo.com//item/Desert+Eagle+%7C+Naga+%28Minimal+Wear%29/300.png",
+      "skin": "Нага",
+      "price": "195",
+      "statrack": "yes",
+      "number": 23,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "pistol",
+      "name": "Deser Eagle",
+      "image": "https://cdn.csgo.com//item/StatTrak%E2%84%A2+Desert+Eagle+%7C+Printstream+%28Battle-Scarred%29/300.png",
+      "skin": "Потік інформації",
+      "price": "2256",
+      "statrack": "yes",
+      "number": 24,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "pistol",
+      "name": "Deser Eagle",
+      "image": "https://cdn.csgo.com//item/StatTrak%E2%84%A2+Desert+Eagle+%7C+Printstream+%28Battle-Scarred%29/300.png",
+      "skin": "Потік інформації",
+      "price": "2256",
+      "statrack": "yes",
+      "number": 25,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "pistol",
+      "name": "CZ75-Auto",
+      "image": "https://cdn.csgo.com//item/CZ75-Auto+%7C+Army+Sheen+%28Field-Tested%29/300.png",
+      "skin": "Армійський блиск",
+      "price": "54",
+      "statrack": "no",
+      "number": 23,
+      "condition": "Прямо із заводу"
+    },
+    {
+      "type": "pistol",
+      "name": "CZ75-Auto",
+      "image": "https://cdn.csgo.com//item/CZ75-Auto+%7C+Indigo+%28Battle-Scarred%29/300.png",
+      "skin": "Індиго",
+      "price": "18",
+      "statrack": "no",
+      "number": 26,
+      "condition": "Поношене"
+    },
+    {
+      "type": "pistol",
+      "name": "CZ75-Auto",
+      "image": "https://cdn.csgo.com//item/CZ75-Auto+%7C+Hexane+%28Field-Tested%29/300.png",
+      "skin": "Гексан",
+      "price": "18",
+      "statrack": "no",
+      "number": 27,
+      "condition": "Поношене"
+    },
+    {
+      "type": "pistol",
+      "name": "CZ75-Auto",
+      "image": "https://cdn.csgo.com//item/CZ75-Auto+%7C+Vendetta+%28Factory+New%29/300.png",
+      "skin": "Вендетта",
+      "price": "16",
+      "statrack": "no",
+      "number": 29,
+      "condition": "Прямо із заводу"
+    },
+    {
+      "type": "rifle",
+      "name": "AWP",
+      "image": "https://cdn.csgo.com/item/AWP+%7C+%D0%AD%D0%BB%D0%B8%D1%82%D0%BD%D0%BE%D0%B5+%D1%81%D0%BD%D0%B0%D1%80%D1%8F%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5+%28%D0%9F%D0%BE%D1%81%D0%BB%D0%B5+%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D1%85+%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D0%BD%D0%B8%D0%B9%29/300.png",
+      "skin": "Елітне спорядження",
+      "price": "221",
+      "statrack": "no",
+      "number": 18,
+      "condition": "Поношене"
+    },
+    {
+      "type": "rifle",
+      "name": "AWP",
+      "image": "https://cdn.csgo.com/item/AWP+%7C+%D0%AD%D0%BB%D0%B8%D1%82%D0%BD%D0%BE%D0%B5+%D1%81%D0%BD%D0%B0%D1%80%D1%8F%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5+%28%D0%9F%D0%BE%D1%81%D0%BB%D0%B5+%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D1%85+%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D0%BD%D0%B8%D0%B9%29/300.png",
+      "skin": "Елітне спорядження",
+      "price": "221",
+      "statrack": "no",
+      "number": 18,
+      "condition": "Поношене"
+    },
+    {
+      "type": "rifle",
+      "name": "AWP",
+      "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17PLfYQJD_9W7m5a0mvLwOq7cqWdQ-sJ0xOzAot-jiQa3-hBqYzvzLdSVJlQ3NQvR-FfsxL3qh5e7vM6bzSA26Sg8pSGKJUPeNtY/360fx360f",
+      "skin": "Азимів",
+      "price": "3511",
+      "statrack": "yes",
+      "number": 14,
+      "condition": "Поношене"
+    },
+    {
+      "type": "rifle",
+      "name": "AWP",
+      "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17PXJZzhO7eO3g5C0m_7zO6_ummpD78A_3rqTrI-l3AOxqkJkamClJ46RdFc_MFDR_1K3k7_t1JS7upvMmHdn7z5iuygrdWg_VA/360fx360f",
+      "skin": "Кортісейра",
+      "price": "331",
+      "statrack": "no",
+      "number": 19,
+      "condition": "Поношене"
+    },
+    {
+      "type": "rifle",
+      "name": "AWP",
+      "image": "https://cdn.csgo.com//item/AWP+%7C+Electric+Hive+%28Factory+New%29/300.png",
+      "skin": "Електричний вулик",
+      "price": "1134",
+      "statrack": "no",
+      "number": 32,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "rifle",
+      "name": "AWP",
+      "image": "https://cdn.csgo.com//item/AWP+%7C+Electric+Hive+%28Factory+New%29/300.png",
+      "skin": "Електричний вулик",
+      "price": "1134",
+      "statrack": "no",
+      "number": 32,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "rifle",
+      "name": "AWP",
+      "image": "https://cdn.csgo.com/item/AWP+%7C+%D0%9B%D0%90%D0%9F%D0%9A%D0%98+%28%D0%9D%D0%B5%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE+%D0%BF%D0%BE%D0%BD%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5%29/300.png",
+      "skin": "Лапки",
+      "price": "482",
+      "statrack": "no",
+      "number": 13,
+      "condition": "Прямо із заводу"
+    },
+    {
+      "type": "rifle",
+      "name": "AWP",
+      "image": "https://cdn.csgo.com/item/AWP+%7C+%D0%A1%D0%BA%D0%BE%D1%80%D0%BE%D1%81%D1%82%D0%BD%D0%BE%D0%B9+%D0%B7%D0%B2%D0%B5%D1%80%D1%8C+%28%D0%9F%D0%BE%D1%81%D0%BB%D0%B5+%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D1%85+%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D0%BD%D0%B8%D0%B9%29/300.png",
+      "skin": "Швидкісний звір",
+      "price": "553",
+      "statrack": "no",
+      "number": 22,
+      "condition": "Загартоване у боях"
+    },
+    {
+      "type": "automatic",
+      "name": "AUG",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFBRv7ODYcD5H09G3homFksj8NrrHjyUFu5Rw3uqX842j3gDj_UQ_ZGr2LNXHdFA6aFvZq1G7kOzr05fu6JuY1zI97TNaHTCg",
+      "skin": "Колонія",
+      "price": "33",
+      "statrack": "no",
+      "number": 12,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "automatic",
+      "name": "AUG",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFA957PXNcClK6c6lq4GekMj4OrzZgiVUuZEg0-uUp42mjFCw_xE5N2zwJo7DdgU2NAnVrgTvwem9hcTtvpnB1zI97VRJemoq",
+      "skin": "Крила",
+      "price": "260",
+      "statrack": "no",
+      "number": 16,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "automatic",
+      "name": "AUG",
+      "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j5Nr_Yg2Zu5MRjjeyP9NWn3FHs-kc4a2j6IYDEJwI7aFrV-FntkLy81MTu6JWczyMx6ygks2GdwUKNHIUL1Q/360fx360f",
+      "skin": "Сід Мід",
+      "price": "208",
+      "statrack": "no",
+      "number": 22,
+      "condition": "Прямо із заводу"
+    },
+    {
+      "type": "automatic",
+      "name": "AUG",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFA957OfBdjhQ09GzkImemrmhY-PVxWkDsZcp2urC8N2s3lew_0NoMj-lLNKTcA9oNQnU-wO6wLvnm9bi65rZUCs2",
+      "skin": "Бенгальский тигр",
+      "price": "251",
+      "statrack": "no",
+      "number": 18,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "automatic",
+      "name": "AUG",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJS_tOxhoWYhP7iDLfYkWNFpsMm27vD9Iqs2gHnqRdvZm6gI4fEcwM8ZAyBqVS_lO3vh5-075TMynd9-n51xJ7ya_c",
+      "skin": "Закручений",
+      "price": "251",
+      "statrack": "yes",
+      "number": 18,
+      "condition": "Трохи поношене"
+    },
+    {
+      "type": "automatic",
+      "name": "AK-47",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJS_tOxhoWYhP7iDLfYkWNFpsMm27vD9Iqs2gHnqRdvZm6gI4fEcwM8ZAyBqVS_lO3vh5-075TMynd9-n51xJ7ya_c",
+      "skin": "Чорний глянець",
+      "price": "596",
+      "statrack": "no",
+      "number": 25,
+      "condition": "Загартоване у боях"
+    },
+    {
+      "type": "automatic",
+      "name": "AK-47",
+      "image": "httpshttps://cdn.csgo.com//item/AK-47+%7C+Point+Disarray+%28Minimal+Wear%29/300.png",
+      "skin": "Буяння фарб",
+      "price": "296",
+      "statrack": "no",
+      "number": 23,
+      "condition": "Загартоване у боях"
+    },
+    {
+      "type": "automatic",
+      "name": "AK-47",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYcDNW5Nmkq4GAw6DLP7LWnn8fvscmibGTpdSmigGyqRFrYm_wJdfBdQ84YAmD-1S6wrru08W-7ZianWwj5HfSt_Eogg",
+      "skin": "Ягуар",
+      "price": "567",
+      "statrack": "no",
+      "number": 23,
+      "condition": "Поношене"
+    },
+    {
+      "type": "automatic",
+      "name": "AK-47",
+      "image": "https://s-wiki.cs.money/wiki_KWBmFFP_large_preview.png",
+      "skin": "Червона ліная",
+      "price": "342",
+      "statrack": "no",
+      "number": 23,
+      "condition": "Поношене"
+    },
+    {
+      "type": "automatic",
+      "name": "AK-47",
+      "image": "https://s-wiki.cs.money/wiki_JO8H5MF_large_preview.png",
+      "skin": "Азимів",
+      "price": "1032",
+      "statrack": "no",
+      "number": 27,
+      "condition": "Поношене"
+    },
+    {
+      "type": "automatic",
+      "name": "AK-47",
+      "image": "https://s-wiki.cs.money/wiki_lPocyxm_large_preview.png",
+      "skin": "Неонова революція",
+      "price": "787",
+      "statrack": "no",
+      "number": 27,
+      "condition": "Поношене"
+    },
+    {
+      "type": "automatic",
+      "name": "AK-47",
+      "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zbYS9D9eO8gY6Mm_LLP7LWnn8f6cMk2L3E9NqkilHm8hI-a2inctSWcAc8Zl-C81nvw-_uhpW06MjKzmwj5Hd9a9y0Zw",
+      "skin": "Колір джунглів",
+      "price": "125",
+      "statrack": "no",
+      "number": 27,
+      "condition": "Поношене"
+    }
+  ],
+  "cases": [
+    {
+      "name": "Унікальний",
+      "img": "https://anderbot.com/wp-content/uploads/2018/10/Case-Opener-Ultimate-2.png",
+      "price": 149
+    },
+    {
+      "name": "Золотий",
+      "img": "https://go2case.pro/case_img/1584180208.png",
+      "price": 199
+    },
+    {
+      "name": "Пріоритет",
+      "img": "https://ggdorp.me/public/storage/cases/S0kf_prioritet.png",
+      "price": 199
+    },
+    {
+      "name": "Богатирський",
+      "img": "https://soondrop.shop/img/cases/knife.png",
+      "price": 399
+    },
+    {
+      "name": "Шазам",
+      "img": "https://cscase.com/files/38vac.webp",
+      "price": 59
+    },
+    {
+      "name": "Геймерський",
+      "img": "https://cscase.com/files/38vac.webp",
+      "price": 59
+    },
+    {
+      "name": "Міцний",
+      "img": "https://cscase.com/files/1051csgoskins.webp",
+      "price": 59
     }
   ]
 }
