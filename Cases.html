@@ -101,7 +101,7 @@
                   <transition name="fade">
                 <div class="container-skins">
                     <p align='center'v-if='!Object.keys(caseItem).length == 0' >Скіни які знаходяться у цьому кейсі</p>
-                      <div v-for="skins in caseSkins" class="personal-invent-item" :style="[skins.type === 'knife' ? {borderColor: '#F4CA16'} : {borderColor:'#ffffff'}]">
+                      <div v-for="skins in caseSkins" class="personal-invent-item"style="border:1px solid transparent;" :style="[skins.type === 'knife' ? {borderColor: '#F4CA16'} : {borderColor:'transparent'}]">
                         <img :src="skins.image" alt="">
                       </div>
                 </div>

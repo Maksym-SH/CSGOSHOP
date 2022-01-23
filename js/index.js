@@ -25,6 +25,19 @@ var first = new Vue({
         this.cases[index].inside.forEach((item) => {
           this.caseSkins.push(this.weapon[item]);
         });
+      this.caseSkins.forEach((item) => {
+        Number(item.price <= 100)
+          ? (item.chance = 0.5)
+          : Number(item.price > 100) && Number(item.price < 200)
+          ? (item.chance = 0.5)
+          : Number(item.price > 200) && Number(item.price < 1000)
+          ? (item.chance = 0.17)
+          : Number(item.price > 1000) && Number(item.price < 5000)
+          ? (item.chance = 0.1)
+          : Number(item.price > 5000)
+          ? (item.chance = 0.03)
+          : null;
+      });
       console.log(this.caseSkins);
     },
   },
