@@ -112,7 +112,7 @@
     {
       "type": "knife",
       "name": "Керамбіт",
-      "image": "https://static.wikia.nocookie.net/counterstrike/images/6/68/Kerlogo.png/revision/latest?cb=20150710100048&path-prefix=ru",
+      "image": "https://cdn.csgo.com/item/%E2%98%85+%D0%9A%D0%B5%D1%80%D0%B0%D0%BC%D0%B1%D0%B8%D1%82/300.png",
       "skin": "Звичайний",
       "price": "9756",
       "statrack": "no",
@@ -1647,7 +1647,7 @@
       "img": "https://soondrop.shop/img/cases/knife.png",
       "price": 399,
       "inside": [
-        1, 2, 3, 16, 18, 20, 23, 30, 34, 37, 39, 44, 50, 54, 56, 61, 64, 68, 73,
+        1, 2, 3, 5, 15, 18, 20, 23, 30, 34, 37, 39, 44, 54, 56, 61, 64, 68, 73,
         76, 84, 92, 95, 102
       ]
     },
@@ -1679,7 +1679,7 @@
       "inside": [0]
     },
     {
-      "name": "Міцний",
+      "name": "Звичайний",
       "img": "https://cscase.com/files/1051csgoskins.webp",
       "price": 59,
       "inside": [0]
