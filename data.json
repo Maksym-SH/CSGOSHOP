@@ -1646,32 +1646,43 @@
       "name": "Богатирський",
       "img": "https://soondrop.shop/img/cases/knife.png",
       "price": 399,
-      "inside": []
+      "inside": [
+        1, 2, 3, 16, 18, 20, 23, 25, 30, 34, 37, 39, 44, 50, 54, 56, 61, 64, 68,
+        73, 76, 84, 92, 95, 102
+      ]
     },
     {
       "name": "Золотий",
       "img": "https://go2case.pro/case_img/1584180208.png",
-      "price": 199
+      "price": 199,
+      "inside": [
+        0, 4, 6, 9, 17, 19, 21, 22, 24, 26, 27, 28, 29, 32, 35, 36, 38, 40, 43,
+        61, 64, 68, 71, 73, 74
+      ]
     },
     {
       "name": "Пріоритет",
       "img": "https://ggdorp.me/public/storage/cases/S0kf_prioritet.png",
-      "price": 199
+      "price": 199,
+      "inside": [0]
     },
     {
       "name": "Унікальний",
       "img": "https://anderbot.com/wp-content/uploads/2018/10/Case-Opener-Ultimate-2.png",
-      "price": 149
+      "price": 149,
+      "inside": [0]
     },
     {
       "name": "Геймерський",
       "img": "https://cscase.com/files/38vac.webp",
-      "price": 59
+      "price": 59,
+      "inside": [0]
     },
     {
       "name": "Міцний",
       "img": "https://cscase.com/files/1051csgoskins.webp",
-      "price": 59
+      "price": 59,
+      "inside": [0]
     }
   ]
 }
