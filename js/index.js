@@ -21,11 +21,11 @@ var first = new Vue({
       this.caseItem = [];
       this.caseItem = this.cases[index];
       this.caseItem.index = index;
-      console.log(this.weapon);
-      this.caseSkins = [];
-      if (this.caseItem.name == 'Богатирський') {
-        this.caseSkins.push();
-      }
+      (this.caseSkins = []),
+        this.cases[index].inside.forEach((item) => {
+          this.caseSkins.push(this.weapon[item]);
+        });
+      console.log(this.caseSkins);
     },
   },
   mounted() {
