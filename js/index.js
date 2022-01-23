@@ -4,15 +4,29 @@ var first = new Vue({
     weapon: [],
     info: [],
     popular: [],
+    cases: [],
     popularAccess: false,
     preloader: true,
     IsLoginSuccess: false,
     errorLoadJson: false,
+    casesLoad: false,
+    caseItem: {},
+    caseSkins: [],
   },
   methods: {
     AllSell() {},
     Withdraw() {},
     Delete() {},
+    showCase(index) {
+      this.caseItem = [];
+      this.caseItem = this.cases[index];
+      this.caseItem.index = index;
+      console.log(this.weapon);
+      this.caseSkins = [];
+      if (this.caseItem.name == 'Богатирський') {
+        this.caseSkins.push();
+      }
+    },
   },
   mounted() {
     try {
@@ -28,9 +42,21 @@ var first = new Vue({
           this.info.push(items);
           this.preloader = false;
         });
+      fetch('http://localhost:3000/cases')
+        .then((cases) => cases.json())
+        .then((data) => {
+          this.cases = data;
+          this.casesLoad = true;
+        });
+      fetch('http://localhost:3000/weapon')
+        .then((weapon) => weapon.json())
+        .then((weapon) => {
+          this.weapon = weapon;
+        });
     } catch (error) {
       console.error(error);
       this.errorLoadJson = true;
     }
+    console.log(this.weapon);
   },
 });

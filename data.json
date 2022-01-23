@@ -1645,7 +1645,8 @@
     {
       "name": "Богатирський",
       "img": "https://soondrop.shop/img/cases/knife.png",
-      "price": 399
+      "price": 399,
+      "inside": []
     },
     {
       "name": "Золотий",
