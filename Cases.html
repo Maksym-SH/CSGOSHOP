@@ -20,7 +20,7 @@
     <title>Кейси</title>
   </head>
   <body>
-    <div id="app">
+    <div id="app" class="cases">
     <header class="header">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
@@ -101,8 +101,9 @@
                   <transition name="fade">
                 <div class="container-skins">
                     <p align='center'v-if='!Object.keys(caseItem).length == 0' >Скіни які знаходяться у цьому кейсі</p>
-                      <div v-for="skins in caseSkins" class="personal-invent-item"style="border:1px solid transparent;" :style="[skins.type === 'knife' ? {borderColor: '#F4CA16'} : {borderColor:'transparent'}]">
+                      <div v-for="skins in caseSkins" class="personal-invent-item"style="border:1px solid transparent; position: relative;" :style="[skins.type === 'knife' ? {borderColor: '#F4CA16'} : {borderColor:'transparent'}]">
                         <img :src="skins.image" alt="">
+                        <p class="skin-price">{{skins.price}} ₴</p>
                       </div>
                 </div>
                 </transition>
@@ -110,38 +111,39 @@
           <div class="result"></div>
         </div>
       </section>
-      <footer class="footer invenory-footer">
-        <div class="footer-between">
-          <div class="footer-logo">
-            <img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
-              >shop</span
-            >
-          </div>
-          <div class="footer__wrap">
-            <h5>Зв'язатися з нами</h5>
-            <div>
-              <a href="https://vk.com/max185"
-                ><img src="./img/vk.svg" alt=""
-              /></a>
-              <a href="https://github.com/Maksym-SH/CSGOSHOP"
-                ><img src="./img/github.svg" alt=""
-              /></a>
-            </div>
-          </div>
-          <div class="footer__pay">
-            <div class="replenishment">
-              Ми приймаємо такі способи <br />поповнення рахунку<br />
-              <img src="./img/mastercard.svg" alt="" />
-              <img src="./img/visa.svg" alt="" />
-            </div>
-            <p>
-              Copyright © 2022 CSGOSHOP.<br />
-              Усі права захищені.
-            </p>
+
+    </main>
+    <footer class="footer invenory-footer">
+      <div class="footer-between">
+        <div class="footer-logo">
+          <img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
+            >shop</span
+          >
+        </div>
+        <div class="footer__wrap">
+          <h5>Зв'язатися з нами</h5>
+          <div>
+            <a href="https://vk.com/max185"
+              ><img src="./img/vk.svg" alt=""
+            /></a>
+            <a href="https://github.com/Maksym-SH/CSGOSHOP"
+              ><img src="./img/github.svg" alt=""
+            /></a>
           </div>
         </div>
-      </footer>
-    </main>
+        <div class="footer__pay">
+          <div class="replenishment">
+            Ми приймаємо такі способи <br />поповнення рахунку<br />
+            <img src="./img/mastercard.svg" alt="" />
+            <img src="./img/visa.svg" alt="" />
+          </div>
+          <p>
+            Copyright © 2022 CSGOSHOP.<br />
+            Усі права захищені.
+          </p>
+        </div>
+      </div>
+    </footer>
   </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="./js/index.js"></script>

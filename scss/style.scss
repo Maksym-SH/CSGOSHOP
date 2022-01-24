@@ -18,13 +18,9 @@ body {
   padding: 0px;
   font-family: monserat;
   color: #c2c5cc !important;
-  height: 100%;
-}
-main {
-  height: 100vh;
 }
 #app {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -117,16 +113,13 @@ a {
   }
 }
 /* section-main */
-.container {
-  width: 60%;
-  margin: 0 auto;
-  display: block;
-}
-
-.section-main {
-  padding-top: 170px;
+.main {
   background: $dark url('../img/background-main.jpeg') no-repeat;
   background-size: cover;
+}
+.section-main {
+  padding-top: 170px;
+
   padding-bottom: 100px;
   @media (max-width: 980px) {
     padding-bottom: 50px;
@@ -312,7 +305,6 @@ a {
   padding-top: 175px;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(#000, #173118);
   @media (max-width: 980px) {
     padding-top: 70px;
   }
@@ -415,6 +407,7 @@ a {
 .footer {
   border-top: 1px solid #3d7a97;
   width: 100%;
+  margin-top: auto;
   &-between {
     display: flex;
     padding: 80px 15px 20px 20px;
@@ -474,12 +467,13 @@ a {
   }
 }
 /* Question-page */
+.questions {
+  background-color: #141c00;
+}
 .section-about {
   padding-top: 120px;
-  background-color: #141c00;
+
   color: #fff;
-  min-height: 91vh;
-  flex: 1 1 auto;
   padding-bottom: 20px;
   & + .footer {
     background-color: #141c00;
@@ -561,15 +555,18 @@ a {
   }
 }
 /* inventory */
-.inventory-section {
-  padding-top: 200px;
+.inventory {
   background: $dark url(../img/bg-inventory.jpg) center center;
   background-size: cover;
   background-blend-mode: multiply;
-  padding-bottom: 50px;
-  @media (min-width: 2500px) {
-    height: 95vh;
+  .footer {
+    background-color: transparent;
   }
+}
+.inventory-section {
+  padding-top: 200px;
+  padding-bottom: 50px;
+
   @media (max-width: 1000px) {
     padding-top: 100px;
   }
@@ -729,17 +726,17 @@ a {
   }
 }
 /* case-page */
+.cases {
+  background-color: #1c1f21;
+  .footer {
+    background-color: transparent;
+  }
+}
 .section-cases {
   width: 100%;
   padding-top: 95px;
   background-color: #1c1f21;
   animation: gradient 3s infinite alternate;
-  @media (min-width: 2880px) {
-    height: 97vh;
-  }
-  + footer {
-    background-color: #1c1f21;
-  }
 }
 .info-cases {
   display: flex;
@@ -854,6 +851,12 @@ a {
   p {
     width: 100%;
   }
+}
+.skin-price {
+  position: absolute;
+  bottom: -15px;
+  left: 10px;
+  font-size: 14px;
 }
 .skins-item {
 }
