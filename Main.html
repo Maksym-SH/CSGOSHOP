@@ -131,60 +131,85 @@
           </div>
         </section>
         <section class="section-main-second">
-          <div class="container-skins" v-if="popularAccess">
-            <h2>
-              <img src="./img/cs-person.svg" alt="" />Найпопулярніші скіни CS:GO
-            </h2>
-            <div class="horizontal-line"></div>
-            <div
-              class="popular-skins-item"
-              v-for="item in popular"
-              :style="[item.type === 'knife' ? {borderColor: '#F4CA16'} : {borderColor:'#ffffff'}]"
-            >
-              <div class="fix-height">
-                <img :src="item.image" alt="" />
+          <template v-cloak>
+            <transition name="fade">
+              <div class="container-skins" v-if="popularAccess">
+                <h2>
+                  <img src="./img/cs-person.svg" alt="" />Найпопулярніші скіни
+                  CS:GO
+                </h2>
+                <div class="horizontal-line"></div>
+                <div
+                  class="popular-skins-item"
+                  v-for="(item,index) in popular"
+                  :style="[item.type === 'knife' ? {borderColor: '#F4CA16'} : {borderColor:'#ffffff'}]"
+                  @click="shopPopapSkin(index)"
+                >
+                  <div class="fix-height">
+                    <img :src="item.image" alt="" />
+                  </div>
+                  <h5>{{ item.name }}</h5>
+                </div>
               </div>
-              <h5>{{ item.name }}</h5>
-              <h5>Якість: {{ item.condition }}</h5>
-              <h5>Ціна: {{item.price}}₴</h5>
-            </div>
-          </div>
+            </transition>
+          </template>
           <h2 class="title-more-skins">
             Розшир свій інвентар скінами з <span>CSGOSHOP</span>
+            <div class="title__line"></div>
           </h2>
-          <footer class="footer">
-            <div class="footer-between">
-              <div class="footer-logo">
-                <img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
-                  >shop</span
-                >
-              </div>
-              <div class="footer__wrap">
-                <h5>Зв'язатися з нами</h5>
-                <div>
-                  <a href="https://vk.com/max185"
-                    ><img src="./img/vk.svg" alt=""
-                  /></a>
-                  <a href="https://github.com/Maksym-SH/CSGOSHOP"
-                    ><img src="./img/github.svg" alt=""
-                  /></a>
-                </div>
-              </div>
-              <div class="footer__pay">
-                <div class="replenishment">
-                  Ми приймаємо такі способи <br />поповнення рахунку<br />
-                  <img src="./img/mastercard.svg" alt="" />
-                  <img src="./img/visa.svg" alt="" />
-                </div>
-                <p>
-                  Copyright © 2022 CSGOSHOP.<br />
-                  Усі права захищені.
-                </p>
-              </div>
-            </div>
-          </footer>
         </section>
       </main>
+      <footer class="footer">
+        <div class="footer-between">
+          <div class="footer-logo">
+            <img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
+              >shop</span
+            >
+          </div>
+          <div class="footer__wrap">
+            <h5>Зв'язатися з нами</h5>
+            <div>
+              <a href="https://vk.com/max185"
+                ><img src="./img/vk.svg" alt=""
+              /></a>
+              <a href="https://github.com/Maksym-SH/CSGOSHOP"
+                ><img src="./img/github.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="footer__pay">
+            <div class="replenishment">
+              Ми приймаємо такі способи <br />поповнення рахунку<br />
+              <img src="./img/mastercard.svg" alt="" />
+              <img src="./img/visa.svg" alt="" />
+            </div>
+            <p>
+              Copyright © 2022 CSGOSHOP.<br />
+              Усі права захищені.
+            </p>
+          </div>
+        </div>
+      </footer>
+      <transition name="fade">
+        <div class="popap-skins-info" v-if="popapActive">
+          <div class="popap-skins-window">
+            <img
+              src="./img/close.svg"
+              alt=""
+              class="close__popap"
+              @click="popapActive = !popapActive"
+            />
+            <div class="popap__img">
+              <img :src="popapInfoSkin.image" alt="" />
+            </div>
+            <div class="popap__desc">
+              <p>Назва: {{ popapInfoSkin.name }}</p>
+              <p>Стан: {{ popapInfoSkin.condition }}</p>
+              <p>Ціна: {{ popapInfoSkin.price}}₴</p>
+            </div>
+          </div>
+        </div>
+      </transition>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="./js/index.js"></script>

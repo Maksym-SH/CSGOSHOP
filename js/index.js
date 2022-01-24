@@ -12,12 +12,21 @@ var first = new Vue({
     casesLoad: false,
     caseItem: {},
     caseSkins: [],
+    popapInfoSkin: {},
+    popapActive: false,
   },
   methods: {
+    shopPopapSkin(index) {
+      this.popapInfoSkin = this.popular[index];
+      localStorage.setItem('popap', true);
+      this.popapActive = localStorage.getItem('popap');
+    },
     AllSell() {},
     Withdraw() {},
     Delete() {},
     showCase(index) {
+      localStorage.index = index;
+      index = +localStorage.index;
       this.caseItem = [];
       this.caseItem = this.cases[index];
       this.caseItem.index = index;
@@ -38,7 +47,6 @@ var first = new Vue({
           ? (item.chance = 0.03)
           : null;
       });
-      console.log(this.caseSkins);
     },
   },
   mounted() {
@@ -70,6 +78,5 @@ var first = new Vue({
       console.error(error);
       this.errorLoadJson = true;
     }
-    console.log(this.weapon);
   },
 });

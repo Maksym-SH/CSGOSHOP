@@ -195,7 +195,6 @@ a {
   img {
     width: 100%;
     min-width: 300px;
-    z-index: 10;
     height: auto;
   }
   @media (max-width: 830px) {
@@ -253,7 +252,9 @@ a {
 .more-info-item {
   text-align: center;
   width: 33%;
-  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
   margin-top: 100px;
   @media (max-width: 720px) {
     font-size: 12px;
@@ -341,6 +342,7 @@ a {
     margin: 5px;
     border: 1px solid #fff;
     background-color: #36363c;
+    cursor: pointer;
     transition: all 0.2s ease;
     color: #fff;
     h5 {
@@ -382,6 +384,44 @@ a {
     }
   }
 }
+.popap-skins-info {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  .popap-skins-window {
+    position: fixed;
+    z-index: +99;
+    width: 30%;
+    padding: 10px;
+    min-width: 310px;
+    max-width: 400px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333140;
+    opacity: 1;
+    padding: 10px;
+    .close__popap {
+      display: block;
+      margin-left: auto;
+      margin-bottom: -10px;
+      cursor: pointer;
+    }
+    .popap__img {
+      img {
+        max-width: 100%;
+        display: block;
+        margin: 10px auto;
+      }
+    }
+    .popap__desc {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
 .horizontal-line {
   width: 99%;
   height: 1px;
@@ -401,6 +441,12 @@ a {
   @media (max-width: 650px) {
     font-size: 15px;
     margin-bottom: 100px;
+  }
+  div {
+    width: 5%;
+    margin: 40px auto 10px auto;
+    height: 2px;
+    background-color: #7a6ccf;
   }
 }
 /* footer */
