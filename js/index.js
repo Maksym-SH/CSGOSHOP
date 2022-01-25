@@ -46,7 +46,9 @@ var first = new Vue({
           : Number(item.price > 5000)
           ? (item.chance = 0.03)
           : null;
+        item.price = +item.price;
       });
+      this.caseSkins.sort((a, b) => (a.price > b.price ? 1 : -1));
     },
   },
   mounted() {
