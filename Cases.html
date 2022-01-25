@@ -90,7 +90,7 @@
                 >
                   <span class="sr-only"></span>
                 </div>
-                    <div class="container-cases-item" v-for="(item,index) in cases" @click="showCase(index)">
+                    <div class="container-cases-item" v-for="(item,index) in cases" @click="showCase(index)" :refs="item">
                         <img :src="item.img" alt="">
                         <h5 align="center">{{ item.name}}</h5>
                         <p align="center">{{+item.price}}₴</p>
@@ -109,7 +109,9 @@
                   <transition name="fade">
                 <div class="container-skins">
                     <p align='center'v-if='!Object.keys(caseItem).length == 0' >Скіни які знаходяться у цьому кейсі</p>
-                      <div v-for="(skins, index) in caseSkins" class="personal-invent-item"style="border:1px solid transparent; position: relative;" :style="[skins.type === 'knife' ? {borderColor: '#F4CA16'} : {borderColor:'transparent'}]" @click="shopPopapSkin(index, 'cases')">
+                      <div v-for="(skins, index) in caseSkins" class="personal-invent-item"
+                      style="border:1px solid transparent; position: relative;"
+                      :style="[skins.type === 'knife' ? {borderColor: '#F4CA16'} : {borderColor:'transparent'}]" @click="shopPopapSkin(index, 'cases')">
                         <img :src="skins.image" alt="">
                         <p class="skin-price">{{skins.price}} ₴</p>
                       </div>
@@ -164,7 +166,7 @@
             <img :src="popapInfoSkin.image" alt="" />
           </div>
           <div class="popap__desc">
-            <p>Назва: {{ popapInfoSkin.name }}</p>
+            <p>Назва: {{ popapInfoSkin.name }} | {{popapInfoSkin.skin}}</p>
             <p>Стан: {{ popapInfoSkin.condition }}</p>
             <p>Ціна: {{ popapInfoSkin.price}}₴</p>
           </div>
