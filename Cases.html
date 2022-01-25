@@ -109,7 +109,7 @@
                   <transition name="fade">
                 <div class="container-skins">
                     <p align='center'v-if='!Object.keys(caseItem).length == 0' >Скіни які знаходяться у цьому кейсі</p>
-                      <div v-for="skins in caseSkins" class="personal-invent-item"style="border:1px solid transparent; position: relative;" :style="[skins.type === 'knife' ? {borderColor: '#F4CA16'} : {borderColor:'transparent'}]">
+                      <div v-for="(skins, index) in caseSkins" class="personal-invent-item"style="border:1px solid transparent; position: relative;" :style="[skins.type === 'knife' ? {borderColor: '#F4CA16'} : {borderColor:'transparent'}]" @click="shopPopapSkin(index, 'cases')">
                         <img :src="skins.image" alt="">
                         <p class="skin-price">{{skins.price}} ₴</p>
                       </div>
@@ -119,7 +119,6 @@
           <div class="result"></div>
         </div>
       </section>
-
     </main>
     <footer class="footer invenory-footer">
       <div class="footer-between">
@@ -152,6 +151,26 @@
         </div>
       </div>
     </footer>
+    <transition name="fade">
+      <div class="popap-skins-info" v-if="popapActive">
+        <div class="popap-skins-window">
+          <img
+            src="./img/close.svg"
+            alt=""
+            class="close__popap"
+            @click="popapActive = !popapActive"
+          />
+          <div class="popap__img">
+            <img :src="popapInfoSkin.image" alt="" />
+          </div>
+          <div class="popap__desc">
+            <p>Назва: {{ popapInfoSkin.name }}</p>
+            <p>Стан: {{ popapInfoSkin.condition }}</p>
+            <p>Ціна: {{ popapInfoSkin.price}}₴</p>
+          </div>
+        </div>
+      </div>
+    </transition>
   </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="./js/index.js"></script>

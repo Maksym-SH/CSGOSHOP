@@ -43,7 +43,7 @@ a {
 /* animation-vue */
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.9s;
+  transition: opacity 0.5s;
 }
 .fade-enter,
 .fade-leave-to {
@@ -893,7 +893,6 @@ a {
 }
 .container-skins {
   padding: 10px 15px 20px 15px;
-
   background-color: #1c1f21;
   p {
     width: 100%;

@@ -16,8 +16,11 @@ var first = new Vue({
     popapActive: false,
   },
   methods: {
-    shopPopapSkin(index) {
-      this.popapInfoSkin = this.popular[index];
+    shopPopapSkin(index, str) {
+      this.popapInfoSkin = [];
+      if (str == 'main') this.popapInfoSkin = this.popular[index];
+      if (str === 'cases') this.popapInfoSkin = this.caseSkins[index];
+      console.log(this.popapInfoSkin);
       this.popapActive = true;
     },
     AllSell() {},
