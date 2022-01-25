@@ -18,22 +18,19 @@ var first = new Vue({
   methods: {
     shopPopapSkin(index) {
       this.popapInfoSkin = this.popular[index];
-      localStorage.setItem('popap', true);
-      this.popapActive = localStorage.getItem('popap');
+      this.popapActive = true;
     },
     AllSell() {},
     Withdraw() {},
     Delete() {},
     showCase(index) {
-      localStorage.index = index;
-      index = +localStorage.index;
       this.caseItem = [];
       this.caseItem = this.cases[index];
       this.caseItem.index = index;
-      (this.caseSkins = []),
-        this.cases[index].inside.forEach((item) => {
-          this.caseSkins.push(this.weapon[item]);
-        });
+      this.caseSkins = [];
+      this.cases[index].inside.forEach((item) => {
+        this.caseSkins.push(this.weapon[item]);
+      });
       this.caseSkins.forEach((item) => {
         Number(item.price <= 100)
           ? (item.chance = 0.5)

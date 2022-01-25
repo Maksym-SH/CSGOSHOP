@@ -82,6 +82,14 @@
           </div>
           <template v-cloak>
                 <div class="container-cases" >
+                  <div
+                  v-if="!casesLoad"
+                  class="spinner-grow"
+                  style="width: 4rem; height: 4rem"
+                  role="status"
+                >
+                  <span class="sr-only"></span>
+                </div>
                     <div class="container-cases-item" v-for="(item,index) in cases" @click="showCase(index)">
                         <img :src="item.img" alt="">
                         <h5 align="center">{{ item.name}}</h5>
