@@ -5,7 +5,146 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./img/steam.svg" type="image/x-icon" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css">
     <title>Увійти за допомогою Steam</title>
   </head>
-  <body></body>
+  <body>
+    <div id="app" class="login-steam">
+      <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a href="Main.html" class="navbar-brand logo"
+              ><img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
+                >shop</span
+              ></a
+            >
+            <button
+              class="navbar-toggler bg-light link-info"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto">
+                <li>
+                  <a class="nav-link" href="Main.html">До головної</a>
+                </li>
+                <li>
+                  <a class="nav-link" href="Questions.html">Питання</a>
+                </li>
+                <li>
+                  <a class="nav-link" href="Inventory.html">Інвентар</a>
+                </li>
+                <li>
+                  <a class="nav-link" href="Trade.html">Обмін</a>
+                </li>
+              </ul>
+              </ul>
+              <h6 v-if="!IsLoginSuccess">Вхід до акаунту не виконаний</h6>
+            </nav>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section class="login-section">
+          <div class="container-lg">
+            <div class="login-container">
+              <div class="block-login">
+                <form action="#" class="inputs-login">
+                  <label for="login">Ім'я акаунта Steam</label>
+                  <input type="text" name='login' v-model="login">
+                  <label for="password">Пароль</label>
+                  <div class="block-password">
+                    <input type="password" name="password" v-model="password" ref="input">
+                    <template v-cloak>
+                      <transition name='fade'>
+                        <img src="./img/eye.svg" alt="" draggable="false" class='eye-input' v-if="password"  @mousedown="showPassword()"
+                        @mouseup="hidePassword()">
+                      </transition>
+                    </template>
+                  </div>
+                  <button type="button" class="btn btn-primary my-3" @click="checkForRobot()">Увійти</button>
+                </form>
+                <p class="wrong-login">Невірний логін або пароль, повторіть спробу</p>
+              </div>
+              <div class="block-info" id='d1'>
+              <p>Увійдіть до Steam акаунту, щоб мати можливість користуватися функціями магазину</p>
+                <img src="./img/steam-entrance.png" alt="">
+              </div>
+           </div>
+        </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-between">
+          <div class="footer-logo">
+            <img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
+              >shop</span
+            >
+          </div>
+          <div class="footer__wrap">
+            <h5>Зв'язатися з нами</h5>
+            <div>
+              <a href="https://vk.com/max185"
+                ><img src="./img/vk.svg" alt=""
+              /></a>
+              <a href="https://github.com/Maksym-SH/CSGOSHOP"
+                ><img src="./img/github.svg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="footer__pay" id='d'>
+            <div class="replenishment">
+              Ми приймаємо такі способи <br />поповнення рахунку<br />
+              <img src="./img/mastercard.svg" alt="" />
+              <img src="./img/visa.svg" alt="" />
+            </div>
+            <p>
+              Copyright © 2022 CSGOSHOP.<br />
+              Усі права захищені.
+            </p>
+          </div>
+        </div>
+      </footer>
+      <template v-cloak>
+        <transition name="fade">
+          <div class="popap-skins-info position-relative" v-if="checkRobot">
+            <div class="popap-skins-window">
+              <h6 align="center">Підтвердіть, що ви не робот</h6>
+              <div class="popap__img">
+                <div class="numeric-table">{{ checkRobotText }}</div>
+              </div>
+              <div class="popap__desc">
+                <div class="input-value">
+                  <label for="enter-data">Введіть код який показано вище</label>
+                  <input type="text" name='enter-data' v-model="valueCheckRobot">
+                  <button class="btn btn-success p-1 mt-3">Підтвердити</button>
+                  <h6 class="wrong-enter-code">Ви неправильно ввели код</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition>
+      </template>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
 </html>

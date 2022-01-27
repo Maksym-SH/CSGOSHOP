@@ -14,6 +14,12 @@ var first = new Vue({
     caseSkins: [],
     popapInfoSkin: {},
     popapActive: false,
+    password: '',
+    login: '',
+    valueCheckRobot: '',
+    checkRobot: false,
+    wrongLogin: false,
+    checkRobotText: '',
   },
   methods: {
     shopPopapSkin(index, str) {
@@ -22,6 +28,29 @@ var first = new Vue({
       if (str === 'cases') this.popapInfoSkin = this.caseSkins[index];
       console.log(this.popapInfoSkin);
       this.popapActive = true;
+    },
+    showPassword() {
+      this.$refs.input.setAttribute('type', 'text');
+    },
+    hidePassword() {
+      this.$refs.input.setAttribute('type', 'password');
+    },
+    checkForRobot() {
+      let randWord =
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789';
+      let text = '';
+      if (this.login.length >= 5 && this.password.length >= 5) {
+        for (let i = 0; i < 6; i++) {
+          text += randWord.charAt(Math.floor(Math.random() * randWord.length));
+        }
+        this.checkRobot = true;
+        this.checkRobotText = text;
+      }
+    },
+    comparisonValues(){
+      if(this.checkRobotText === this.valueCheckRobot){
+        this.
+      }
     },
     AllSell() {},
     Withdraw() {},
