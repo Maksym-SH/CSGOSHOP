@@ -1,4 +1,4 @@
-var first = new Vue({
+new Vue({
   el: '#app',
   data: {
     weapon: [],
@@ -20,6 +20,7 @@ var first = new Vue({
     checkRobot: false,
     wrongLogin: false,
     checkRobotText: '',
+    robotValueComparison: false,
   },
   methods: {
     shopPopapSkin(index, str) {
@@ -45,11 +46,16 @@ var first = new Vue({
         }
         this.checkRobot = true;
         this.checkRobotText = text;
+      } else {
+        this.wrongLogin = true;
       }
     },
-    comparisonValues(){
-      if(this.checkRobotText === this.valueCheckRobot){
-        this.
+    comparisonValues() {
+      if (this.checkRobotText === this.valueCheckRobot) {
+        localStorage.login = this.login;
+      } else {
+        this.checkForRobot();
+        this.robotValueComparison = true;
       }
     },
     AllSell() {},
@@ -78,20 +84,21 @@ var first = new Vue({
         item.price = +item.price;
       });
       this.caseSkins.sort((a, b) => (a.price > b.price ? 1 : -1));
+      sessionStorage.caseSkins = JSON.stringify(this.caseSkins);
+      sessionStorage.caseItem = JSON.stringify(this.caseItem);
     },
   },
   mounted() {
+    if (sessionStorage.caseSkins && sessionStorage.caseItem) {
+      this.caseItem = JSON.parse(sessionStorage.caseItem);
+      this.caseSkins = JSON.parse(sessionStorage.caseSkins);
+    }
     try {
       fetch('http://localhost:3000/popular')
         .then((data) => data.json())
         .then((data) => {
           this.popular = data;
           this.popularAccess = true;
-        });
-      fetch('http://localhost:3000/peculiar')
-        .then((items) => items.json())
-        .then((items) => {
-          this.info.push(items);
           this.preloader = false;
         });
       fetch('http://localhost:3000/cases')
