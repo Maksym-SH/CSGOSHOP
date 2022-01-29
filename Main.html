@@ -107,18 +107,15 @@
             <div class="more-info-content">
               <div class="more-info-item">
                 <p>Відповідь</p>
-                <p v-if="info != ''">{{info[0].TimeAnswer}}</p>
-                <p v-else>Інформація не відома</p>
+                <p>Протягом 30-ти хвилин</p>
               </div>
               <div class="more-info-item">
                 <p>Сайт працює:</p>
-                <p v-if="info != ''">{{info[0].Wbt}}</p>
-                <p v-else>Інформація не відома</p>
+                <p>Понад шість місяців</p>
               </div>
               <div class="more-info-item">
                 <p>Понад:</p>
-                <p v-if="info != ''">{{info[0].skins}}</p>
-                <p v-else>Інформація не відома</p>
+                <p>Більше ста різних скинів</p>
               </div>
             </div>
             <div class="shop-desc">
@@ -190,26 +187,28 @@
           </div>
         </div>
       </footer>
-      <transition name="fade">
-        <div class="popap-skins-info" v-if="popapActive">
-          <div class="popap-skins-window">
-            <img
-              src="./img/close.svg"
-              alt=""
-              class="close__popap"
-              @click="popapActive = !popapActive"
-            />
-            <div class="popap__img">
-              <img :src="popapInfoSkin.image" alt="" />
-            </div>
-            <div class="popap__desc">
-              <p>Назва: {{ popapInfoSkin.name }}</p>
-              <p>Стан: {{ popapInfoSkin.condition }}</p>
-              <p>Ціна: {{ popapInfoSkin.price}}₴</p>
+      <template v-cloak>
+        <transition name="fade">
+          <div class="popap-skins-info" v-if="popapActive">
+            <div class="popap-skins-window">
+              <img
+                src="./img/close.svg"
+                alt=""
+                class="close__popap"
+                @click="popapActive = !popapActive"
+              />
+              <div class="popap__img">
+                <img :src="popapInfoSkin.image" alt="" />
+              </div>
+              <div class="popap__desc">
+                <p>Назва: {{ popapInfoSkin.name }}</p>
+                <p>Стан: {{ popapInfoSkin.condition }}</p>
+                <p>Ціна: {{ popapInfoSkin.price}}₴</p>
+              </div>
             </div>
           </div>
-        </div>
-      </transition>
+        </transition>
+      </template>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="./js/index.js"></script>

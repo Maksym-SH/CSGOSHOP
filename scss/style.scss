@@ -388,12 +388,13 @@ a {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: +90;
   .popap-skins-window {
     position: fixed;
     z-index: +99;
     width: 30%;
     padding: 10px;
-    min-width: 310px;
+    min-width: 300px;
     max-width: 400px;
     border-radius: 10px;
     top: 50%;
@@ -973,11 +974,9 @@ a {
   font-size: 14px;
   max-width: 220px;
   text-align: center;
+  position: absolute;
+  bottom: -55px;
   color: #c00;
-  @media (max-width: 600px) {
-    display: block;
-    margin: 0 auto;
-  }
 }
 .numeric-table {
   font-size: 30px;
