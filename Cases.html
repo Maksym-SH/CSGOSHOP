@@ -56,15 +56,34 @@
               </li>
             </ul>
             </ul>
-            <a href="LoginSteam.html" target="_blank"
-              ><button type="button" class="btn btn-primary">
+            <template v-cloak>
+            <a href="LoginSteam.html" v-if="!IsLoginSuccess" target="_blank"
+              ><button type="button" class="btn btn-primary login-failed">
                 <img src="./img/steam.svg" alt="" /> Увіти за допомогою STEAM
               </button></a
             >
+              <div v-else-if='IsLoginSuccess && !isMdWidth' class="header__login-success">
+                <p class="header__balance">Баланс {{balance}}₴</p>
+                  <div class="ellips-icon">
+                    {{ savedLogin[0] }}
+                  </div>
+              </div>
+            </template>
           </nav>
         </div>
       </nav>
+      <template v-cloak>
+        <div v-if='isMdWidth && IsLoginSuccess' class="header__login-success header__account_fixed ">
+          <p class="header__balance">Баланс {{balance}}₴</p>
+            <div class="ellips-icon" >
+              {{ savedLogin[0] }}
+            </div>
+        </div>
+      </template>
     </header>
+    <div class="show-popap-account" v-if="IsLoginSuccess" @click="popapInfoAccountActive = !popapInfoAccountActive"            title="Відобразити/скрити інформацію про обліковий запис">
+       <img draggable="false" src="./img/openPopap.svg" alt="">
+    </div>
     <main>
       <div
       v-if="!casesLoad"
@@ -171,6 +190,21 @@
             <p>Ціна: {{ popapInfoSkin.price}}₴</p>
           </div>
         </div>
+      </div>
+    </transition>
+    <transition name="fade">
+      <div class="popap-info-account " :class="{'popap-info-account-show': popapInfoAccountActive  }">
+        <div class="popap-info__wrapper">
+          <span>CSGO<span style="color:#c00">SHOP</span></span>
+          Ви увійшли до свого акаунту як<br>
+          {{ savedLogin }}<br>
+          <p class="popap-info-data">Час входу до аккаунту:  {{loginTime}}</p>
+        </div>
+        <ul class="popap-info__list">
+          <li>Поповнити баланс</li>
+          <li>Інвентар виводу</li>
+          <li @click="singOut()">Вийти з акаунту</li>
+        </ul>
       </div>
     </transition>
   </div>

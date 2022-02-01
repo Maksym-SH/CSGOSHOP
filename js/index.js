@@ -8,7 +8,6 @@ new Vue({
     popularAccess: false,
     preloader: true,
     IsLoginSuccess: false,
-    errorLoadJson: false,
     casesLoad: false,
     caseItem: {},
     caseSkins: [],
@@ -21,6 +20,11 @@ new Vue({
     wrongLogin: false,
     checkRobotText: '',
     robotValueComparison: false,
+    savedLogin: '',
+    balance: 0,
+    isMdWidth: false,
+    popapInfoAccountActive: false,
+    loginTime: '',
   },
   methods: {
     shopPopapSkin(index, str) {
@@ -50,9 +54,26 @@ new Vue({
         this.wrongLogin = true;
       }
     },
+    singOut() {
+      localStorage.clear();
+      this.IsLoginSuccess = false;
+      this.savedLogin = '';
+      this.popapInfoAccountActive = false;
+    },
     comparisonValues() {
       if (this.checkRobotText === this.valueCheckRobot) {
         localStorage.login = this.login;
+        localStorage.IsLoginSuccess = this.IsLoginSuccess = true;
+        this.savedLogin = this.login;
+        this.login = '';
+        this.password = '';
+        let data = new Date();
+        this.loginTime = `${
+          data.getHours() < 9 ? '0' + data.getHours() : data.getHours()
+        }:${
+          data.getMinutes() < 9 ? '0' + data.getMinutes() : data.getMinutes()
+        }`;
+        localStorage.loginTime = this.loginTime;
       } else {
         this.checkForRobot();
         this.robotValueComparison = true;
@@ -93,6 +114,21 @@ new Vue({
       this.caseItem = JSON.parse(sessionStorage.caseItem);
       this.caseSkins = JSON.parse(sessionStorage.caseSkins);
     }
+    if (localStorage.login && localStorage.loginTime) {
+      this.savedLogin = localStorage.login;
+      this.loginTime = localStorage.loginTime;
+    }
+    if (localStorage.IsLoginSuccess) {
+      this.IsLoginSuccess = true;
+    }
+    if (window.innerWidth <= 992) {
+      this.isMdWidth = true;
+    }
+    window.onresize = () => {
+      window.innerWidth <= 992
+        ? (this.isMdWidth = true)
+        : (this.isMdWidth = false);
+    };
     try {
       fetch('http://localhost:3000/popular')
         .then((data) => data.json())

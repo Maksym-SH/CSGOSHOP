@@ -402,6 +402,9 @@ a {
     transform: translate(-50%, -50%);
     background-color: #333140;
     opacity: 1;
+    @media (max-width: 750px) {
+      top: 60%;
+    }
     padding: 10px;
     .close__popap {
       display: block;
@@ -913,6 +916,7 @@ a {
   background-color: #1f2428;
 }
 .login-container {
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -977,6 +981,11 @@ a {
   position: absolute;
   bottom: -55px;
   color: #c00;
+  @media (max-width: 600px) {
+    position: relative;
+    display: block;
+    margin: -30px auto 50px auto;
+  }
 }
 .numeric-table {
   font-size: 30px;
@@ -1007,4 +1016,146 @@ a {
   position: absolute;
   bottom: 10px;
   color: #c00;
+}
+.login-failed {
+  @media (max-width: 992px) {
+    margin: 10px;
+  }
+}
+.header__login-success {
+  width: 258px;
+  display: flex;
+  align-items: center;
+  .ellips-icon {
+    margin-left: auto;
+    @media (max-width: 992px) {
+      margin-left: 10px;
+    }
+    width: 40px;
+    height: 40px;
+    padding-top: 0px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #f4ca16;
+    color: #000;
+  }
+}
+.button__login-steam {
+  @media (max-width: 992px) {
+    margin-left: 10px;
+  }
+}
+.header__balance {
+  margin: 0px;
+  margin-left: auto;
+  @media (max-width: 992px) {
+    margin-left: 10px;
+    order: 2;
+  }
+}
+.popap-info-account {
+  position: fixed;
+  transition: 0.7s ease;
+  padding-top: 20px;
+  top: 160px;
+  background-color: #2e3336;
+  right: -400px;
+  border-radius: 0 0 0 10px;
+  width: 400px;
+  text-align: center;
+  @media (max-width: 992px) {
+    border-radius: 10px 0px 0px 10px;
+  }
+  @media (max-width: 500px) {
+    width: 80%;
+  }
+}
+.show-popap-account {
+  position: fixed;
+  top: 97px;
+  width: 50px;
+  height: 40px;
+  right: 10px;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  transition: all 0.5s ease;
+  z-index: 20;
+  cursor: pointer;
+  img {
+    transform: rotate(90deg);
+    width: 25px;
+    height: 25px;
+  }
+  &:hover {
+    background-color: #36363c;
+  }
+  @media (max-width: 992px) {
+    right: 0;
+    top: 115px;
+    height: 30px;
+    border-radius: 10px 0px 0px 10px;
+  }
+}
+.popap-info-account-show {
+  right: 0;
+}
+.popap-info__wrapper {
+  font-size: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #1f2428;
+  padding: 30px 5px 50px 5px;
+  position: relative;
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+  .popap-info-data {
+    font-size: 13px;
+    position: absolute;
+    bottom: -5px;
+    left: 10px;
+  }
+  > span {
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    user-select: none;
+  }
+}
+.popap-info__list {
+  list-style: none;
+  font-size: 14px;
+  margin-top: 40px;
+  li {
+    width: 100%;
+    margin-left: -16px;
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: #536872;
+      color: #000;
+    }
+  }
+}
+.success-container {
+  padding: 150px 0px 15px 0px;
+}
+.button-back-main {
+  transition: all 0.5s ease;
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+  &:hover {
+    background-color: #329359;
+  }
+}
+.header__account_fixed {
+  position: fixed;
+  top: 110px;
+  right: 0px;
+  width: 180px;
+  margin-right: 7%;
 }
