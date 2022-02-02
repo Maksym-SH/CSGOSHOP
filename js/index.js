@@ -69,9 +69,9 @@ new Vue({
         this.password = '';
         let data = new Date();
         this.loginTime = `${
-          data.getHours() < 9 ? '0' + data.getHours() : data.getHours()
+          data.getHours() <= 9 ? '0' + data.getHours() : data.getHours()
         }:${
-          data.getMinutes() < 9 ? '0' + data.getMinutes() : data.getMinutes()
+          data.getMinutes() <= 9 ? '0' + data.getMinutes() : data.getMinutes()
         }`;
         localStorage.loginTime = this.loginTime;
       } else {
