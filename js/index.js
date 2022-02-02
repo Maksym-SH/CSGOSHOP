@@ -25,6 +25,7 @@ new Vue({
     isMdWidth: false,
     popapInfoAccountActive: false,
     loginTime: '',
+    needLogin: null,
   },
   methods: {
     shopPopapSkin(index, str) {
@@ -82,6 +83,13 @@ new Vue({
     AllSell() {},
     Withdraw() {},
     Delete() {},
+    checkLogin() {
+      if (this.IsLoginSuccess === false) {
+        this.needLogin = true;
+      } else {
+        this.needLogin = false;
+      }
+    },
     showCase(index) {
       this.caseItem = [];
       this.caseItem = this.cases[index];
@@ -110,6 +118,7 @@ new Vue({
     },
   },
   mounted() {
+    this.checkLogin('inventory');
     if (sessionStorage.caseSkins && sessionStorage.caseItem) {
       this.caseItem = JSON.parse(sessionStorage.caseItem);
       this.caseSkins = JSON.parse(sessionStorage.caseSkins);
@@ -120,6 +129,7 @@ new Vue({
     }
     if (localStorage.IsLoginSuccess) {
       this.IsLoginSuccess = true;
+      this.needLogin = false;
     }
     if (window.innerWidth <= 992) {
       this.isMdWidth = true;

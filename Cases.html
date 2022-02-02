@@ -121,7 +121,7 @@
                         <img :src="caseItem.img" alt="" class="img-case-item">
                         <h5 align="center">{{ caseItem.name}}</h5>
                         <p align="center">{{+caseItem.price}}₴</p>
-                        <button type="button" class="btn btn-success">Відкрити</button>
+                        <button type="button" class="btn btn-success" @click='checkLogin()'>Відкрити</button>
                       </div>
                     </transition>
                   </div>
@@ -207,6 +207,24 @@
         </ul>
       </div>
     </transition>
+    <template v-cloak>
+      <transition name="fade">
+        <div class="popap-skins-info" v-if="needLogin">
+          <div class="popap-skins-window py-3" >
+            <img
+            src="./img/close.svg"
+            alt=""
+            class="close__popap"
+            @click="needLogin = !needLogin"
+          />
+            <h3 align="center">Увага</h3>
+            <hr>
+            <p>Для доступу до вашого інвентарю та відкриттю кейсів вам потрібно увійти до свого облікового запису, щоб увійти натисніть кнопку нижче</p>
+            <a href="LoginSteam.html"><button class="btn btn-primary"><img src="./img/steam.svg" alt=""> Увійти за допомогою Steam</button></a>
+          </div>
+        </div>
+      </transition>
+    </template>
   </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="./js/index.js"></script>
