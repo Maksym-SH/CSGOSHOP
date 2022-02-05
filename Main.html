@@ -235,47 +235,49 @@
             </div>
           </div>
         </transition>
-      </template>
-      <transition name="fade">
-        <div
-          class="popap-info-account"
-          :class="{'popap-info-account-show': popapInfoAccountActive  }"
-        >
-          <div class="popap-info__wrapper">
-            <span>CSGO<span style="color: #c00">SHOP</span></span>
-            Ви увійшли до свого акаунту як<br />
-            {{ savedLogin }}<br />
-            <p class="popap-info-data">Час входу до аккаунту: {{loginTime}}</p>
+        <transition name="fade">
+          <div
+            class="popap-info-account"
+            :class="{'popap-info-account-show': popapInfoAccountActive  }"
+          >
+            <div class="popap-info__wrapper">
+              <span>CSGO<span style="color: #c00">SHOP</span></span>
+              Ви увійшли до свого акаунту як<br />
+              {{ savedLogin }}<br />
+              <p class="popap-info-data">
+                Час входу до аккаунту: {{loginTime}}
+              </p>
+            </div>
+            <ul class="popap-info__list">
+              <li @click="replenishmentActive = !replenishmentActive">
+                Поповнити баланс
+              </li>
+              <li>Інвентар виводу</li>
+              <li @click="singOut()">Вийти з акаунту</li>
+            </ul>
           </div>
-          <ul class="popap-info__list">
-            <li @click="replenishmentActive = !replenishmentActive">
-              Поповнити баланс
-            </li>
-            <li>Інвентар виводу</li>
-            <li @click="singOut()">Вийти з акаунту</li>
-          </ul>
-        </div>
-      </transition>
-      <transition name="fade">
-        <div class="popap-skins-info" v-if="replenishmentActive">
-          <div class="replenishment-popap">
-            <img
-              src="./img/close.svg"
-              alt=""
-              @click="replenishmentActive = !replenishmentActive"
-            />
-            <h5 align="center">Виберіть спосіб поповнення рахунку</h5>
-            <div class="replenishment-popap__wrapper">
-              <div class="replenishment-popap-block">
-                <img draggable="false" src="./img/visa.svg" alt="" />
-              </div>
-              <div class="replenishment-popap-block">
-                <img draggable="false" src="./img/mastercard.svg" alt="" />
+        </transition>
+        <transition name="fade">
+          <div class="popap-skins-info" v-if="replenishmentActive">
+            <div class="replenishment-popap">
+              <img
+                src="./img/close.svg"
+                alt=""
+                @click="replenishmentActive = !replenishmentActive"
+              />
+              <h5 align="center">Виберіть спосіб поповнення рахунку</h5>
+              <div class="replenishment-popap__wrapper">
+                <div class="replenishment-popap-block">
+                  <img draggable="false" src="./img/visa.svg" alt="" />
+                </div>
+                <div class="replenishment-popap-block">
+                  <img draggable="false" src="./img/mastercard.svg" alt="" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </transition>
+        </transition>
+      </template>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="./js/index.js"></script>

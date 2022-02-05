@@ -93,53 +93,55 @@
           <div class="container-lg">
             <div class="login-container" v-if="!IsLoginSuccess">
               <div class="block-login position-relative">
-                <form action="#" class="inputs-login">
-                  <template v-cloak>
+                <template v-cloak>
+                  <form action="#" class="inputs-login">
                     <label for="login">Ім'я акаунта Steam</label>
                     <input type="text" name="login" v-model="login" />
                     <label for="password">Пароль</label>
-                  </template>
-                  <div class="block-password">
-                    <input
-                      type="password"
-                      name="password"
-                      v-model="password"
-                      ref="input"
-                      maxlength="26"
-                    />
-                    <template v-cloak>
-                      <transition name="fade">
-                        <img
-                          src="./img/eye.svg"
-                          alt=""
-                          draggable="false"
-                          class="eye-input"
-                          v-if="password"
-                          @mousedown="showPassword()"
-                          @mouseup="hidePassword()"
-                        />
-                      </transition>
-                    </template>
-                  </div>
-                  <button
-                    type="button"
-                    class="btn btn-primary my-3"
-                    @click="checkForRobot()"
-                  >
-                    Увійти
-                  </button>
-                </form>
-                <p class="wrong-login" v-if="wrongLogin">
-                  Невірний логін або пароль, повторіть спробу
-                </p>
+                    <div class="block-password">
+                      <input
+                        type="password"
+                        name="password"
+                        v-model="password"
+                        ref="input"
+                        maxlength="26"
+                      />
+                      <template v-cloak>
+                        <transition name="fade">
+                          <img
+                            src="./img/eye.svg"
+                            alt=""
+                            draggable="false"
+                            class="eye-input"
+                            v-if="password"
+                            @mousedown="showPassword()"
+                            @mouseup="hidePassword()"
+                          />
+                        </transition>
+                      </template>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-primary my-3"
+                      @click="checkForRobot()"
+                    >
+                      Увійти
+                    </button>
+                  </form>
+                  <p class="wrong-login" v-if="wrongLogin">
+                    Невірний логін або пароль, повторіть спробу
+                  </p>
+                </template>
               </div>
-              <div class="block-info" id="d1">
-                <p>
-                  Увійдіть до Steam акаунту, щоб мати можливість користуватися
-                  функціями магазину
-                </p>
-                <img src="./img/steam-entrance.png" alt="" />
-              </div>
+              <template v-cloak>
+                <div class="block-info">
+                  <p>
+                    Увійдіть до Steam акаунту, щоб мати можливість користуватися
+                    функціями магазину
+                  </p>
+                  <img src="./img/steam-entrance.png" alt="" />
+                </div>
+              </template>
             </div>
             <div class="success-container" v-else align="center">
               <template v-cloak>
@@ -218,47 +220,49 @@
             </div>
           </div>
         </transition>
-      </template>
-      <transition name="fade">
-        <div
-          class="popap-info-account"
-          :class="{'popap-info-account-show': popapInfoAccountActive  }"
-        >
-          <div class="popap-info__wrapper">
-            <span>CSGO<span style="color: #c00">SHOP</span></span>
-            Ви увійшли до свого акаунту як<br />
-            {{ savedLogin }}<br />
-            <p class="popap-info-data">Час входу до аккаунту: {{loginTime}}</p>
+        <transition name="fade">
+          <div
+            class="popap-info-account"
+            :class="{'popap-info-account-show': popapInfoAccountActive  }"
+          >
+            <div class="popap-info__wrapper">
+              <span>CSGO<span style="color: #c00">SHOP</span></span>
+              Ви увійшли до свого акаунту як<br />
+              {{ savedLogin }}<br />
+              <p class="popap-info-data">
+                Час входу до аккаунту: {{loginTime}}
+              </p>
+            </div>
+            <ul class="popap-info__list">
+              <li @click="replenishmentActive = !replenishmentActive">
+                Поповнити баланс
+              </li>
+              <li>Інвентар виводу</li>
+              <li @click="singOut()">Вийти з акаунту</li>
+            </ul>
           </div>
-          <ul class="popap-info__list">
-            <li @click="replenishmentActive = !replenishmentActive">
-              Поповнити баланс
-            </li>
-            <li>Інвентар виводу</li>
-            <li @click="singOut()">Вийти з акаунту</li>
-          </ul>
-        </div>
-      </transition>
-      <transition name="fade">
-        <div class="popap-skins-info" v-if="replenishmentActive">
-          <div class="replenishment-popap">
-            <img
-              src="./img/close.svg"
-              alt=""
-              @click="replenishmentActive = !replenishmentActive"
-            />
-            <h5 align="center">Виберіть спосіб поповнення рахунку</h5>
-            <div class="replenishment-popap__wrapper">
-              <div class="replenishment-popap-block">
-                <img draggable="false" src="./img/visa.svg" alt="" />
-              </div>
-              <div class="replenishment-popap-block">
-                <img draggable="false" src="./img/mastercard.svg" alt="" />
+        </transition>
+        <transition name="fade">
+          <div class="popap-skins-info" v-if="replenishmentActive">
+            <div class="replenishment-popap">
+              <img
+                src="./img/close.svg"
+                alt=""
+                @click="replenishmentActive = !replenishmentActive"
+              />
+              <h5 align="center">Виберіть спосіб поповнення рахунку</h5>
+              <div class="replenishment-popap__wrapper">
+                <div class="replenishment-popap-block">
+                  <img draggable="false" src="./img/visa.svg" alt="" />
+                </div>
+                <div class="replenishment-popap-block">
+                  <img draggable="false" src="./img/mastercard.svg" alt="" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </transition>
+        </transition>
+      </template>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="./js/index.js"></script>
