@@ -16,7 +16,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-  <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Ваш інвентар</title>
   </head>
   <body>
@@ -55,61 +55,88 @@
                   <a class="nav-link" href="Trade.html">Обмін</a>
                 </li>
               </ul>
-              </ul>
               <template v-cloak>
                 <a href="LoginSteam.html" v-if="!IsLoginSuccess"
                   ><button type="button" class="btn btn-primary login-failed">
-                    <img src="./img/steam.svg" alt="" /> Увіти за допомогою STEAM
+                    <img src="./img/steam.svg" alt="" /> Увіти за допомогою
+                    STEAM
                   </button>
                 </a>
-                  <div v-else-if='IsLoginSuccess && !isMdWidth' class="header__login-success">
-                    <p class="header__balance">Баланс {{balance}}₴</p>
-                      <div class="ellips-icon">
-                        {{ savedLogin[0] }}
-                      </div>
-                  </div>
-               </template>
+                <div
+                  v-else-if="IsLoginSuccess && !isMdWidth"
+                  class="header__login-success"
+                >
+                  <p class="header__balance">Баланс {{balance}}₴</p>
+                  <div class="ellips-icon">{{ savedLogin[0] }}</div>
+                </div>
+              </template>
             </nav>
           </div>
         </nav>
-        <template v-cloak>
-          <div v-if='isMdWidth && IsLoginSuccess' class="header__login-success header__account_fixed ">
-            <p class="header__balance">Баланс {{balance}}₴</p>
-              <div class="ellips-icon" >
-                {{ savedLogin[0] }}
-              </div>
-          </div>
-        </template>
       </header>
-      <div class="show-popap-account" v-if="IsLoginSuccess" @click="popapInfoAccountActive = !popapInfoAccountActive"        title="Відобразити/скрити інформацію про обліковий запис">
-        <img draggable="false" src="./img/openPopap.svg" alt="">
-     </div>
+      <template v-cloak>
+        <div
+          v-if="isMdWidth && IsLoginSuccess"
+          class="header__login-success header__account_fixed"
+        >
+          <p class="header__balance">Баланс {{balance}}₴</p>
+          <div class="ellips-icon">{{ savedLogin[0] }}</div>
+        </div>
+      </template>
+      <div
+        class="show-popap-account"
+        v-if="IsLoginSuccess"
+        @click="popapInfoAccountActive = !popapInfoAccountActive"
+        title="Відобразити/скрити інформацію про обліковий запис"
+      >
+        <img draggable="false" src="./img/openPopap.svg" alt="" />
+      </div>
       <main>
         <section class="inventory-section">
           <div class="container-lg">
-            <h1 class="main-title">Ваш особистий<br> інвентар</h1>
+            <h1 class="main-title">
+              Ваш особистий<br />
+              інвентар
+            </h1>
             <div class="personal-invent">
-              <h3><img src="./img/cs-person.svg" alt="">Counter-Strike: Global Offensive</h3>
-              <hr>
+              <h3>
+                <img src="./img/cs-person.svg" alt="" />Counter-Strike: Global
+                Offensive
+              </h3>
+              <hr />
               <div class="personal-invent-wrapper">
-                  <div class="personal-invent-collection">
-                    <div class="personal-invent-item" @click=""><img src="./img/ak.png" alt=""></div>
+                <div class="personal-invent-collection">
+                  <div class="personal-invent-item" @click="">
+                    <img src="./img/ak.png" alt="" />
                   </div>
-                  <div class="personal-invent-information">
-                  </div>
+                </div>
+                <div class="personal-invent-information"></div>
               </div>
             </div>
             <div class="button-func">
-              <button type="button" class=" btn btn-primary" @click="AllSell()">Продати усе</button>
-              <button type="button" class=" btn btn-success" @click="Withdraw()">Вивести до аккаунту</button>
-              <button type="button" class=" btn btn-danger" @click="Delete()">Видалити</button>
+              <button type="button" class="btn btn-primary" @click="AllSell()">
+                Продати усе
+              </button>
+              <button type="button" class="btn btn-success" @click="Withdraw()">
+                Вивести до аккаунту
+              </button>
+              <button type="button" class="btn btn-danger" @click="Delete()">
+                Видалити
+              </button>
             </div>
             <div class="more-skins">
               <h3>Хочеш більше скинів?</h3>
-              <p>Переходьте до сторінки СSGO кейс <a href="Cases.html">натиснувши тут</a></p>
+              <p>
+                Переходьте до сторінки СSGO кейс
+                <a href="Cases.html">натиснувши тут</a>
+              </p>
             </div>
-            <div class="alert alert-danger d-flex justify-content-between align-items-center" role="alert">
-              Ви дійсно хочете продати всі скіни? <button class="btn btn-primary">Так</button>
+            <div
+              class="alert alert-danger d-flex justify-content-between align-items-center"
+              role="alert"
+            >
+              Ви дійсно хочете продати всі скіни?
+              <button class="btn btn-primary">Так</button>
             </div>
           </div>
         </section>
@@ -146,12 +173,15 @@
         </div>
       </footer>
       <transition name="fade">
-        <div class="popap-info-account " :class="{'popap-info-account-show': popapInfoAccountActive  }">
+        <div
+          class="popap-info-account"
+          :class="{'popap-info-account-show': popapInfoAccountActive  }"
+        >
           <div class="popap-info__wrapper">
-            <span>CSGO<span style="color:#c00">SHOP</span></span>
-            Ви увійшли до свого акаунту як<br>
-            {{ savedLogin }}<br>
-            <p class="popap-info-data">Час входу до аккаунту:  {{loginTime}}</p>
+            <span>CSGO<span style="color: #c00">SHOP</span></span>
+            Ви увійшли до свого акаунту як<br />
+            {{ savedLogin }}<br />
+            <p class="popap-info-data">Час входу до аккаунту: {{loginTime}}</p>
           </div>
           <ul class="popap-info__list">
             <li>Поповнити баланс</li>
@@ -163,17 +193,25 @@
       <template v-cloak>
         <transition name="fade">
           <div class="popap-skins-info" v-if="needLogin">
-            <div class="popap-skins-window py-3" >
+            <div class="popap-skins-window py-3">
               <h3 align="center">Увага</h3>
-              <hr>
-              <p>Для доступу до вашого інвентарю та відкриттю кейсів вам потрібно увійти до свого облікового запису, щоб увійти натисніть кнопку нижче</p>
-              <a href="LoginSteam.html"><button class="btn btn-primary"><img src="./img/steam.svg" alt=""> Увійти за допомогою Steam</button></a>
+              <hr />
+              <p>
+                Для доступу до вашого інвентарю та відкриттю кейсів вам потрібно
+                увійти до свого облікового запису, щоб увійти натисніть кнопку
+                нижче
+              </p>
+              <a href="LoginSteam.html"
+                ><button class="btn btn-primary">
+                  <img src="./img/steam.svg" alt="" /> Увійти за допомогою Steam
+                </button></a
+              >
             </div>
           </div>
         </transition>
       </template>
     </div>
-      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-      <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

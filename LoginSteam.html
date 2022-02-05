@@ -16,7 +16,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Увійти за допомогою Steam</title>
   </head>
   <body>
@@ -55,31 +55,39 @@
                   <a class="nav-link" href="Trade.html">Обмін</a>
                 </li>
               </ul>
-              </ul>
               <template v-cloak>
-              <h6 v-if="!IsLoginSuccess" class="login-failed">Вхід до акаунту не виконаний</h6>
-              <div v-else-if='IsLoginSuccess && !isMdWidth' class="header__login-success">
-                <p class="header__balance">Баланс {{balance}}₴</p>
-                  <div class="ellips-icon">
-                    {{ savedLogin[0] }}
-                  </div>
-              </div>
-            </template>
+                <h6 v-if="!IsLoginSuccess" class="login-failed">
+                  Вхід до акаунту не виконаний
+                </h6>
+                <div
+                  v-else-if="IsLoginSuccess && !isMdWidth"
+                  class="header__login-success"
+                >
+                  <p class="header__balance">Баланс {{balance}}₴</p>
+                  <div class="ellips-icon">{{ savedLogin[0] }}</div>
+                </div>
+              </template>
             </nav>
           </div>
         </nav>
-        <template v-cloak>
-          <div v-if='isMdWidth && IsLoginSuccess' class="header__login-success header__account_fixed ">
-            <p class="header__balance">Баланс {{balance}}₴</p>
-              <div class="ellips-icon" >
-                {{ savedLogin[0] }}
-              </div>
-          </div>
-        </template>
       </header>
-      <div class="show-popap-account" v-if="IsLoginSuccess" @click="popapInfoAccountActive = !popapInfoAccountActive" title="Відобразити/скрити інформацію про обліковий запис">
-      <img draggable="false" src="./img/openPopap.svg" alt="">
-    </div>
+      <template v-cloak>
+        <div
+          v-if="isMdWidth && IsLoginSuccess"
+          class="header__login-success header__account_fixed"
+        >
+          <p class="header__balance">Баланс {{balance}}₴</p>
+          <div class="ellips-icon">{{ savedLogin[0] }}</div>
+        </div>
+      </template>
+      <div
+        class="show-popap-account"
+        v-if="IsLoginSuccess"
+        @click="popapInfoAccountActive = !popapInfoAccountActive"
+        title="Відобразити/скрити інформацію про обліковий запис"
+      >
+        <img draggable="false" src="./img/openPopap.svg" alt="" />
+      </div>
       <main>
         <section class="login-section">
           <div class="container-lg">
@@ -87,35 +95,63 @@
               <div class="block-login position-relative">
                 <form action="#" class="inputs-login">
                   <template v-cloak>
-                      <label for="login">Ім'я акаунта Steam</label>
-                      <input type="text" name='login' v-model="login">
-                      <label for="password">Пароль</label>
+                    <label for="login">Ім'я акаунта Steam</label>
+                    <input type="text" name="login" v-model="login" />
+                    <label for="password">Пароль</label>
                   </template>
                   <div class="block-password">
-                    <input type="password" name="password" v-model="password" ref="input" maxlength="26">
+                    <input
+                      type="password"
+                      name="password"
+                      v-model="password"
+                      ref="input"
+                      maxlength="26"
+                    />
                     <template v-cloak>
-                      <transition name='fade'>
-                        <img src="./img/eye.svg" alt="" draggable="false" class='eye-input' v-if="password"  @mousedown="showPassword()"
-                        @mouseup="hidePassword()">
+                      <transition name="fade">
+                        <img
+                          src="./img/eye.svg"
+                          alt=""
+                          draggable="false"
+                          class="eye-input"
+                          v-if="password"
+                          @mousedown="showPassword()"
+                          @mouseup="hidePassword()"
+                        />
                       </transition>
                     </template>
                   </div>
-                  <button type="button" class="btn btn-primary my-3" @click="checkForRobot()">Увійти</button>
+                  <button
+                    type="button"
+                    class="btn btn-primary my-3"
+                    @click="checkForRobot()"
+                  >
+                    Увійти
+                  </button>
                 </form>
-                <p class="wrong-login" v-if="wrongLogin">Невірний логін або пароль, повторіть спробу</p>
+                <p class="wrong-login" v-if="wrongLogin">
+                  Невірний логін або пароль, повторіть спробу
+                </p>
               </div>
-              <div class="block-info" id='d1'>
-              <p>Увійдіть до Steam акаунту, щоб мати можливість користуватися функціями магазину</p>
-                <img src="./img/steam-entrance.png" alt="">
+              <div class="block-info" id="d1">
+                <p>
+                  Увійдіть до Steam акаунту, щоб мати можливість користуватися
+                  функціями магазину
+                </p>
+                <img src="./img/steam-entrance.png" alt="" />
               </div>
-           </div>
-           <div class="success-container" v-else align="center">
+            </div>
+            <div class="success-container" v-else align="center">
               <template v-cloak>
                 <h1>Ви успішно увійшли до свого акаунту</h1>
-                <a href="Main.html"><button class="btn btn-success mt-5 button-back-main">Можете повернутися на головну сторінку натиснувши тут</button></a>
-             </template>
-           </div>
-        </div>
+                <a href="Main.html"
+                  ><button class="btn btn-success mt-5 button-back-main">
+                    Можете повернутися на головну сторінку натиснувши тут
+                  </button></a
+                >
+              </template>
+            </div>
+          </div>
         </section>
       </main>
       <footer class="footer">
@@ -151,7 +187,10 @@
       </footer>
       <template v-cloak>
         <transition name="fade">
-          <div class="popap-skins-info position-relative" v-if="checkRobot && !IsLoginSuccess">
+          <div
+            class="popap-skins-info position-relative"
+            v-if="checkRobot && !IsLoginSuccess"
+          >
             <div class="popap-skins-window">
               <h6 align="center">Підтвердіть, що ви не робот</h6>
               <div class="popap__img">
@@ -160,9 +199,20 @@
               <div class="popap__desc">
                 <div class="input-value">
                   <label for="enter-data">Введіть код який показано вище</label>
-                  <input type="text" name='enter-data' v-model="valueCheckRobot">
-                  <button class="btn btn-success p-1 mt-3" @click='comparisonValues()'>Підтвердити</button>
-                  <h6 class="wrong-enter-code" v-if="robotValueComparison">Ви неправильно ввели код</h6>
+                  <input
+                    type="text"
+                    name="enter-data"
+                    v-model="valueCheckRobot"
+                  />
+                  <button
+                    class="btn btn-success p-1 mt-3"
+                    @click="comparisonValues()"
+                  >
+                    Підтвердити
+                  </button>
+                  <h6 class="wrong-enter-code" v-if="robotValueComparison">
+                    Ви неправильно ввели код
+                  </h6>
                 </div>
               </div>
             </div>
@@ -170,12 +220,15 @@
         </transition>
       </template>
       <transition name="fade">
-        <div class="popap-info-account " :class="{'popap-info-account-show': popapInfoAccountActive  }">
+        <div
+          class="popap-info-account"
+          :class="{'popap-info-account-show': popapInfoAccountActive  }"
+        >
           <div class="popap-info__wrapper">
-            <span>CSGO<span style="color:#c00">SHOP</span></span>
-            Ви увійшли до свого акаунту як<br>
-            {{ savedLogin }}<br>
-            <p class="popap-info-data">Час входу до аккаунту:  {{loginTime}}</p>
+            <span>CSGO<span style="color: #c00">SHOP</span></span>
+            Ви увійшли до свого акаунту як<br />
+            {{ savedLogin }}<br />
+            <p class="popap-info-data">Час входу до аккаунту: {{loginTime}}</p>
           </div>
           <ul class="popap-info__list">
             <li>Поповнити баланс</li>

@@ -5,13 +5,13 @@ $media-sm: 480px;
 $media-em: 320px;
 @font-face {
   font-family: monserat;
-  src: url('../font/Montserrat-Black.ttf');
-  src: url('../font/Montserrat-BlackItalic.ttf');
-  src: url('../font/Montserrat-Bold.ttf');
-  src: url('../font/Montserrat-BoldItalic.ttf');
-  src: url('../font/Montserrat-Italic.ttf');
-  src: url('../font/Montserrat-ThinItalic.ttf');
-  src: url('../font/Montserrat-SemiBold.ttf');
+  src: url("../font/Montserrat-Black.ttf");
+  src: url("../font/Montserrat-BlackItalic.ttf");
+  src: url("../font/Montserrat-Bold.ttf");
+  src: url("../font/Montserrat-BoldItalic.ttf");
+  src: url("../font/Montserrat-Italic.ttf");
+  src: url("../font/Montserrat-ThinItalic.ttf");
+  src: url("../font/Montserrat-SemiBold.ttf");
 }
 body {
   margin: 0px;
@@ -114,7 +114,7 @@ a {
 }
 /* section-main */
 .main {
-  background: $dark url('../img/background-main.jpeg') no-repeat;
+  background: $dark url("../img/background-main.jpeg") no-repeat;
   background-size: cover;
 }
 .section-main {
@@ -994,8 +994,8 @@ a {
   text-align: center;
   margin: 20px auto;
   background-color: #a2bcbd;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .input-value {
   display: block;
@@ -1061,12 +1061,9 @@ a {
   top: 160px;
   background-color: #2e3336;
   right: -600px;
-  border-radius: 0 0 0 10px;
+  border-radius: 10px 0px 0px 10px;
   width: 400px;
   text-align: center;
-  @media (max-width: 992px) {
-    border-radius: 10px 0px 0px 10px;
-  }
   @media (max-width: 500px) {
     width: 80%;
   }
@@ -1158,6 +1155,5 @@ a {
   right: 0px;
   width: 180px;
   margin-right: 7%;
-}
-.popap__need-sign {
+  z-index: 1;
 }

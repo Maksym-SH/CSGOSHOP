@@ -73,16 +73,16 @@
             </nav>
           </div>
         </nav>
-        <template v-cloak>
-          <div
-            v-if="isMdWidth && IsLoginSuccess"
-            class="header__login-success header__account_fixed"
-          >
-            <p class="header__balance">Баланс {{balance}}₴</p>
-            <div class="ellips-icon">{{ savedLogin[0] }}</div>
-          </div>
-        </template>
       </header>
+      <template v-cloak>
+        <div
+          v-if="isMdWidth && IsLoginSuccess"
+          class="header__login-success header__account_fixed"
+        >
+          <p class="header__balance">Баланс {{balance}}₴</p>
+          <div class="ellips-icon">{{ savedLogin[0] }}</div>
+        </div>
+      </template>
       <div
         class="show-popap-account"
         v-if="IsLoginSuccess"
