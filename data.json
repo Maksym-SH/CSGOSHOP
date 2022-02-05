@@ -1,11 +1,11 @@
 {
   "popular": [
     {
-      "type": "automatic",
-      "name": "AK-47 | Червона ліная",
-      "image": "https://s-wiki.cs.money/wiki_KWBmFFP_large_preview.png",
-      "condition": "Поношене",
-      "price": "342"
+      "type": "rifle",
+      "name": "AWP | Електричний вулик",
+      "image": "https://cdn.csgo.com//item/AWP+%7C+Electric+Hive+%28Factory+New%29/300.png",
+      "condition": "Трохи поношене",
+      "price": "1134"
     },
     {
       "type": "automatic",
@@ -15,11 +15,11 @@
       "price": "1032"
     },
     {
-      "type": "automatic",
-      "name": "AK-47 | Неонова революція",
-      "image": "https://s-wiki.cs.money/wiki_lPocyxm_large_preview.png",
-      "condition": "Поношене",
-      "price": "787"
+      "type": "rifle",
+      "name": "SSG 08 | Полум'я дракону",
+      "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopamie19f0Ob3Yi5FvISJkJKKkPj6NbLDk1RC68phj9bN_Iv9nGu4qgE7Nnf3LISddw5taAzQ8lm6xOq9gZTpuZ6fyXA3syIltHffnxbkhxEYOLZtm7XAHgXm-xFt/330x192",
+      "condition": "Прямо із заводу",
+      "price": "580"
     },
     {
       "type": "knife",
