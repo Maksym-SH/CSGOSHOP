@@ -1,5 +1,5 @@
 new Vue({
-  el: '#app',
+  el: "#app",
   data: {
     weapon: [],
     info: [],
@@ -13,38 +13,39 @@ new Vue({
     caseSkins: [],
     popapInfoSkin: {},
     popapActive: false,
-    password: '',
-    login: '',
-    valueCheckRobot: '',
+    password: "",
+    login: "",
+    valueCheckRobot: "",
     checkRobot: false,
     wrongLogin: false,
-    checkRobotText: '',
+    checkRobotText: "",
     robotValueComparison: false,
-    savedLogin: '',
+    savedLogin: "",
     balance: 0,
     isMdWidth: false,
     popapInfoAccountActive: false,
-    loginTime: '',
+    loginTime: "",
     needLogin: null,
+    replenishmentActive: false,
   },
   methods: {
     shopPopapSkin(index, str) {
       this.popapInfoSkin = [];
-      if (str == 'main') this.popapInfoSkin = this.popular[index];
-      if (str === 'cases') this.popapInfoSkin = this.caseSkins[index];
+      if (str == "main") this.popapInfoSkin = this.popular[index];
+      if (str === "cases") this.popapInfoSkin = this.caseSkins[index];
       console.log(this.popapInfoSkin);
       this.popapActive = true;
     },
     showPassword() {
-      this.$refs.input.setAttribute('type', 'text');
+      this.$refs.input.setAttribute("type", "text");
     },
     hidePassword() {
-      this.$refs.input.setAttribute('type', 'password');
+      this.$refs.input.setAttribute("type", "password");
     },
     checkForRobot() {
       let randWord =
-        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789';
-      let text = '';
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789";
+      let text = "";
       if (this.login.length >= 5 && this.password.length >= 5) {
         for (let i = 0; i < 6; i++) {
           text += randWord.charAt(Math.floor(Math.random() * randWord.length));
@@ -58,7 +59,7 @@ new Vue({
     singOut() {
       localStorage.clear();
       this.IsLoginSuccess = false;
-      this.savedLogin = '';
+      this.savedLogin = "";
       this.popapInfoAccountActive = false;
     },
     comparisonValues() {
@@ -66,13 +67,13 @@ new Vue({
         localStorage.login = this.login;
         localStorage.IsLoginSuccess = this.IsLoginSuccess = true;
         this.savedLogin = this.login;
-        this.login = '';
-        this.password = '';
+        this.login = "";
+        this.password = "";
         let data = new Date();
         this.loginTime = `${
-          data.getHours() <= 9 ? '0' + data.getHours() : data.getHours()
+          data.getHours() <= 9 ? "0" + data.getHours() : data.getHours()
         }:${
-          data.getMinutes() <= 9 ? '0' + data.getMinutes() : data.getMinutes()
+          data.getMinutes() <= 9 ? "0" + data.getMinutes() : data.getMinutes()
         }`;
         localStorage.loginTime = this.loginTime;
       } else {
@@ -118,7 +119,7 @@ new Vue({
     },
   },
   mounted() {
-    this.checkLogin('inventory');
+    this.checkLogin("inventory");
     if (sessionStorage.caseSkins && sessionStorage.caseItem) {
       this.caseItem = JSON.parse(sessionStorage.caseItem);
       this.caseSkins = JSON.parse(sessionStorage.caseSkins);
@@ -140,20 +141,20 @@ new Vue({
         : (this.isMdWidth = false);
     };
     try {
-      fetch('http://localhost:3000/popular')
+      fetch("http://localhost:3000/popular")
         .then((data) => data.json())
         .then((data) => {
           this.popular = data;
           this.popularAccess = true;
           this.preloader = false;
         });
-      fetch('http://localhost:3000/cases')
+      fetch("http://localhost:3000/cases")
         .then((cases) => cases.json())
         .then((data) => {
           this.cases = data;
           this.casesLoad = true;
         });
-      fetch('http://localhost:3000/weapon')
+      fetch("http://localhost:3000/weapon")
         .then((weapon) => weapon.json())
         .then((weapon) => {
           this.weapon = weapon;

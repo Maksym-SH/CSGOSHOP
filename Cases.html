@@ -229,7 +229,9 @@
             <p class="popap-info-data">Час входу до аккаунту: {{loginTime}}</p>
           </div>
           <ul class="popap-info__list">
-            <li>Поповнити баланс</li>
+            <li @click="replenishmentActive = !replenishmentActive">
+              Поповнити баланс
+            </li>
             <li>Інвентар виводу</li>
             <li @click="singOut()">Вийти з акаунту</li>
           </ul>
@@ -257,6 +259,26 @@
                   <img src="./img/steam.svg" alt="" /> Увійти за допомогою Steam
                 </button></a
               >
+            </div>
+          </div>
+        </transition>
+        <transition name="fade">
+          <div class="popap-skins-info" v-if="replenishmentActive">
+            <div class="replenishment-popap">
+              <img
+                src="./img/close.svg"
+                alt=""
+                @click="replenishmentActive = !replenishmentActive"
+              />
+              <h5 align="center">Виберіть спосіб поповнення рахунку</h5>
+              <div class="replenishment-popap__wrapper">
+                <div class="replenishment-popap-block">
+                  <img draggable="false" src="./img/visa.svg" alt="" />
+                </div>
+                <div class="replenishment-popap-block">
+                  <img draggable="false" src="./img/mastercard.svg" alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </transition>
