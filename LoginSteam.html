@@ -243,7 +243,10 @@
           </div>
         </transition>
         <transition name="fade">
-          <div class="popap-skins-info" v-if="replenishmentActive">
+          <div
+            class="popap-skins-info"
+            v-if="replenishmentActive && !methodPayActive"
+          >
             <div class="replenishment-popap">
               <img
                 src="./img/close.svg"
@@ -252,16 +255,59 @@
               />
               <h5 align="center">Виберіть спосіб поповнення рахунку</h5>
               <div class="replenishment-popap__wrapper">
-                <div class="replenishment-popap-block">
+                <div class="replenishment-popap-block" @click="Payment('visa')">
                   <img draggable="false" src="./img/visa.svg" alt="" />
                 </div>
-                <div class="replenishment-popap-block">
+                <div
+                  class="replenishment-popap-block"
+                  @click="Payment('mastercard')"
+                >
                   <img draggable="false" src="./img/mastercard.svg" alt="" />
                 </div>
               </div>
             </div>
           </div>
         </transition>
+        <template name="fade">
+          <div class="popap-skins-info" v-if="methodPayActive">
+            <div class="replenishment-popap">
+              <img
+                src="./img/close.svg"
+                alt=""
+                @click="methodPayActive = !methodPayActive"
+              />
+              <h5 align="center">
+                Cпосіб поповнення рахунку: {{methodPay.method}}
+              </h5>
+              <form action="#">
+                <div class="inputs">
+                  <div class="inputs__wrapper">
+                    <label for="cardNumber">Номер карти</label>
+                    <input
+                      type="number"
+                      name="cardNumber"
+                      v-model="cardNumber"
+                      maxlength="16"
+                    />
+                    <div class="d-block">
+                      <label for="cardDate">Термін дії</label>
+                      <input type="date" name="cardDate" v-model="cardDate" />
+                      <label for="CVV">CVV код</label>
+                      <input type="number" maxlength="3" name="CVV" />
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit" @click.prevent>
+                  Підтвердити
+                </button>
+              </form>
+              <div class="info-pay">
+                <img :src="methodPay.path" alt="" />
+                <p>Зверніть увагу, що максимальна сума поповнення 40000₴</p>
+              </div>
+            </div>
+          </div>
+        </template>
       </template>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>

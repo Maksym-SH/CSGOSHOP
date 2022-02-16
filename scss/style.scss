@@ -30,6 +30,23 @@ $media-em: 320px;
 ::-webkit-scrollbar {
   width: 7px;
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 body {
   margin: 0px;
   padding: 0px;
@@ -1181,7 +1198,7 @@ a {
   width: 70%;
   padding: 10px;
   min-width: 300px;
-  max-width: 600px;
+  max-width: 700px;
   border-radius: 10px;
   top: 50%;
   left: 50%;
@@ -1219,5 +1236,23 @@ a {
     &:hover {
       background-color: #2b3033;
     }
+  }
+}
+.inputs {
+  margin-top: 30px;
+  input {
+    margin: 10px;
+    &[name="CVV"] {
+      width: 60px;
+    }
+  }
+}
+.info-pay {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  p {
+    max-width: 40%;
+    font-size: 14px;
   }
 }

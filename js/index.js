@@ -27,8 +27,20 @@ new Vue({
     loginTime: "",
     needLogin: null,
     replenishmentActive: false,
+    methodPay: {},
+    methodPayActive: false,
   },
   methods: {
+    Payment(method) {
+      if (method === "visa") {
+        (this.methodPay.method = "Visa"),
+          (this.methodPay.path = "./img/visaImage.png");
+      } else if (method === "mastercard") {
+        this.methodPay.method = "MasterCard";
+        this.methodPay.path = "./img/mastercardImage.png";
+      }
+      this.methodPayActive = true;
+    },
     shopPopapSkin(index, str) {
       this.popapInfoSkin = [];
       if (str == "main") this.popapInfoSkin = this.popular[index];
@@ -119,7 +131,7 @@ new Vue({
     },
   },
   mounted() {
-    this.checkLogin("inventory");
+    this.checkLogin();
     if (sessionStorage.caseSkins && sessionStorage.caseItem) {
       this.caseItem = JSON.parse(sessionStorage.caseItem);
       this.caseSkins = JSON.parse(sessionStorage.caseSkins);
