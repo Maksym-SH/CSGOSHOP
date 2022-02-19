@@ -84,12 +84,13 @@ a {
   opacity: 0;
 }
 /* bootstrap */
-.spinner-grow {
+.spinner-loader {
   position: fixed;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: calc(50% - 25px);
   z-index: +99;
+  width: 4rem;
+  height: 4rem;
 }
 .nav-link {
   text-transform: capitalize;
@@ -820,7 +821,7 @@ a {
 }
 .section-cases {
   width: 100%;
-  padding-top: 95px;
+  padding-top: 125px;
   background-color: #1c1f21;
   animation: gradient 3s infinite alternate;
 }
@@ -843,6 +844,12 @@ a {
     padding: 5px;
     border-radius: 10px;
   }
+  .img-ct {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    max-width: 180px;
+  }
   @media (max-width: 1199px) {
     p {
       right: 15%;
@@ -855,10 +862,10 @@ a {
   }
   @media (max-width: 600px) {
     p {
-      right: 35%;
+      right: 28%;
     }
   }
-  @media (max-width: 378px) {
+  @media (max-width: 420px) {
     p {
       right: 50%;
       top: 10%;
@@ -1074,6 +1081,7 @@ a {
     border-radius: 50%;
     background-color: #f4ca16;
     color: #000;
+    user-select: none;
   }
 }
 .button__login-steam {
@@ -1189,7 +1197,7 @@ a {
   top: 110px;
   right: 0px;
   width: 180px;
-  margin-right: 7%;
+  margin-right: 50px;
   z-index: 1;
 }
 .replenishment-popap {
@@ -1202,8 +1210,10 @@ a {
   border-radius: 10px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.95);
+  transform: translate(-50%, -40%);
+  background: url("../img/background-popap-pay.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
   @media (max-width: 500px) {
     height: auto;
   }
@@ -1238,13 +1248,47 @@ a {
     }
   }
 }
+.close-popap-pay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 .inputs {
   margin-top: 30px;
+  label {
+    position: relative;
+    &::after {
+      content: "↓";
+      position: absolute;
+      right: -15px;
+    }
+  }
+  .select-card-data {
+    border-radius: 6px;
+    padding: 3px;
+    margin: 10px 0px 15px 12px;
+  }
   input {
     margin: 10px;
-    &[name="CVV"] {
-      width: 60px;
+    border-radius: 8px;
+    &[name="cardNumber"] {
+      width: 50px;
     }
+    &[name="CVV"],
+    &[name="sum"] {
+      width: 80px;
+    }
+  }
+  &__wrapper {
+    position: relative;
+  }
+  &__img-terr {
+    position: absolute;
+    height: 250px;
+    width: auto;
+    bottom: 100px;
+    right: 10px;
+    transform: scaleX(-1);
   }
 }
 .info-pay {
@@ -1252,7 +1296,46 @@ a {
   justify-content: space-between;
   align-items: flex-end;
   p {
-    max-width: 40%;
+    width: 160px;
     font-size: 14px;
   }
+}
+.wrong-card-date {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  z-index: +99;
+  padding: 30px 15px 20px;
+  border-radius: 8px;
+  background-color: #2b3033;
+  border: 1px solid #c00;
+  p {
+    font-size: 13px;
+    text-align: center;
+  }
+  button {
+    font-size: 13px;
+    display: block;
+    margin: 0 auto;
+  }
+  .close-wrong-popap {
+    float: right;
+    cursor: pointer;
+    margin: 5px;
+  }
+  &__warning {
+    img {
+      width: 30%;
+      display: block;
+      margin: 0 auto;
+    }
+    user-select: none;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+.correct-card-date {
+  border: 1px solid #4ab96f;
 }

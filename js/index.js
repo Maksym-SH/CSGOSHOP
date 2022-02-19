@@ -1,3 +1,19 @@
+Vue.directive("filter", {
+  bind: function (el, binding) {
+    this.inputHandler = function (e) {
+      var ch = String.fromCharCode(e.which);
+      var re = new RegExp(binding.value);
+      if (!ch.match(re)) {
+        e.preventDefault();
+      }
+    };
+    el.addEventListener("keypress", this.inputHandler);
+  },
+  unbind: function (el) {
+    el.removeEventListener("keypress", this.inputHandler);
+  },
+  inputHandler: null,
+});
 new Vue({
   el: "#app",
   data: {
@@ -15,6 +31,7 @@ new Vue({
     popapActive: false,
     password: "",
     login: "",
+    imgCT: true,
     valueCheckRobot: "",
     checkRobot: false,
     wrongLogin: false,
@@ -29,8 +46,49 @@ new Vue({
     replenishmentActive: false,
     methodPay: {},
     methodPayActive: false,
+    cardDate: {
+      month: "",
+      year: "",
+    },
+    cardNumber: [],
+    paySum: "",
+    cardDateYears: [2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030],
+    cvvCard: "",
+    cardOwner: "",
+    wrongCardData: false,
+    correctCardData: false,
   },
   methods: {
+    checkDataValidation(event) {
+      event.target.value.length <= 2
+        ? (this.cardDate.month = event.target.value)
+        : (this.cardDate.year = event.target.value);
+    },
+    formClear() {
+      (this.cardNumber = []),
+        (this.paySum = ""),
+        (this.cvvCard = ""),
+        (this.cardOwner = ""),
+        (this.cardDate = {});
+    },
+    checkPayValidation() {
+      if (this.fieldsIsCorrect) {
+        for (item of this.cardNumber) {
+          if (item.length === 4) {
+            continue;
+          } else {
+            this.wrongCardData = true;
+            break;
+          }
+        }
+        this.balance += +this.paySum;
+        localStorage.balance = this.balance;
+        this.correctCardData = true;
+        this.formClear();
+      } else {
+        this.wrongCardData = true;
+      }
+    },
     Payment(method) {
       if (method === "visa") {
         (this.methodPay.method = "Visa"),
@@ -69,6 +127,13 @@ new Vue({
       }
     },
     singOut() {
+      /*       let user = {
+        balance:
+      }
+      fetch('http://localhost:3000/users'{
+        method:'POST',
+        body:
+      }) */
       localStorage.clear();
       this.IsLoginSuccess = false;
       this.savedLogin = "";
@@ -96,12 +161,24 @@ new Vue({
     AllSell() {},
     Withdraw() {},
     Delete() {},
-    checkLogin() {
+    openCase(price) {
+      if (this.balance >= price) {
+        this.balance -= price;
+      }
+    },
+    checkLogin(price = 0) {
       if (this.IsLoginSuccess === false) {
         this.needLogin = true;
       } else {
         this.needLogin = false;
       }
+      price !== 0 ? this.openCase(price) : null;
+    },
+    checkWidth() {
+      window.innerWidth <= 992
+        ? (this.isMdWidth = true)
+        : (this.isMdWidth = false);
+      window.innerWidth <= 560 ? (this.imgCT = false) : (this.imgCT = true);
     },
     showCase(index) {
       this.caseItem = [];
@@ -130,7 +207,24 @@ new Vue({
       sessionStorage.caseItem = JSON.stringify(this.caseItem);
     },
   },
+  computed: {
+    compareData() {
+      return new Date().getFullYear() > this.cardDate.year
+        ? new Date().getMonth() > this.cardDate.month
+        : false;
+    },
+    fieldsIsCorrect() {
+      return (
+        this.compareData &&
+        this.paySum !== "" &&
+        this.paySum <= 40000 &&
+        this.cardOwner !== "" &&
+        this.cvvCard !== ""
+      );
+    },
+  },
   mounted() {
+    this.checkWidth();
     this.checkLogin();
     if (sessionStorage.caseSkins && sessionStorage.caseItem) {
       this.caseItem = JSON.parse(sessionStorage.caseItem);
@@ -148,9 +242,7 @@ new Vue({
       this.isMdWidth = true;
     }
     window.onresize = () => {
-      window.innerWidth <= 992
-        ? (this.isMdWidth = true)
-        : (this.isMdWidth = false);
+      this.checkWidth();
     };
     try {
       fetch("http://localhost:3000/popular")

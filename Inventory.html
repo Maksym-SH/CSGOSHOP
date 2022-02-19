@@ -215,7 +215,10 @@
           </div>
         </transition>
         <transition name="fade">
-          <div class="popap-skins-info" v-if="replenishmentActive">
+          <div
+            class="popap-skins-info"
+            v-if="replenishmentActive && !methodPayActive"
+          >
             <div class="replenishment-popap">
               <img
                 src="./img/close.svg"
@@ -224,13 +227,120 @@
               />
               <h5 align="center">Виберіть спосіб поповнення рахунку</h5>
               <div class="replenishment-popap__wrapper">
-                <div class="replenishment-popap-block">
+                <div class="replenishment-popap-block" @click="Payment('visa')">
                   <img draggable="false" src="./img/visa.svg" alt="" />
                 </div>
-                <div class="replenishment-popap-block">
+                <div
+                  class="replenishment-popap-block"
+                  @click="Payment('mastercard')"
+                >
                   <img draggable="false" src="./img/mastercard.svg" alt="" />
                 </div>
               </div>
+            </div>
+          </div>
+        </transition>
+        <transition name="fade">
+          <div class="popap-skins-info" v-if="methodPayActive">
+            <div class="replenishment-popap">
+              <img
+                src="./img/close.svg"
+                alt=""
+                @click="methodPayActive = !methodPayActive"
+                class="close-popap-pay"
+              />
+              <h5 align="center" class="mt-3">
+                Cпосіб поповнення рахунку: {{methodPay.method}}
+              </h5>
+              <form action="#" ref="formDataCard">
+                <div class="inputs">
+                  <div class="inputs__wrapper">
+                    <div class="inputs__wrong-card-date">
+                    </div>
+                    <label for="cardNumber">Номер карти</label><br />
+                    <input
+                      type="text"
+                      name="cardNumber"
+                      required
+                      v-for="(input,index) in 4"
+                      maxlength="4"
+                      v-filter="'[0-9]'"
+                      v-model="cardNumber[index]"
+                    />
+                    <div class="d-block">
+                      <label >Термін дії</label><br />
+                        <select class="select-card-data" ref="selectMonth" @change="checkDataValidation($event)">
+                          <option v-for="month in 12" :value="month">{{month}}</option>
+                        </select>
+                        <select class="select-card-data" @change="checkDataValidation($event)">
+                          <option v-for="years in cardDateYears" :value="years">{{years}}</option>
+                        </select>
+                      </select>
+                      <br />
+                      <label for="cardOwner">Тримач карти</label></br>
+                      <input type="text"  v-filter="'[a-z A-Z]'" v-model="cardOwner"><br/>
+                      <label for="CVV">CVV код</label><br />
+                      <input
+                        type="text"
+                        name="CVV"
+                        maxlength="3"
+                        v-filter="'[0-9]'"
+                        required
+                        v-model="cvvCard"
+                      /><br />
+                      <label for="sum">Сума ₴</label><br />
+                      <input
+                        type="text"
+                        v-model="paySum"
+                        name="sum"
+                        maxlength="5"
+                        v-filter="'[0-9]'"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary mt-5"
+                  type="submit"
+                  @click.prevent="checkPayValidation()"
+                >
+                  Підтвердити
+                </button>
+              </form>
+              <div class="info-pay">
+                <img
+                  src="./img/image-terr-second.png"
+                  alt=""
+                  class="inputs__img-terr"
+                />
+                <img :src="methodPay.path" alt="" />
+                <p>Зверніть увагу, що максимальна сума поповнення 40000₴</p>
+              </div>
+            </div>
+          </div>
+        </transition>
+        <transition name="fade">
+          <div class="popap-skins-info" v-if="wrongCardData">
+            <div class="wrong-card-date">
+                <div class="wrong-card-date__warning">
+                  <img src="./img/warning.svg" alt="" >
+                  <span>Увага!</span>
+                </div>
+                <p>Ви некоректно ввели дані, повторіть спробу.</p>
+                <button class="btn btn-danger" @click="wrongCardData = !wrongCardData">Гаразд</button>
+            </div>
+          </div>
+        </transition>
+        <transition name="fade">
+          <div class="popap-skins-info" v-if="correctCardData">
+            <div class="wrong-card-date correct-card-date">
+                <div class="wrong-card-date__warning">
+                  <img src="./img/check-mark.svg" alt="" >
+                  <span>Успіх!</span>
+                </div>
+                <p>Ви успішно поповнили свій баланс</p>
+                <button class="btn btn-success" @click="correctCardData = !correctCardData">Гаразд</button>
             </div>
           </div>
         </transition>
