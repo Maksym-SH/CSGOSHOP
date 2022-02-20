@@ -1041,6 +1041,18 @@ a {
   color: cornflowerblue;
 }
 
+.wrong-open-case {
+  color: #c00 !important;
+  position: absolute;
+  bottom: -60px;
+  display: block;
+  margin: 0 auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .img-case-item {
   margin: 0 auto;
   width: 100%;

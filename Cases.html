@@ -141,18 +141,23 @@
                     <img :src="caseItem.img" alt="" class="img-case-item" />
                     <h5 align="center">{{ caseItem.name}}</h5>
                     <p align="center">{{+caseItem.price}}₴</p>
-                    <button
+                    <div class="position-relative ">
+                      <button
                       type="button"
                       class="btn btn-success"
                       @click="checkLogin(caseItem.price)"
                     >
                       Відкрити
                     </button>
+                      <transition name="fade">
+                        <p class="wrong-open-case" v-if="insufficientFunds">У вас недостатньо коштів для відкриття кейсу</p>
+                      </transition>
+                    </div>
                   </div>
                 </transition>
               </div>
               <transition name="fade">
-                <div class="container-skins">
+                <div class="container-skins mt-5">
                   <p align="center" v-if="!Object.keys(caseItem).length == 0">
                     Скіни які знаходяться у цьому кейсі
                   </p>

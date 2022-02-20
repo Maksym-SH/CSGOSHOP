@@ -28,6 +28,7 @@ new Vue({
     caseItem: {},
     caseSkins: [],
     popapInfoSkin: {},
+    insufficientFunds: false,
     popapActive: false,
     password: "",
     login: "",
@@ -164,6 +165,11 @@ new Vue({
     openCase(price) {
       if (this.balance >= price) {
         this.balance -= price;
+      } else {
+        this.insufficientFunds = true;
+        setTimeout(() => {
+          this.insufficientFunds = false;
+        }, 2000);
       }
     },
     checkLogin(price = 0) {
