@@ -145,6 +145,7 @@
                       <button
                       type="button"
                       class="btn btn-success"
+                      :disabled="disableOpenCase"
                       @click="checkLogin(caseItem.price)"
                     >
                       Відкрити
@@ -158,6 +159,11 @@
               </div>
               <transition name="fade">
                 <div class="container-skins mt-5">
+                  <div class="w-100 mx-auto">
+                      <div class="roulette-wrapper">
+                        <div id="roulette-container" ></div>
+                      </div>
+                  </div>
                   <p align="center" v-if="!Object.keys(caseItem).length == 0">
                     Скіни які знаходяться у цьому кейсі
                   </p>
@@ -174,7 +180,6 @@
                 </div>
               </transition>
             </template>
-            <div class="result"></div>
           </div>
         </section>
       </main>
@@ -210,6 +215,35 @@
         </div>
       </footer>
       <template v-cloak>
+        <transition name="fade">
+          <div class="popap-skins-info" v-if="Object.keys(winThing).length !== 0">
+            <div class="popap-win-weapon">
+              <h4>Вітаємо</h4>
+              <div class="popap-win-weapon__wrapper">
+                <p>
+                  Ви відкрили кейс "{{caseItem.name}}" та отримали наступний предмет:
+                </p>
+                <div class="popap-win-weapon__skin-info">
+                  <img :src="winThing.image" alt="">
+                  <div class="px-2">
+                    <p>
+                      Назва: {{winThing.name}} | {{winThing.skin}}
+                    </p>
+                    <p>
+                      Стан: {{winThing.condition}}
+                    </p>
+                    <p>
+                      Stattrack: {{winThing.statrack === 'no' ? 'ні' : 'так'}}
+                    </p>
+                    <p>Ціна: {{winThing.price}} ₴</p>
+                  </div>
+                </div>
+              </div>
+              <h6 align="center">Ваш приз був поміщений до вашого інвентарю</h6>
+              <button class="btn btn-success d-block mx-auto my-2" @click="winThing ={}">Гаразд</button>
+            </div>
+          </div>
+        </transition>
         <transition name="fade">
           <div class="popap-skins-info" v-if="popapActive">
             <div class="popap-skins-window">
@@ -363,7 +397,7 @@
                   </div>
                 </div>
                 <button
-                  class="btn btn-primary mt-5"
+                  class="btn btn-primary mt-5 button-agree"
                   type="submit"
                   @click.prevent="checkPayValidation()"
                 >
@@ -372,11 +406,13 @@
               </form>
               <div class="info-pay">
                 <img
+                  v-if="imgPresentInPopap"
                   src="./img/image-terr-second.png"
                   alt=""
                   class="inputs__img-terr"
+
                 />
-                <img :src="methodPay.path" alt="" />
+                <img :src="methodPay.path" alt="" v-if="imgPresentInPopap"/>
                 <p>Зверніть увагу, що максимальна сума поповнення 40000₴</p>
               </div>
             </div>
@@ -409,6 +445,7 @@
       </template>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./js/ev_roulette.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

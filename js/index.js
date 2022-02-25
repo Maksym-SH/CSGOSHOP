@@ -27,6 +27,7 @@ new Vue({
     casesLoad: false,
     caseItem: {},
     caseSkins: [],
+    unSortedCaseSkins: [],
     popapInfoSkin: {},
     insufficientFunds: false,
     popapActive: false,
@@ -58,6 +59,10 @@ new Vue({
     cardOwner: "",
     wrongCardData: false,
     correctCardData: false,
+    isSmallDisplay: false,
+    imgPresentInPopap: true,
+    winThing: {},
+    disableOpenCase: false,
   },
   methods: {
     checkDataValidation(event) {
@@ -104,7 +109,6 @@ new Vue({
       this.popapInfoSkin = [];
       if (str == "main") this.popapInfoSkin = this.popular[index];
       if (str === "cases") this.popapInfoSkin = this.caseSkins[index];
-      console.log(this.popapInfoSkin);
       this.popapActive = true;
     },
     showPassword() {
@@ -164,7 +168,44 @@ new Vue({
     Delete() {},
     openCase(price) {
       if (this.balance >= price) {
+        this.disableOpenCase = true;
+        this.unSortedCaseSkins = Array.from(this.caseSkins);
+        this.unSortedCaseSkins.sort(() => Math.random() - 0.5);
+        let rouletteDiv = document.querySelector("#roulette-container");
+        if (rouletteDiv.childNodes.length) {
+          rouletteDiv.removeChild(rouletteDiv.firstChild);
+        }
         this.balance -= price;
+        let randomProcent = Math.round(Math.random(0, 100) * 100);
+        let resultRandom;
+        if (randomProcent <= 50) {
+          resultRandom = 50;
+        } else if (randomProcent > 50 && randomProcent <= 70) {
+          resultRandom = 20;
+        } else if (randomProcent > 70 && randomProcent <= 87) {
+          resultRandom = 17;
+        } else if (randomProcent > 87 && randomProcent < 97) {
+          resultRandom = 10;
+        } else if (randomProcent > 97) {
+          resultRandom = 3;
+        } else {
+          resultRandom = 50;
+        }
+        this.unSortedCaseSkins.filter((item) => item.chance === resultRandom);
+        setTimeout(() => {
+          this.winThing = this.unSortedCaseSkins[0];
+          this.disableOpenCase = false;
+          if (this.isSmallDisplay) {
+            rouletteDiv.removeChild(rouletteDiv.firstChild);
+          }
+        }, 12500);
+        var elParent = document.getElementById("roulette-container"),
+          roulette = new EvRoulette({
+            weaponPrizeAttrs: this.unSortedCaseSkins[0],
+            weaponActorsAttrs: this.unSortedCaseSkins,
+            elParent: elParent,
+          });
+        roulette.start();
       } else {
         this.insufficientFunds = true;
         setTimeout(() => {
@@ -184,7 +225,16 @@ new Vue({
       window.innerWidth <= 992
         ? (this.isMdWidth = true)
         : (this.isMdWidth = false);
-      window.innerWidth <= 560 ? (this.imgCT = false) : (this.imgCT = true);
+      window.innerHeight <= 800
+        ? (this.imgPresentInPopap = false)
+        : (this.imgPresentInPopap = true);
+      if (window.innerWidth <= 600) {
+        this.imgCT = false;
+        this.isSmallDisplay = true;
+      } else {
+        this.imgCT = true;
+        this.isSmallDisplay = false;
+      }
     },
     showCase(index) {
       this.caseItem = [];
@@ -196,15 +246,15 @@ new Vue({
       });
       this.caseSkins.forEach((item) => {
         Number(item.price <= 100)
-          ? (item.chance = 0.5)
+          ? (item.chance = 50)
           : Number(item.price > 100) && Number(item.price < 200)
-          ? (item.chance = 0.5)
+          ? (item.chance = 50)
           : Number(item.price > 200) && Number(item.price < 1000)
-          ? (item.chance = 0.17)
+          ? (item.chance = 17)
           : Number(item.price > 1000) && Number(item.price < 5000)
-          ? (item.chance = 0.1)
+          ? (item.chance = 10)
           : Number(item.price > 5000)
-          ? (item.chance = 0.03)
+          ? (item.chance = 3)
           : null;
         item.price = +item.price;
       });

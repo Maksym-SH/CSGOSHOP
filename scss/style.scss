@@ -353,6 +353,7 @@ a {
   justify-content: center;
   max-width: 900px;
   margin: 0 auto;
+  overflow: hidden;
   flex-wrap: wrap;
   h2 {
     font-size: 30px;
@@ -928,6 +929,189 @@ a {
     }
   }
 }
+.single-roulett {
+  width: 220px;
+  height: 180px;
+  background-color: #282c36;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+  &__horizontal-line {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    left: -10px;
+    border-radius: 50%;
+    top: 0;
+    background-color: #282c36;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  p {
+    position: absolute;
+    bottom: 0px;
+    font-size: 14px;
+    color: #fff;
+    width: 110%;
+    background-color: rgba(#212126, 0.5);
+    border-radius: 10px;
+    margin: 0;
+    height: 45px;
+    padding: 5px;
+  }
+}
+#roulette-container {
+  width: 100%;
+  height: 180px;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  inset: 0;
+}
+.roulette-wrapper {
+  height: 200px;
+  position: relative;
+  @media (max-width: 600px) {
+    margin-bottom: 20px;
+  }
+}
+#ev-roulette {
+  margin: 0;
+  padding: 0 0 20px 0;
+  font-family: sans-serif;
+  height: 140px;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  box-shadow: inset 0 0 4px #1a1b22;
+  border: 1px solid #232730;
+  border-radius: 5px;
+}
+
+#ev-weapons {
+  height: 140px;
+  white-space: nowrap;
+  position: relative;
+  left: 0;
+}
+.ev-weapon {
+  display: inline-block;
+  width: 200px;
+  height: 140px;
+}
+.ev-weapon-inner {
+  width: 190px;
+  height: 140px;
+  position: relative;
+  background: #282c36;
+  margin-right: 10px;
+  img {
+    width: 120px;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 35px;
+  }
+}
+
+.ev-weapon-rarity {
+  width: 5px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.ev-weapon-rarity.ev-weapon-rarity-milspec {
+  background: #4b69ff;
+}
+.ev-weapon-rarity.ev-weapon-rarity-restricted {
+  background: #8847ff;
+}
+.ev-weapon-rarity.ev-weapon-rarity-classified {
+  background: #d32ce6;
+}
+.ev-weapon-rarity.ev-weapon-rarity-covert {
+  background: #eb4b4b;
+}
+.ev-weapon-rarity.ev-weapon-rarity-rare {
+  background: #ffd700;
+}
+.ev-weapon-rarity.ev-weapon-rarity-uncommon {
+  background: #ddd;
+}
+
+.ev-weapon-text {
+  position: absolute;
+  top: 90px;
+  left: 5px;
+  width: 185px;
+  height: 50px;
+  background: #242531;
+  p {
+    height: 15px;
+    line-height: 15px;
+    color: #e4e4e4;
+    font-size: 12px;
+    margin: 0;
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:first-child {
+      margin-top: 10px;
+    }
+  }
+}
+.popap-win-weapon {
+  background-color: #32353c;
+  border-radius: 10px;
+  width: 50%;
+  color: #fff;
+  max-width: 500px;
+  min-width: 300px;
+  position: fixed;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  h4 {
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #000;
+  }
+  &__wrapper {
+    padding: 20px;
+  }
+  &__skin-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 50%;
+      height: auto;
+    }
+    padding-top: 20px;
+    div {
+      p {
+        font-size: 15px;
+        display: block;
+      }
+    }
+    @media (max-width: 750px) {
+      display: block;
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+      }
+    }
+  }
+}
 .wrong-open-case {
   color: #c00 !important;
   position: absolute;
@@ -1222,8 +1406,16 @@ a {
   background: url("../img/background-popap-pay.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
-  @media (max-width: 500px) {
-    height: auto;
+  @media (max-height: 710px) {
+    top: 54%;
+  }
+  @media (max-height: 800px) {
+    max-height: 500px;
+    .button-agree {
+      position: absolute;
+      bottom: 30px;
+      right: 45px;
+    }
   }
   > img {
     float: right;
@@ -1306,6 +1498,11 @@ a {
   p {
     width: 160px;
     font-size: 14px;
+    @media (max-height: 800px) {
+      position: absolute;
+      bottom: 70px;
+      right: 20px;
+    }
   }
 }
 .wrong-card-date {

@@ -345,7 +345,7 @@
                   </div>
                 </div>
                 <button
-                  class="btn btn-primary mt-5"
+                  class="btn btn-primary mt-5 button-agree"
                   type="submit"
                   @click.prevent="checkPayValidation()"
                 >
@@ -354,11 +354,13 @@
               </form>
               <div class="info-pay">
                 <img
+                  v-if="imgPresentInPopap"
                   src="./img/image-terr-second.png"
                   alt=""
                   class="inputs__img-terr"
+
                 />
-                <img :src="methodPay.path" alt="" />
+                <img :src="methodPay.path" alt="" v-if="imgPresentInPopap"/>
                 <p>Зверніть увагу, що максимальна сума поповнення 40000₴</p>
               </div>
             </div>
