@@ -99,44 +99,70 @@
               інвентар
             </h1>
             <div class="personal-invent">
+              <template v-cloak>
+                <p class="personal-invent__total-cost" v-if="personalInventory.length">Загальна ціна інвентарю {{summarCost}} ₴</p>
+              </template>
               <h3>
                 <img src="./img/cs-person.svg" alt="" />Counter-Strike: Global
                 Offensive
               </h3>
               <hr />
               <div class="personal-invent-wrapper">
-                <div class="personal-invent-collection">
-                  <div class="personal-invent-item" @click="">
-                    <img src="./img/ak.png" alt="" />
+                <template v-cloak>
+                  <div class="personal-invent-collection" v-if="!isInventoryEmpty">
+                    <div class="personal-invent-item" v-for="(item, index) in personalInventory" :key="index" @click="selectInventoryItem(index)">
+                      <img :src="item.image" alt="">
+                      <div class="personal-invent-item__rarity"></div>
+                    </div>
                   </div>
-                </div>
-                <div class="personal-invent-information"></div>
+                  <div v-else>
+                        <div  class="w-100 my-5">
+                          <h2 align="center">На жаль ваш інвентар порожній</h2>
+                      </div>
+                  </div>
+                  <div class="fix-height-inventory" v-if="personalInventory.length">
+                  </div>
+                </template>
+                <template v-cloak>
+                  <transition name="fade">
+                    <div class="personal-invent-information" v-if="
+                    Object.keys(selectInventorySkin).length && personalInventory.length">
+                    <div class="personal-invent-information__img">
+                      <img :src="selectInventorySkin.image" alt="">
+                    </div>
+                    <div class="personal-invent-information w-100">
+                      <p>
+                        Назва: {{selectInventorySkin.name}} | {{selectInventorySkin.skin}}
+                      </p>
+                      <p>
+                        Ціна: {{selectInventorySkin.price}} ₴
+                      </p>
+                      <p>
+                        Стан: {{selectInventorySkin.condition}}
+                      </p>
+                      <p>
+                        Stattrack: {{selectInventorySkin.statrack === 'yes' ? 'Так' : 'Ні'}}
+                      </p>
+                    </div>
+                  </div>
+                </transition>
+                </template>
               </div>
             </div>
             <div class="button-func">
-              <button type="button" class="btn btn-primary" @click="AllSell()">
-                Продати усе
+              <button type="button"  class="btn btn-primary" :disabled="Object.keys(selectInventorySkin).length === 0" @click="action = 'продати'">
+                Продати
               </button>
-              <button type="button" class="btn btn-success" @click="Withdraw()">
+              <button type="button" class="btn btn-success" :disabled="Object.keys(selectInventorySkin).length === 0 " @click="action = 'вивести до акаунту'">
                 Вивести до аккаунту
-              </button>
-              <button type="button" class="btn btn-danger" @click="Delete()">
-                Видалити
               </button>
             </div>
             <div class="more-skins">
               <h3>Хочеш більше скинів?</h3>
               <p>
-                Переходьте до сторінки СSGO кейс
+                Переходьте до сторінки СSGO кейсів та відкривай
                 <a href="Cases.html">натиснувши тут</a>
               </p>
-            </div>
-            <div
-              class="alert alert-danger d-flex justify-content-between align-items-center"
-              role="alert"
-            >
-              Ви дійсно хочете продати всі скіни?
-              <button class="btn btn-primary">Так</button>
             </div>
           </div>
         </section>
@@ -343,6 +369,20 @@
                 </div>
                 <p>Ви успішно поповнили свій баланс</p>
                 <button class="btn btn-success" @click="correctCardData = !correctCardData">Гаразд</button>
+            </div>
+          </div>
+        </transition>
+        <transition name="fade">
+          <div class="popap-skins-info" v-if="action !== ''">
+            <div class="wrong-card-date warning-about-action">
+                <div class="wrong-card-date__warning">
+                  <h5 align="center" class="mb-2">Попередження</h5>
+                  <span>Ви дійсно хочете {{action}} предмет з інвентарю?</span>
+                </div>
+                <div class="d-flex">
+                  <button class="btn btn-danger w-50 mx-2" @click="inventoryAction()">Так</button>
+                  <button class="btn btn-success w-50" @click="action = ''">Ні</button>
+                </div>
             </div>
           </div>
         </transition>

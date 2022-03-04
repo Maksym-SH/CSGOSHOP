@@ -40,7 +40,7 @@ new Vue({
     checkRobotText: "",
     robotValueComparison: false,
     savedLogin: "",
-    balance: 0,
+    balance: 1110,
     isMdWidth: false,
     popapInfoAccountActive: false,
     loginTime: "",
@@ -63,6 +63,22 @@ new Vue({
     imgPresentInPopap: true,
     winThing: {},
     disableOpenCase: false,
+    caseInventory: {},
+    personalInventory: [],
+    selectInventorySkin: {},
+    action: "",
+    getSkin: [],
+    selectInventoryIndex: null,
+    selectType: "Всі",
+    buyChecked: "buy",
+    ownSkinForSwap: {},
+    buySkinForSwap: {},
+    buySkinForBuy: {},
+    warningForBuy: false,
+    smallBalance: false,
+    warningForSwapText: "",
+    priceForBuy: 0,
+    resultSwapItems: "",
   },
   methods: {
     checkDataValidation(event) {
@@ -70,12 +86,73 @@ new Vue({
         ? (this.cardDate.month = event.target.value)
         : (this.cardDate.year = event.target.value);
     },
+    actionBuy(str) {
+      str === "yes"
+        ? (this.warningForBuy = true)
+        : (this.warningForBuy = false);
+      if (this.buyChecked === "trade" && str === "swap") {
+        if (
+          this.resultSwapItems === "withdrow" &&
+          this.balance > this.priceForBuy
+        ) {
+          this.balance -= this.priceForBuy;
+        } else if (this.resultSwapItems === "back") {
+          this.balance += this.priceForBuy;
+        } else if (this.balance < this.priceForBuy) {
+          this.smallBalance = true;
+          setTimeout(() => {
+            this.smallBalance = false;
+          }, 3000);
+          this.warningForBuy = false;
+          return;
+        }
+        if (this.resultSwapItems !== "") {
+          this.personalInventory.splice(
+            this.personalInventory.indexOf(this.ownSkinForSwap, 0),
+            1
+          );
+          this.personalInventory.push(this.buySkinForSwap);
+          this.buySkinForSwap = this.ownSkinForSwap = {};
+          localStorage.balance = this.balance;
+          localStorage.personalInventory = JSON.stringify(
+            this.personalInventory
+          );
+        }
+        this.warningForBuy = false;
+      } else if (this.buyChecked === str && str === "buy") {
+        if (this.balance >= this.buySkinForBuy.price) {
+          this.balance -= this.buySkinForBuy.price;
+          localStorage.balance = this.balance;
+          this.personalInventory.push(this.buySkinForBuy);
+          localStorage.personalInventory = JSON.stringify(
+            this.personalInventory
+          );
+          this.buySkinForBuy = {};
+        } else {
+          this.smallBalance = true;
+          setTimeout(() => {
+            this.smallBalance = false;
+          }, 3000);
+          this.warningForBuy = false;
+          return;
+        }
+      }
+    },
+    swapItems(str, index) {
+      if (this.buyChecked === "trade") {
+        str === "own"
+          ? (this.ownSkinForSwap = this.personalInventory[index])
+          : str === "buy"
+          ? (this.buySkinForSwap = this.selectWeaponType[index])
+          : null;
+      } else if (this.buyChecked === "buy") {
+        this.buySkinForBuy = this.selectWeaponType[index];
+      }
+    },
     formClear() {
-      (this.cardNumber = []),
-        (this.paySum = ""),
-        (this.cvvCard = ""),
-        (this.cardOwner = ""),
-        (this.cardDate = {});
+      this.cardNumber = [];
+      this.paySum = this.cvvCard = this.cardOwner = "";
+      this.cardDate = {};
     },
     checkPayValidation() {
       if (this.fieldsIsCorrect) {
@@ -163,19 +240,33 @@ new Vue({
         this.robotValueComparison = true;
       }
     },
-    AllSell() {},
-    Withdraw() {},
-    Delete() {},
+    sell() {
+      this.action = "";
+      this.balance += this.selectInventorySkin.price;
+      localStorage.balance = this.balance;
+      this.personalInventory.splice(this.selectInventoryIndex, 1);
+      localStorage.personalInventory = JSON.stringify(this.personalInventory);
+      this.selectInventorySkin = {};
+    },
+    withdraw() {},
+    inventoryAction() {
+      this.action === "продати"
+        ? this.sell()
+        : this.action === "вивести до акаунту"
+        ? this.withdraw()
+        : null;
+    },
     openCase(price) {
       if (this.balance >= price) {
+        this.balance -= price;
+        localStorage.balance = this.balance;
         this.disableOpenCase = true;
         this.unSortedCaseSkins = Array.from(this.caseSkins);
         this.unSortedCaseSkins.sort(() => Math.random() - 0.5);
-        let rouletteDiv = document.querySelector("#roulette-container");
+        let rouletteDiv = this.$refs.rouletteContainer;
         if (rouletteDiv.childNodes.length) {
           rouletteDiv.removeChild(rouletteDiv.firstChild);
         }
-        this.balance -= price;
         let randomProcent = Math.round(Math.random(0, 100) * 100);
         let resultRandom;
         if (randomProcent <= 50) {
@@ -192,6 +283,8 @@ new Vue({
           resultRandom = 50;
         }
         this.unSortedCaseSkins.filter((item) => item.chance === resultRandom);
+        this.personalInventory.push(this.unSortedCaseSkins[0]);
+        localStorage.personalInventory = JSON.stringify(this.personalInventory);
         setTimeout(() => {
           this.winThing = this.unSortedCaseSkins[0];
           this.disableOpenCase = false;
@@ -236,6 +329,11 @@ new Vue({
         this.isSmallDisplay = false;
       }
     },
+    selectInventoryItem(index) {
+      this.selectInventoryIndex = index;
+      this.selectInventorySkin =
+        this.personalInventory[this.selectInventoryIndex];
+    },
     showCase(index) {
       this.caseItem = [];
       this.caseItem = this.cases[index];
@@ -245,18 +343,17 @@ new Vue({
         this.caseSkins.push(this.weapon[item]);
       });
       this.caseSkins.forEach((item) => {
-        Number(item.price <= 100)
+        item.price <= 100
           ? (item.chance = 50)
-          : Number(item.price > 100) && Number(item.price < 200)
+          : item.price > 100 && item.price < 200
           ? (item.chance = 50)
-          : Number(item.price > 200) && Number(item.price < 1000)
+          : item.price > 200 && item.price < 1000
           ? (item.chance = 17)
-          : Number(item.price > 1000) && Number(item.price < 5000)
+          : item.price > 1000 && item.price < 5000
           ? (item.chance = 10)
-          : Number(item.price > 5000)
+          : item.price > 5000
           ? (item.chance = 3)
           : null;
-        item.price = +item.price;
       });
       this.caseSkins.sort((a, b) => (a.price > b.price ? 1 : -1));
       sessionStorage.caseSkins = JSON.stringify(this.caseSkins);
@@ -264,6 +361,51 @@ new Vue({
     },
   },
   computed: {
+    checkMethodSwap() {
+      if (this.buySkinForSwap.price > this.ownSkinForSwap.price) {
+        this.priceForBuy =
+          this.buySkinForSwap.price - this.ownSkinForSwap.price;
+        this.resultSwapItems = "withdrow";
+        return `Предмет на який ви обмінюєтеся коштує дорожче ніж ваш запропонований, з балансу спишеться ${this.priceForBuy} ₴, ви згодні?`;
+      } else if (+this.ownSkinForSwap.price > this.buySkinForSwap.price) {
+        this.priceForBuy =
+          this.ownSkinForSwap.price - this.buySkinForSwap.price;
+        this.resultSwapItems = "back";
+        return `Предмет на який ви обмінюєтеся коштує дешевше ніж ваш запропонований, на ваш баланс зарахується сума на ${this.priceForBuy} ₴, ви згодні?`;
+      } else if (this.ownSkinForSwap.price === this.buySkinForSwap.price) {
+        return `Запропонований предмет який ви бажаєте обміняти буде замінений на предмет який ви добавили для обмину, ви згодні?`;
+      }
+    },
+    checkMethodBuy() {
+      if (Object.keys(this.buySkinForBuy).length !== 0) {
+        return `З вашого балансу спишеться сума ${this.buySkinForBuy.price} ₴, ви згодні?`;
+      }
+    },
+    isInventoryEmpty() {
+      return Object.keys(this.personalInventory).length === 0;
+    },
+    disabledButtonToBuy() {
+      return (
+        (this.buyChecked === "trade" &&
+          Object.keys(this.buySkinForSwap).length !== 0 &&
+          Object.keys(this.ownSkinForSwap).length !== 0) ||
+        (this.buyChecked === "buy" &&
+          Object.keys(this.buySkinForBuy).length !== 0)
+      );
+    },
+    weaponType() {
+      let set = new Set();
+      set.add("Всі");
+      this.weapon.forEach((item) => {
+        set.add(item.type);
+      });
+      return set;
+    },
+    selectWeaponType() {
+      return this.selectType === "Всі"
+        ? this.weapon
+        : this.weapon.filter((item) => item.type === this.selectType);
+    },
     compareData() {
       return new Date().getFullYear() > this.cardDate.year
         ? new Date().getMonth() > this.cardDate.month
@@ -278,13 +420,52 @@ new Vue({
         this.cvvCard !== ""
       );
     },
+    deleteChangeField() {
+      this.personalInventory.forEach((item) => {
+        delete item.chance;
+      });
+    },
+    summarCost() {
+      let cost = 0;
+      this.personalInventory.length
+        ? this.personalInventory.forEach((skin) => {
+            cost += +skin.price;
+          })
+        : null;
+      return +cost;
+    },
+    raritySkin() {
+      this.personalInventory.forEach((item) => {
+        let raritySkinLine =
+          item.chance === 50
+            ? "milspec"
+            : item.chance === 20
+            ? "restricted"
+            : item.chance === 17
+            ? "classified"
+            : item.chance === 10
+            ? "covert"
+            : item.chance === 3
+            ? "rare"
+            : "uncommon";
+        document
+          .querySelector(".personal-invent-item__rarity")
+          .classList.add("ev-weapon-rarity-" + raritySkinLine);
+      });
+    },
   },
   mounted() {
     this.checkWidth();
     this.checkLogin();
+    if (localStorage.balance) {
+      this.balance = Number(localStorage.balance);
+    }
     if (sessionStorage.caseSkins && sessionStorage.caseItem) {
       this.caseItem = JSON.parse(sessionStorage.caseItem);
       this.caseSkins = JSON.parse(sessionStorage.caseSkins);
+    }
+    if (localStorage.personalInventory) {
+      this.personalInventory = JSON.parse(localStorage.personalInventory);
     }
     if (localStorage.login && localStorage.loginTime) {
       this.savedLogin = localStorage.login;

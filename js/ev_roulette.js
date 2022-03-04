@@ -120,22 +120,15 @@ EvRoulette.prototype.spin = function () {
     rand = function (min, max) {
       return Math.floor(Math.random() * (max - min + 1)) - min;
     },
-    // рандомная координата остановки
     rand_stop =
       (EvRoulette.nWeapons - 6) * EvWeapon.elWidth +
       elWeaponWidth1 +
       rand(elWeaponWidth2, 24 * elWeaponWidth2),
     soundSpinInterval,
-    // считает количество пройденных оружий во время вращения
     spinCounter = 0;
-
   self.elWeapons.style.transition =
     "left " + EvRoulette.spinTime + "s ease-out";
-
-  // немного отложенный старт
-  // (ибо нельзя сразу установить цсс-свойство 'left')
   setTimeout(function () {
-    // перед стартом может быть необходимость что-то сотворитьRT);
     self.elWeapons.style.left = "-" + rand_stop + "px";
     soundSpinInterval = setInterval(function () {
       var currentLeft = Math.abs(
@@ -144,7 +137,6 @@ EvRoulette.prototype.spin = function () {
         currentSpinCounter = Math.floor(
           (currentLeft + elWeaponWidth1) / EvWeapon.elWidth
         );
-      // рулетка довращалась до нового оружия
       if (currentSpinCounter > spinCounter) {
         spinCounter = currentSpinCounter;
       }
