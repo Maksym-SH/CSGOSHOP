@@ -45,46 +45,51 @@
   ],
   "weapon": [
     {
+      "id": 1,
       "type": "Ніж",
       "name": "Штик-ніж",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf3qr3czxb49KzgL-Yh8j5NqjZqX9Q5vp9g-7J4cKk2Azt_RBrMGrzJo6SdQ9sZ17Y8lm7kOztjMO57szOznFluSdw43aOgVXp1oG2cQbD",
       "skin": "Африканська сітка",
       "statTrack": "no",
       "price": 6450,
-      "number": 9,
+      "number": 13,
       "condition": "Загартоване у боях"
     },
     {
+      "id": 2,
       "type": "Ніж",
       "name": "Штик ніж",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf3qr3czxb49KzgL-KmsjwPKvBmm5D19V5i_rEobP5gVO8v11kZTr6cdDAIVA5ZA2GqVW3x7281sftvZ_AzXZmv3Mm5H2LlxWw1RhIcKUx0uHVWO7n",
       "skin": "Хвилі фаза 4",
       "price": 17235,
       "statrack": "yes",
-      "number": 5,
+      "number": 19,
       "condition": "Трохи поношене"
     },
     {
+      "id": 3,
       "type": "Ніж",
       "name": "Штик ніж М9",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf3qr3czxb49KzgL-Khsj7OrfUklRd4cJ5nqeWoI7zjVey8xZlY27wd4aQIFc8YFrV-1m2yLzn0ZK1tJXAn3tjvCYr-z-DyMubhSbn",
       "skin": "Корпус загартований",
       "price": 22442,
       "statrack": "yes",
-      "number": 5,
+      "number": 15,
       "condition": "Загартоване у боях"
     },
     {
+      "id": 4,
       "type": "Ніж",
       "name": "Штик ніж М9",
       "image": "https://cdn.csgo.com/item/%E2%98%85+%D0%A8%D1%82%D1%8B%D0%BA-%D0%BD%D0%BE%D0%B6+M9+%7C+%D0%9B%D0%B5%D0%B3%D0%B5%D0%BD%D0%B4%D1%8B+%28%D0%9F%D0%BE%D1%81%D0%BB%D0%B5+%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D1%85+%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D0%BD%D0%B8%D0%B9%29/300.png",
       "skin": "Легенди",
       "price": 19718,
       "statrack": "yes",
-      "number": 5,
+      "number": 12,
       "condition": "Загартоване у боях"
     },
     {
+      "id": 5,
       "type": "Ніж",
       "name": "Штик ніж М9",
       "image": "https://cdn.csgo.com/item/%E2%98%85+%D0%A8%D1%82%D1%8B%D0%BA-%D0%BD%D0%BE%D0%B6+M9+%7C+%D0%92%D0%BE%D0%BB%D0%BD%D1%8B+%28%D0%9F%D1%80%D1%8F%D0%BC%D0%BE+%D1%81+%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0%29/300.png",
@@ -95,6 +100,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 6,
       "type": "Ніж",
       "name": "Штик ніж М9",
       "image": "https://cdn.csgo.com/item/%E2%98%85+%D0%A8%D1%82%D1%8B%D0%BA-%D0%BD%D0%BE%D0%B6+M9+%7C+%D0%93%D1%80%D0%B0%D0%B4%D0%B8%D0%B5%D0%BD%D1%82+%28%D0%9F%D1%80%D1%8F%D0%BC%D0%BE+%D1%81+%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0%29/300.png",
@@ -105,6 +111,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 7,
       "type": "Ніж",
       "name": "Керамбіт",
       "image": "https://cdn.csgo.com/item/%E2%98%85+%D0%9A%D0%B5%D1%80%D0%B0%D0%BC%D0%B1%D0%B8%D1%82/300.png",
@@ -115,6 +122,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 8,
       "type": "Ніж",
       "name": "Керамбіт",
       "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0kfjmML7VqWZU7Mxkh9bN9J7yjRqy-EY5NTrwJYSTe1I8ZwzU_QS-yOq8h8K17pzKzSA3u3Ijt33Ulxaxn1gSOW7yFo2m/330x192",
@@ -125,6 +133,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 9,
       "type": "Ніж",
       "name": "Керамбіт",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJh4-0mf7zO6_um25V4dB8teXA54vwxgbtrRVqNm_xJdKXcQVqMg7W_lDtl7vq1pe4753KynJqsnZ25n_alxapwUYbStGwX0o",
@@ -135,6 +144,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 10,
       "type": "Ніж",
       "name": "Керамбіт",
       "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJh5C0k_bkI7fUqWZU7Mxkh9bN9J7yjRrm_UdrNW77cdKWdAY7Z1DRrlG9yey80JO7ucudyXY3uXIlt3uMzRe1n1gSOZd2wXJa/360fx360f",
@@ -145,6 +155,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 11,
       "type": "Ніж",
       "name": "Керамбіт",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0mP74Nr_ummJW4NE_37vHrN6n0VDm8kVsNWz2IYHEeg89MFHZqQK4xue5hJe0vc_NwSZqsj5iuyizSJQHPQ",
@@ -155,6 +166,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 12,
       "type": "Ніж",
       "name": "Керамбіт",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0lfvhNr_ummJW4NE_273ErN6ti1CxrxZlYjjzIdeRdQA7ZwqD-wC6xu680ZO9uc_AnXVgvz5iuyhtDBWPCg",
@@ -165,16 +177,18 @@
       "condition": "Поношене"
     },
     {
+      "id": 13,
       "type": "Ніж",
       "name": "Фальшіон",
       "image": "https://static.wikia.nocookie.net/counterstrike/images/f/f6/Falchlogo.png/revision/latest?cb=20150710075321&path-prefix=ru",
       "skin": "Звичайний",
       "price": 3409,
       "statrack": "no",
-      "number": 25,
+      "number": 24,
       "condition": "Прямо із заводу"
     },
     {
+      "id": 14,
       "type": "Ніж",
       "name": "Фальшіон",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf1fLEcjVL49KJh4-0h-LmI7fUqW1Q5MZ5g-bPyoHwjF2hpiwwMiukcZjDclA9ZFqF_VO5lLvtg8W0uJjPwXRg7yVxsXfYyhXl0x8dabNv1qbLVxzAUFFqcRD2",
@@ -185,6 +199,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 15,
       "type": "Ніж",
       "name": "Фальшіон",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf1fLEcjVL49KJlZG0hOPxNrfunWVY7sBOguzA45XKhFWmrBZyamilcofEIQ9oZQrV-1a4k-e5hJLvuZ7IzHIy6XUr4y6JnBS2gUlPOPsv26JcsTvjcQ",
@@ -194,8 +209,8 @@
       "number": 16,
       "condition": "Поношене"
     },
-
     {
+      "id": 16,
       "type": "Ніж",
       "name": "Ніж-метелик",
       "image": "https://cs-site.ru/uploads/posts/2020-07/1595079984_nozh-babochka-afrikanskaja-setka.png",
@@ -206,6 +221,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 17,
       "type": "Дробовик",
       "name": "XM1014",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgporrf0e1Y07PDdTiVPvYznwL-KmuL4Nq_ulGdE7fp8j-3I4IHKhFWmrBZyZ2z0LI_AdAY7aFDX-Qe3xLi9h8Po7ZXIyCAw7iBw5S6PnhLh0BgYOvsv26JDy_wWDg",
@@ -216,6 +232,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 18,
       "type": "Дробовик",
       "name": "XM1014",
       "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgporrf0e1Y07ODHTjdX4tu6kb-JhfbiPITck29Y_chOhujT8om731e2_kc_Mjihco6VIVNrZFDRrwXvw-u508O8u5qYyXo16yhx7SvfzAv3308e6Dz9DA/360fx360f",
@@ -226,6 +243,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 19,
       "type": "Дробовик",
       "name": "XM1014",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgporrf0e1Y07PLFTjNX79CzlZK0hPzhP7fCx1RJ5ZQh273-_Yn0nk36qBJrNW32LYLDeg5vaV7Y-lbsxOnvg5-8tJ7KznBlvCZztnrbmRTjhgYMMLLqCIC5zg",
@@ -236,6 +254,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 20,
       "type": "Дробовик",
       "name": "XM1014",
       "image": "https://cdn.csgo.com//item/XM1014+%7C+Seasons+%28Field-Tested%29/300.png",
@@ -246,6 +265,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 21,
       "type": "Пістолет",
       "name": "USP-S",
       "image": "https://cdn.csgo.com/item/USP-S+%7C+%D0%9E%D1%80%D0%B8%D0%BE%D0%BD+%28%D0%9F%D1%80%D1%8F%D0%BC%D0%BE+%D1%81+%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0%29/300.png",
@@ -256,6 +276,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 22,
       "type": "Пістолет",
       "name": "USP-S",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ09-jq5WYh8j_IbTamXhu5Mx2gv3--Y3nj1H6rhVlZzj6LYHBIAJvaFHQr1S7k73rgcK47p3Om3Bm7CB04X3dyhC-1AYMMLLxSvuMdg",
@@ -266,6 +287,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 23,
       "type": "Пістолет",
       "name": "USP-S",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ0927q4mFg_L4P7LWk2VS7fp8i-7E-5j0t1mxrxopPgavdcTCJxg-MwzQrgTqkOrmhZHptJ-fnCMwsyElsyzcmBTj0Bsfa7A7jPLLTw6fGeUXSw1ztgpj/360fx360f",
@@ -276,6 +298,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 24,
       "type": "Пістолет",
       "name": "USP-S",
       "image": "https://cdn.csgo.com//item/USP-S+%7C+Blood+Tiger+%28Factory+New%29/300.png",
@@ -286,6 +309,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 25,
       "type": "Піст. кулемет",
       "name": "UMP-45",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1Jf0Ob3ZDBS09-5hpCEhfb4DLbUkmJE5Ysn0-uSp9mg3FXgqUZuaz3zLYeWcQc3MF6F_QDtxL-60Je1v8-bySZmpGB8srqGkaWw",
@@ -296,6 +320,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 26,
       "type": "Піст. кулемет",
       "name": "UMP-45",
       "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwPz3cjxQ7dGzmL-GkvP9JrbummpD78A_j7GXo9Xz31a3-ks5ZT_7JI6SclM2NFiB-Va2l73pjcfptc7BySNisj5iuyiUkezNPQ/360fx360f",
@@ -306,6 +331,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 27,
       "type": "Піст. кулемет",
       "name": "UMP-45",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1JfwOP3dTxS_NCzq42Ok_7hPvWAlzsGv5Jy27rDo4r22lG1qhFvazv7IIPAelU2YguG-wC2w7vn08W8ot2XnjjPeAaD",
@@ -316,6 +342,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 28,
       "type": "Піст. кулемет",
       "name": "UMP-45",
       "image": "https://cdn.csgo.com/item/UMP-45+%7C+%D0%9F%D0%BB%D0%B0%D0%BC%D1%8F+%28%D0%9F%D1%80%D1%8F%D0%BC%D0%BE+%D1%81+%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0%29/300.png",
@@ -326,6 +353,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 29,
       "type": "Піст. кулемет",
       "name": "UMP-45",
       "image": "https://cdn.csgo.com//item/UMP-45+%7C+Gold+Bismuth+%28Minimal+Wear%29/300.png",
@@ -336,6 +364,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 30,
       "type": "Пістолет",
       "name": "Tec-9",
       "image": "https://s-wiki.cs.money/wiki_mew0pUP_large_preview.png",
@@ -346,6 +375,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 31,
       "type": "Пістолет",
       "name": "Tec-9",
       "image": "https://s-wiki.cs.money/wiki_Gxm6pGA_large_preview.png",
@@ -356,6 +386,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 32,
       "type": "Пістолет",
       "name": "Tec-9",
       "image": "https://s-wiki.cs.money/wiki_rsmzFNF_large_preview.png",
@@ -366,6 +397,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 33,
       "type": "Пістолет",
       "name": "Tec-9",
       "image": "https://cdn.csgo.com//item/Tec-9+%7C+Rust+Leaf+%28Factory+New%29/300.png",
@@ -376,6 +408,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 34,
       "type": "Гвинтівка",
       "name": "SSG 08",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopamie19f2-r3fDxb7dKJkJKOlvrnDLnDl31e18l4jeHVu9qh31Xs_hY6NWn0cYCQdANraA3S8lW3x-a7jMW9vczInCFnuHRz43fD30vgXl6H59Q",
@@ -386,6 +419,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 35,
       "type": "Гвинтівка",
       "name": "SSG 08",
       "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopamie19f2-r3Yi5FvISJmYGZnPLmDLbUkmJE5fp9i_vG8MKi3QLg-Bc-YGj7J4eSJwRraQ6F-gW6x-rogp_ouM6bySdj6XQktynbgVXp1rAggSal/330x192",
@@ -396,6 +430,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 36,
       "type": "Гвинтівка",
       "name": "SSG 08",
       "image": "https://cdn.csgo.com//item/SSG+08+%7C+Death%27s+Head+%28Battle-Scarred%29/300.png",
@@ -406,6 +441,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 37,
       "type": "Гвинтівка",
       "name": "SSG 08",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopamie19f0Ob3Yi5FvISJkJKKkPj6NbLDk1RC68phj9bN_Iv9nGu4qgE7Nnf3LISddw5taAzQ8lm6xOq9gZTpuZ6fyXA3syIltHffnxbkhxEYOLZtm7XAHgXm-xFt/330x192",
@@ -416,16 +452,19 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 38,
       "type": "Гвинтівка",
       "name": "SSG 08",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopamie19fwOP3YTxO4eOlnIGPmODLPr7Vn35cpsZ137-Zrdvz3QXg_EQ-MTqiINXBdVdvZFHYqAC9k7rqgpXousnBwXR9-n51Y41l40A",
       "skin": "Тропічна блискавка",
       "price": 117,
       "statrack": "no",
-      "number": 26,
-      "condition": "Загартоване у боях"
+      "number": 27,
+      "condition": "Загартоване у боях",
+      "chance": 50
     },
     {
+      "id": 39,
       "type": "Авт. гвинтівка",
       "name": "SG 553",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopb3wflFf0Ob3YjoXuYqJgJKCluX3O4TZk2pH8Ysl0uyTpNz23Qay_xU-Yz3xdtKRdgA5YArVr1Tqye-5gJHp757On3FlpGB8spPPtiGj",
@@ -436,6 +475,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 40,
       "type": "Авт. гвинтівка",
       "name": "SG 553",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopb3wflFf0Ob3YjoXuYqJgJKCluX3O4Tdn2xZ_Isij-iWoY7wiQHn-xI4NzjyJIbBcAM3YFnT_VPtkO3uhsPttZTNzHEypGB8snpeMLkS",
@@ -446,6 +486,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 41,
       "type": "Авт. гвинтівка",
       "name": "SG 553",
       "image": "https://cdn.csgo.com//item/SG+553+%7C+Fallout+Warning+%28Field-Tested%29/300.png",
@@ -456,6 +497,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 42,
       "type": "Авт. гвинтівка",
       "name": "SG 553",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopb3wflFf0Ob3YjoXuY-JhoWKlOP7IYTdn2xZ_Pp9i_vG8ML0jgG3-0Q4YWzxLIecegA6YAmErFK8krjsgZ-07czOnXBruCNw5XvVgVXp1mEkNP6x",
@@ -466,6 +508,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 43,
       "type": "Авт. гвинтівка",
       "name": "SG 553",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopb3wflFf0Ob3YjoXuY-Jl5mZku_LPr7Vn35c18lwmO7Eu9ii3lXgqRBpNzr2JICVdgU8Zl3Wq1e8wum9hJW86s7ByHU17iJxsHfD30vgJ6ERlcU/360fx360f",
@@ -476,6 +519,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 44,
       "type": "Гвинтівка",
       "name": "SCAR-20",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopbmkOVUw7PDdTi5B7c7kxL-CmePxIa3UmH9Y58tOh-zF_Jn4xle3qBJvYW_xJoSdcAU-YQ3QrgLtxensjJW4upuaz3ExvHV2ty7dzUapwUYbwQEB91I",
@@ -486,6 +530,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 45,
       "type": "Гвинтівка",
       "name": "SCAR-20",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopbmkOVUw7PDdTj9O-dmmhomFg8jnMLrDqWZU7Mxkh9bN9J7yjRrj8ks-Zzz7ddCXewQ4YV_WqwXvleq5g5S-uJjLyCAw73Zx5HnazkCyn1gSOYHSKgdR/360fx360f",
@@ -496,6 +541,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 46,
       "type": "Гвинтівка",
       "name": "SCAR-20",
       "image": "https://cdn.csgo.com//item/SCAR-20+%7C+Torn+%28Minimal+Wear%29/300.png",
@@ -506,6 +552,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 47,
       "type": "Гвинтівка",
       "name": "SCAR-20",
       "image": "https://cdn.csgo.com//item/SCAR-20+%7C+Crimson+Web+%28Battle-Scarred%29/300.png",
@@ -516,6 +563,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 48,
       "type": "Гвинтівка",
       "name": "SCAR-20",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopbmkOVUw7PLZTi5B7c7kxL-Hkvb_DLPUl31I18lwmO7Eu4jxigXnr0o6NjvwLdecIwVsZgnT81O-xO2-hMTo6JnKnHdkuHQj4yzD30vgQEWvaBI/330x192",
@@ -526,6 +574,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 49,
       "type": "Дробовик",
       "name": "Sawed-Off",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopbuyLgNv1fX3cCx9_92hkYSEkfHLMbfQlWBW58l1teHE9Jrsxgzt80BsZTr2ctOQewc-Mw7ZqAe2krrqg5G-vZ2bmnsw6CIm7S3bykGpwUYbd08UubQ",
@@ -536,6 +585,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 50,
       "type": "Дробовик",
       "name": "Sawed-Off",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopbuyLgNv1fX3di59_92hkYSEkfHLPb7ShGRc6ctyj_v-_Yn0nk36r0ZlMWn6LIaUdgU5YF3X_gO4kOrngsDov5udyCM2viQj7SzcnBXj0AYMMLKgpEmT6w",
@@ -546,6 +596,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 51,
       "type": "Дробовик",
       "name": "Sawed-Off",
       "image": "https://cdn.csgo.com//item/Sawed-Off+%7C+Limelight+%28Field-Tested%29/300.png",
@@ -556,6 +607,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 52,
       "type": "Дробовик",
       "name": "Sawed-Off",
       "image": "https://cdn.csgo.com//item/Sawed-Off+%7C+The+Kraken+%28Factory+New%29/300.png",
@@ -566,6 +618,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 53,
       "type": "Дробовик",
       "name": "Sawed-Off",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopbuyLgNv1fX3Yi194sm9kZOfhf7kNoTThGRG5vp8j-3I4IHKhFWmrBZyMWClIIOVIQY7M1DVrFm_lbjmhpS-u8-fyCAwvnMgt3-OzES11BEdPfsv26LQjT224g/512fx384f",
@@ -576,6 +629,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 54,
       "type": "Піст. кулемет",
       "name": "P90",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopuP1FA957P7HdS5S48ilq4iOluHtDLfQhGxUpsYo3riWotzw2Qy2-UdoYj-lcYSXIQY5MlDZ_lHqxeu8gcO5v8uYm3Z9-n51FHcoZTw/360fx360f",
@@ -586,6 +640,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 55,
       "type": "Піст. кулемет",
       "name": "P90",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopuP1FBRw7PfJYS1O6eO7kYSCgvrLP7rDkW4f6ZYj2LiZpomii1Ky-kpkYGn0IdCQdFI3ZwrS8lS3xL_mhp606svLzGwj5Hcs2GaaAA/360fx360f",
@@ -596,6 +651,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 56,
       "type": "Піст. кулемет",
       "name": "P90",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopuP1FAR17OORIQJN6tqhm5KHk8j5Nr_Yg2Zu5MRjjeyPpd7x2g23qBJtYW_6co6WcQdqNQ3S_1DtxLy8gZO_75jJwCBmuSEj5mGdwUIDU3APmg",
@@ -606,6 +662,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 57,
       "type": "Піст. кулемет",
       "name": "P90",
       "image": "https://cdn.csgo.com//item/P90+%7C+Fallout+Warning+%28Minimal+Wear%29/300.png",
@@ -613,9 +670,11 @@
       "price": 27,
       "statrack": "no",
       "number": 31,
-      "condition": "Поношене"
+      "condition": "Поношене",
+      "chance": 50
     },
     {
+      "id": 58,
       "type": "Пістолет",
       "name": "P250",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhzw8zccC1H09C_k4if2a_xML6Dxj8GupIoibmUod-n3Vbkr0FqYGv2IY_BJwc6ZAuFrFS8xb_xxcjr7uv4usk",
@@ -626,6 +685,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 59,
       "type": "Пістолет",
       "name": "P250",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhhwszYI2gS09-3hpSOm8j5Nr_Yg2Zu5MRjjeyP8N-k3way-UM5NmCiLIeRIwQ4ZgvQq1O8k--7hp_vuZSdyXdrvnZx7WGdwUIdDe8uxA/360fx360f",
@@ -636,6 +696,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 60,
       "type": "Пістолет",
       "name": "P250",
       "image": "https://cdn.csgo.com//item/P250+%7C+Mehndi+%28Field-Tested%29/300.png",
@@ -646,6 +707,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 61,
       "type": "Пістолет",
       "name": "P250",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhzw8zbYTFD_9SJhNLex8j4OrzZgiUIupIhjrHFpNj22w21rhVkYG3zI9PEdwZrZFmG-gTsyee8hJG-up6d1zI97bay_VK1",
@@ -656,6 +718,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 62,
       "type": "Пістолет",
       "name": "P2000",
       "image": "https://cdn.csgo.com//item/P2000+%7C+Coach+Class+%28Factory+New%29/300.png",
@@ -666,6 +729,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 63,
       "type": "Пістолет",
       "name": "P2000",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovrG1eVcwg8zLZAJSvozmxL-EleT9N7LQmFRd4cJ5ntbN9J7yjRrkqkU9N2ryctOdJAE-ZVjRrAfqle3ogsW-tJTKyXs3uiIn433VnUaxn1gSORT4o59X/360fx360f",
@@ -676,6 +740,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 64,
       "type": "Пістолет",
       "name": "P2000",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovrG1eVcwg8zJfwJR5dCgkZK0m_7zO6-fzj9T7sEjjLnD8Y-iiVbi-kc4ajqnI4eVcVQ5NVjX-1e-x-_ujZe6uoOJlyU5sT_JRA",
@@ -686,6 +751,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 65,
       "type": "Пістолет",
       "name": "P2000",
       "image": "https://cdn.csgo.com/item/StatTrak%E2%84%A2+P2000+%7C+%D0%9F%D1%83%D0%BB%D1%8C%D1%81+%28%D0%9F%D0%BE%D0%BD%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5%29/300.png",
@@ -696,6 +762,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 66,
       "type": "Пістолет",
       "name": "P2000",
       "image": "https://cdn.csgo.com//item/P2000+%7C+Amber+Fade+%28Factory+New%29/300.png",
@@ -706,6 +773,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 67,
       "type": "Пістолет",
       "name": "P2000",
       "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovrG1eVcwg8zAaAJSvozmxL-ElPL1PbLummJW4NFOhujT8om70FLi_0VpZzr2LYCRewE7MlDV-FG_k--718To6pqbwSQ163Il43ePygv330-1I2r84w/330x192",
@@ -716,6 +784,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 68,
       "type": "Дробовик",
       "name": "Nova",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpouLWzKjhzw8zEdDxU6c-JmYWPnuL5fe_SkzgBu5Ugi7rF8Yih0VHh8kc-YjryItCUdlI8M1-F_lm5wrrp0MWi_MOeg5n07lM",
@@ -726,6 +795,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 69,
       "type": "Дробовик",
       "name": "Nova",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpouLWzKjhzw8zLcDBN08u5m4S0lfvhNoTck29Y_cg_i-uSot-n3lDhqRI5a2r2cIaQegY4aVDQ8lK9xOa818K0v8jIyCE17j5iuygbkA59og",
@@ -736,6 +806,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 70,
       "type": "Дробовик",
       "name": "Nova",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpouLWzKjhjxszfcDFM-ciJmo-dlsj5Nr_Yg2YfuJIn2O2Wo92m2gXh-Bdramr1ItKUJlM3YFiC-Ae2kOi7hpbu7cydn2wj5HdE8usZbQ",
@@ -746,6 +817,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 71,
       "type": "Дробовик",
       "name": "Nova",
       "image": "https://cdn.csgo.com//item/Nova+%7C+Tempest+%28Minimal+Wear%29/300.png",
@@ -756,6 +828,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 72,
       "type": "Піст. кулемет",
       "name": "MP9",
       "image": "https://cdn.csgo.com//item/Nova+%7C+Tempest+%28Minimal+Wear%29/300.png",
@@ -766,6 +839,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 73,
       "type": "Піст. кулемет",
       "name": "MP9",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6r8FAR17P7YKAJF49OJmImMn-O6YLjQlDNU68ci37_E8Nnz2gHg8hBtMWj3LNCQewA_NwyG_wW3krrog4j84socNYvhew",
@@ -776,6 +850,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 74,
       "type": "Піст. кулемет",
       "name": "MP9",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6r8FBRw7OfJYTh94863moeOqPv9NLPFqWdQ-sJ0xL6Wrdmh2gzmrRU_YmrydoHHIFM2ZlCD-1W-k-28gZfu6s_OyndhviI8pSGKwEALt-s/360fx360f",
@@ -786,6 +861,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 75,
       "type": "Піст. кулемет",
       "name": "MP9",
       "image": "https://cdn.csgo.com//item/Souvenir+MP9+%7C+Storm+%28Well-Worn%29/300.png",
@@ -796,6 +872,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 76,
       "type": "Піст. кулемет",
       "name": "MP9",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6r8FA957P3dcjFH7c6JhIGfg_LmPenum3sI18h0juDU-MKljAbi-UM4MDrycNTAdFRoNQzZ-1a9yOy60JK96pnIwHZnuiNw5X_bgVXp1qKBy7Rx",
@@ -806,16 +883,19 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 77,
       "type": "Піст. кулемет",
       "name": "MP7",
       "image": "https://s-wiki.cs.money/wiki_Uvps6tG_large_preview.png",
       "skin": "Сажа",
       "price": 43,
       "statrack": "no",
-      "number": 23,
-      "condition": "Прямо із заводу"
+      "number": 24,
+      "condition": "Прямо із заводу",
+      "chance": 50
     },
     {
+      "id": 78,
       "type": "Піст. кулемет",
       "name": "MP7",
       "image": "https://s-wiki.cs.money/wiki_MTZP5yj_large_preview.png",
@@ -826,6 +906,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 79,
       "type": "Піст. кулемет",
       "name": "MP7",
       "image": "https://s-wiki.cs.money/wiki_yhI74F5_large_preview.png",
@@ -836,6 +917,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 80,
       "type": "Піст. кулемет",
       "name": "MP7",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6ryFAR17P7YJgJM6dGlnZO0m_7zO6-fwTkBv5F03bjAp9ut2gOy_0I4MGynItCQcwdqYw7Q-lLtwLzphcK07YOJlyWB9VchYA",
@@ -846,6 +928,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 81,
       "type": "Піст. кулемет",
       "name": "MP5-SD",
       "image": "https://cdn.csgo.com//item/MP5-SD+%7C+Bamboo+Garden+%28Battle-Scarred%29/300.png",
@@ -856,6 +939,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 82,
       "type": "Піст. кулемет",
       "name": "MP5-SD",
       "image": "https://cdn.csgo.com//item/MP5-SD+%7C+Agent+%28Minimal+Wear%29/300.png",
@@ -866,6 +950,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 83,
       "type": "Піст. кулемет",
       "name": "MP5-SD",
       "image": "https://cdn.csgo.com//item/MP5-SD+%7C+Acid+Wash+%28Well-Worn%29/300.png",
@@ -876,6 +961,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 84,
       "type": "Піст. кулемет",
       "name": "MP5-SD",
       "image": "https://cdn.csgo.com//item/MP5-SD+%7C+Phosphor+%28Minimal+Wear%29/300.png",
@@ -886,6 +972,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 85,
       "type": "Піст. кулемет",
       "name": "MP5-SD",
       "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6rwOANf0v73cjRQ78m_gIKEluXwDLrAg2pu5cB1g_zMyoD0mlOx5UA5Ymunco-RdQJtZljZrlS2wu_sh5Xq6pTOyCc3s3Ei4yzVm0DjgRBSLrs4dNOl3DY/360fx360f",
@@ -893,9 +980,11 @@
       "price": 11,
       "statrack": "no",
       "number": 34,
-      "condition": "Поношене"
+      "condition": "Поношене",
+      "chance": 50
     },
     {
+      "id": 86,
       "type": "Піст. кулемет",
       "name": "MP5-SD",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6rwOANf1OD3fC0X_9iJlZOfhfj5Mq_YlVRZ7cRnk9bN9J7yjRrh_kZpMDjwcdOccwQ2aVrRrAO9wO3t08O1vZqcyXFj7CYg5iyIy0Cwn1gSOcV5QuNk/512fx384f",
@@ -906,6 +995,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 87,
       "type": "Дробовик",
       "name": "MAG-7",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7uifDhoyszBcjJR7dSzkJKEmcj4OrzZgiVXv8Bw0urC9Nz33Ay1-0dqYD3zLIGSI1A3MlHUr1boxOq7hcC96JrA1zI97TI-pHTn",
@@ -916,6 +1006,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 88,
       "type": "Дробовик",
       "name": "MAG-7",
       "image": "https://cdn.csgo.com//item/MAG-7+%7C+Seabird+%28Minimal+Wear%29/300.png",
@@ -926,6 +1017,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 89,
       "type": "Дробовик",
       "name": "MAG-7",
       "image": "https://cdn.csgo.com//item/MAG-7+%7C+Core+Breach+%28Minimal+Wear%29/300.png",
@@ -936,6 +1028,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 90,
       "type": "Дробовик",
       "name": "MAG-7",
       "image": "https://cdn.csgo.com//item/MAG-7+%7C+Heat+%28Minimal+Wear%29/300.png",
@@ -946,6 +1039,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 91,
       "type": "Дробовик",
       "name": "MAG-7",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7uifDhzw8zFcDoV09q_hoWJnuPgNrXum25V4dB8xLnAoYnx0QSy-hFqMGvyddSQd1A4ZAmErlTqw-i61sXouM7OyyZj7iY8pSGKm4D2mSA",
@@ -956,6 +1050,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 92,
       "type": "Піст. кулемет",
       "name": "MAC-10",
       "image": "https://cdn.csgo.com//item/MAC-10+%7C+Neon+Rider+%28Well-Worn%29/300.png",
@@ -966,6 +1061,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 93,
       "type": "Піст. кулемет",
       "name": "MAC-10",
       "image": "https://cdn.csgo.com//item/MAC-10+%7C+Heat+%28Minimal+Wear%29/300.png",
@@ -976,6 +1072,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 94,
       "type": "Піст. кулемет",
       "name": "MAC-10",
       "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf0v73ejNN-M-JlpKEgPnLPr7Vn35c18lwmO7Eu9ujjQThrxc9amuhIdCTcwM9aFiC-VPow-jmgcTq6suYm3ExuCJw43nD30vgAB2Lv3U/360fx360f",
@@ -986,6 +1083,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 95,
       "type": "Піст. кулемет",
       "name": "MAC-10",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldfwPz3YShQ_NCzq4iOluHtDLfQhGxUpsclj-uYp9-m2wDlrxVtMWzwJ4XGcg43MlGC-VPrxOa5hsW478vLnXZ9-n51Vk5AXdA/360fx360f",
@@ -996,6 +1094,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 96,
       "type": "Піст. кулемет",
       "name": "MAC-10",
       "image": "https://cdn.csgo.com/item/MAC-10+%7C+%D0%A5%D1%80%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0+%28%D0%9F%D1%80%D1%8F%D0%BC%D0%BE+%D1%81+%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0%29/300.png",
@@ -1006,6 +1105,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 97,
       "type": "Авт. гвинтівка",
       "name": "M4A4",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhzw8zSdD9Q7d-3mb-JgMj8NrrHjyUB6sBz0ryUpdis0QLs8kpkNWrwJYScegc_M1jU-la_lLzvgJW6tJSf1zI97dltdVCK",
@@ -1016,6 +1116,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 98,
       "type": "Авт. гвинтівка",
       "name": "M4A4",
       "image": "https://cdn.csgo.com//item/M4A4+%7C+Desert-Strike+%28Field-Tested%29/300.png",
@@ -1026,6 +1127,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 99,
       "type": "Авт. гвинтівка",
       "name": "M4A4",
       "image": "https://cdn.csgo.com//item/M4A4+%7C+Griffin+%28Well-Worn%29/300.png",
@@ -1036,6 +1138,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 100,
       "type": "Авт. гвинтівка",
       "name": "M4A4",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhnwMzFJTwW0865jYGHqOTlJrLDk1Rc7cF4n-SP8dSm2gHk-UtoZGv7I9DBcVM5ZV_XqFe_lervhsS76sjIyCBhviYg52GdwUI8s6PzHQ",
@@ -1046,6 +1149,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 101,
       "type": "Авт. гвинтівка",
       "name": "M4A4",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhzw8zGZDZH_8iknZCOqPjmMrXWk1Rc7cF4n-SP9o6h2gfjrhY-Z2-lcYWde1NsNAmC-APok-zm0Z-_vMvBz3tq7yEmsWGdwUJ6nxi7Dw",
@@ -1056,6 +1160,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 102,
       "type": "Авт. гвинтівка",
       "name": "M4A1-S",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alIITShWxeupUl0tbN_Iv9nGu4qgE7Nnf1IYWUcAQ7MgnS-FW6wOi705Lo75uYmHNh6SZ3tiqMmh210xkZb-Rvm7XAHs3vPuvv",
@@ -1066,6 +1171,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 103,
       "type": "Авт. гвинтівка",
       "name": "M4A1-S",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO3mb-RkvXmMoTVl3la18l4jeHVyoD0mlOx5RVoa23wIo7EdgE2N12F-lPqwLzm0ZPpvpXIz3FmvnZ34n_YmhW01xtSLrs4m_P9LyY/330x192",
@@ -1076,6 +1182,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 104,
       "type": "Авт. гвинтівка",
       "name": "M4A1-S",
       "image": "https://cdn.csgo.com//item/M4A1-S+%7C+Atomic+Alloy+%28Field-Tested%29/300.png",
@@ -1086,6 +1193,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 105,
       "type": "Авт. гвинтівка",
       "name": "M4A1-S",
       "image": "https://cdn.csgo.com/item/M4A1-S+%7C+%D0%9C%D0%B5%D1%85%D0%B0%D0%BD%D0%BE-%D0%BF%D1%83%D1%88%D0%BA%D0%B0+%28%D0%9D%D0%B5%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE+%D0%BF%D0%BE%D0%BD%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5%29/300.png",
@@ -1096,6 +1204,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 106,
       "type": "Авт. гвинтівка",
       "name": "M4A1-S",
       "image": "https://cdn.csgo.com//item/M4A1-S+%7C+Control+Panel+%28Minimal+Wear%29/300.png",
@@ -1106,6 +1215,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 107,
       "type": "Авт. гвинтівка",
       "name": "M4A1-S",
       "image": "https://cdn.csgo.com/item/M4A1-S+%7C+%D0%91%D1%80%D0%B8%D1%84%D0%B8%D0%BD%D0%B3+%28%D0%9D%D0%B5%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE+%D0%BF%D0%BE%D0%BD%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5%29/300.png",
@@ -1116,6 +1226,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 108,
       "type": "Кулемет",
       "name": "M249",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-jxcjhzw8zFI2kb09qkm4e0mOX9NLLfl2du5cB1g_zMu9mhilKx_RFrZz_xd4WdI1U6YFnT-lW3xOjn08C-6pjJmHUwsiYisSnD30vgyFBvx40",
@@ -1126,6 +1237,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 109,
       "type": "Кулемет",
       "name": "M249",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-jxcjhnwMzFI2kb08u3hoKChfPLJb7Fk3lQ5vp8j-3I4IHKhFWmrBZyMj37JY_BJFI5aAnUr1a2ybu5g5O-u8zPyXAxsihwtnmOyRTmgRgab_sv26KMvaW1kg/330x192",
@@ -1136,6 +1248,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 110,
       "type": "Кулемет",
       "name": "M249",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-jxcjhhwszHcy5L6NW3mr-HnvD8J_XSzmoCsMYo2byV9t7z3AHn-hVsa2nxcdfEdg9tMAnZ8la2k7y5jMPoot2XnoUzripl",
@@ -1146,6 +1259,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 111,
       "type": "Пістолет",
       "name": "Glock-18",
       "image": "https://cdn.csgo.com/item/Glock-18+%7C+%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%BB%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD+%28%D0%9F%D0%BE%D1%81%D0%BB%D0%B5+%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D1%85+%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D0%BD%D0%B8%D0%B9%29/300.png",
@@ -1156,6 +1270,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 112,
       "type": "Пістолет",
       "name": "Glock-18",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0Ob3djFN79eJkZmOlPj6J7rSglRc7cF4n-T--Y3nj1H6-kM5NzrwJNTHdlQ8Y1uF-Qfskuq-jZbvuZvKm3pmvici4nfeyUG1iAYMMLJ0uEWB8A/360fx360f",
@@ -1166,6 +1281,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 113,
       "type": "Пістолет",
       "name": "Glock-18",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0v73fyhB4Nm3hr-bluPgNqnfx1RW5MpygdbN_Iv9nGu4qgE7NnfzJdOcc1I8aFvQr1G6lersh5e57siam3tjviQlt32IzUDkgEseZrFmm7XAHtr3Zeyq/330x192",
@@ -1176,6 +1292,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 114,
       "type": "Пістолет",
       "name": "Glock-18",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0Ob3djFN79eJkIWKg__gPLfdqWZU7Mxkh6eToY2l3wy2rkFkNmj0JYaTcQY8YV-BqATrweu615-4u5zLnHVl6CJz-z-DyCIevZ0V",
@@ -1186,6 +1303,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 115,
       "type": "Пістолет",
       "name": "Glock-18",
       "image": "https://cdn.csgo.com//item/Glock-18+%7C+Blue+Fissure+%28Battle-Scarred%29/300.png",
@@ -1196,6 +1314,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 116,
       "type": "Гвинтівка",
       "name": "G3SG1",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposem2LFZf1OD3dm5R642Jh4GdlvDxDLbUkmJE5Ysp0u3D94-i3wXt-BA_ZDilLIaXJFVoZ1_SrFG4l-28h8O0tJzLnXJrpGB8sm8d1GLm",
@@ -1206,6 +1325,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 117,
       "type": "Гвинтівка",
       "name": "G3SG1",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposem2LFZfwOP3dm5R642JmYmHnuP9MrTDl2VW7fp8j-3I4IG7jgfsqUNtYDqlJteSIVA7N1zQ-le9l7i51sTt7svOzHVluHF04yqMnAv330_agV6dCw",
@@ -1216,6 +1336,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 118,
       "type": "Гвинтівка",
       "name": "G3SG1",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposem2LFZf0Ob3dm5R642JloyKlPznMrXVqWdY781lteXA54vwxgy18hFvZW30I4-RewVvNFnZq1m5lLzr0JG_7czNziRnviMgsXyLmxSpwUYbjJfDXCI",
@@ -1226,6 +1347,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 119,
       "type": "Гвинтівка",
       "name": "G3SG1",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposem2LFZf1OD3dm5R642JgombkuXLKr7dmmRG18h0juDU-MKgjQ3sqkRvY2z0JYCQewI5MguD_lXqwe_th5-9tM_AyHU2syAms33agVXp1kZqQZm_",
@@ -1236,6 +1358,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 120,
       "type": "Гвинтівка",
       "name": "G3SG1",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposem2LFZf0v73cDNB5dm4gL-cnvnxDLfYkWNF18lwmO7Eu4jzjVXj-hc_aj-iItKcJ1M5MAnV-Fnowe7ng8O-vZvKynRjvydx4irD30vgik1W_Wc",
@@ -1246,6 +1369,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 121,
       "type": "Пістолет",
       "name": "Five-SeveN",
       "image": "https://cdn.csgo.com//item/Five-SeveN+%7C+Nightshade+%28Factory+New%29/300.png",
@@ -1256,6 +1380,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 122,
       "type": "Пістолет",
       "name": "Five-SeveN",
       "image": "https://cdn.csgo.com//item/Five-SeveN+%7C+Kami+%28Factory+New%29/300.png",
@@ -1266,6 +1391,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 123,
       "type": "Пістолет",
       "name": "Five-SeveN",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLOzLhRlxfbGTjxT09O_mIWPqPv9NLPF2G1V6cQh07yVoN-s3gG2-RE5amqlLNfEewZvNFzW8wW3w-i51MW46ZrXiSw0Tr_CS4o",
@@ -1276,6 +1402,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 124,
       "type": "Пістолет",
       "name": "Five-SeveN",
       "image": "https://cdn.csgo.com//item/Five-SeveN+%7C+Contractor+%28Field-Tested%29/300.png",
@@ -1286,6 +1413,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 125,
       "type": "Пістолет",
       "name": "Five-SeveN",
       "image": "https://cdn.csgo.com//item/Five-SeveN+%7C+Jungle+%28Minimal+Wear%29/300.png",
@@ -1296,6 +1424,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 126,
       "type": "Авт. гвинтівка",
       "name": "FAMAS",
       "image": "https://cdn.csgo.com/item/FAMAS+%7C+%D0%9D%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F+%D1%81%D0%B5%D1%82%D1%8C+%28%D0%9F%D1%80%D1%8F%D0%BC%D0%BE+%D1%81+%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0%29/300.png",
@@ -1306,6 +1435,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 127,
       "type": "Авт. гвинтівка",
       "name": "FAMAS",
       "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLuoKhRf2-r3ZzxQ5d-3mY-0k_LnNqnFqWdY781lteXA54vwxlbi_kM9YTjzIYfEegY3NV_R_AW6w-fn0ZS_tJrOy3tnvyZz4X_ZzECpwUYbb4g9zwY",
@@ -1316,6 +1446,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 128,
       "type": "Авт. гвинтівка",
       "name": "FAMAS",
       "image": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLuoKhRf0vL3ZjRQ5dKxq5mOm_v7JITdn2xZ_Pp9i_vG8ML22gfmqkBqNTv7cIDEdA8_aVHT-1K8kO691MC9vpudy3dj7ih25nqIgVXp1hW43Nue",
@@ -1326,6 +1457,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 129,
       "type": "Авт. гвинтівка",
       "name": "FAMAS",
       "image": "https://cdn.csgo.com//item/FAMAS+%7C+Pulse+%28Minimal+Wear%29/300.png",
@@ -1336,6 +1468,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 130,
       "type": "Авт. гвинтівка",
       "name": "FAMAS",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLuoKhRf0v33dzxP7c-Jh4efqPv9NLPF2DIAucYniejCodnw3lK1-kJqNz_wLYXGJwc_Y1nTqAW2xOnqh5--uZjXiSw0lXvR31M",
@@ -1346,6 +1479,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 131,
       "type": "Пістолет",
       "name": "Dual Berettas",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpos7asPwJf0Ob3dShD4OOzmImfkuTLIbrdmnJu5cB1g_zMyoD0mlOx5Uc_a2vycYWSegY2M1GFr1i-wu7pjZW5u5TNyyRluXYl4HuInkOzhBtSLrs4Dc2Zcgg/330x192",
@@ -1356,6 +1490,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 132,
       "type": "Пістолет",
       "name": "Dual Berettas",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpos7asPwJf1OD3dShD4OO0kZKOg-P1IITWmWdV7ctOnOzP_I_wt1mxrxopPnfyLdXGelQ_ZVnQ_lO8leu-gp-7uJvBwSZmvCkm437emRKxhB9JauZpm7XAHnmddH9j",
@@ -1366,6 +1501,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 133,
       "type": "Пістолет",
       "name": "Dual Berettas",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpos7asPwJf1OD3dShD4OOzmImfkuTLN77Ll3hF-sBOhuDG_ZjKhFWmrBZyajv0ddecI1VtNVmF-VDvw-7t15bqvsybz3Q3unN07Svenxa-1E1LOvsv26KRGIX1Dw",
@@ -1376,6 +1512,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 134,
       "type": "Пістолет",
       "name": "Deser Eagle",
       "image": "https://cdn.csgo.com/item/Desert+Eagle+%7C+%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D0%BE%D0%B9+%D0%BA%D0%B0%D1%80%D0%BF+%28%D0%9F%D1%80%D1%8F%D0%BC%D0%BE+%D1%81+%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0%29/300.png",
@@ -1386,6 +1523,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 135,
       "type": "Пістолет",
       "name": "Deser Eagle",
       "image": "https://cdn.csgo.com//item/Desert+Eagle+%7C+Naga+%28Minimal+Wear%29/300.png",
@@ -1396,6 +1534,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 136,
       "type": "Пістолет",
       "name": "Deser Eagle",
       "image": "https://cdn.csgo.com//item/StatTrak%E2%84%A2+Desert+Eagle+%7C+Printstream+%28Battle-Scarred%29/300.png",
@@ -1406,6 +1545,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 137,
       "type": "Пістолет",
       "name": "CZ75-Auto",
       "image": "https://cdn.csgo.com//item/CZ75-Auto+%7C+Army+Sheen+%28Field-Tested%29/300.png",
@@ -1416,6 +1556,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 138,
       "type": "Пістолет",
       "name": "CZ75-Auto",
       "image": "https://cdn.csgo.com//item/CZ75-Auto+%7C+Indigo+%28Battle-Scarred%29/300.png",
@@ -1426,6 +1567,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 139,
       "type": "Пістолет",
       "name": "CZ75-Auto",
       "image": "https://cdn.csgo.com//item/CZ75-Auto+%7C+Hexane+%28Field-Tested%29/300.png",
@@ -1436,6 +1578,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 140,
       "type": "Пістолет",
       "name": "CZ75-Auto",
       "image": "https://cdn.csgo.com//item/CZ75-Auto+%7C+Vendetta+%28Factory+New%29/300.png",
@@ -1446,6 +1589,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 141,
       "type": "Гвинтівка",
       "name": "AWP",
       "image": "https://cdn.csgo.com/item/AWP+%7C+%D0%AD%D0%BB%D0%B8%D1%82%D0%BD%D0%BE%D0%B5+%D1%81%D0%BD%D0%B0%D1%80%D1%8F%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5+%28%D0%9F%D0%BE%D1%81%D0%BB%D0%B5+%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D1%85+%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D0%BD%D0%B8%D0%B9%29/300.png",
@@ -1456,6 +1600,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 142,
       "type": "Гвинтівка",
       "name": "AWP",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17PLfYQJD_9W7m5a0mvLwOq7cqWdQ-sJ0xOzAot-jiQa3-hBqYzvzLdSVJlQ3NQvR-FfsxL3qh5e7vM6bzSA26Sg8pSGKJUPeNtY/360fx360f",
@@ -1466,6 +1611,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 143,
       "type": "Гвинтівка",
       "name": "AWP",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17PXJZzhO7eO3g5C0m_7zO6_ummpD78A_3rqTrI-l3AOxqkJkamClJ46RdFc_MFDR_1K3k7_t1JS7upvMmHdn7z5iuygrdWg_VA/360fx360f",
@@ -1476,6 +1622,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 144,
       "type": "Гвинтівка",
       "name": "AWP",
       "image": "https://cdn.csgo.com//item/AWP+%7C+Electric+Hive+%28Factory+New%29/300.png",
@@ -1486,6 +1633,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 145,
       "type": "Гвинтівка",
       "name": "AWP",
       "image": "https://cdn.csgo.com/item/AWP+%7C+%D0%9B%D0%90%D0%9F%D0%9A%D0%98+%28%D0%9D%D0%B5%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE+%D0%BF%D0%BE%D0%BD%D0%BE%D1%88%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5%29/300.png",
@@ -1496,6 +1644,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 146,
       "type": "Гвинтівка",
       "name": "AWP",
       "image": "https://cdn.csgo.com/item/AWP+%7C+%D0%A1%D0%BA%D0%BE%D1%80%D0%BE%D1%81%D1%82%D0%BD%D0%BE%D0%B9+%D0%B7%D0%B2%D0%B5%D1%80%D1%8C+%28%D0%9F%D0%BE%D1%81%D0%BB%D0%B5+%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D1%85+%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D0%BD%D0%B8%D0%B9%29/300.png",
@@ -1506,6 +1655,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 147,
       "type": "Авт. гвинтівка",
       "name": "AUG",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFBRv7ODYcD5H09G3homFksj8NrrHjyUFu5Rw3uqX842j3gDj_UQ_ZGr2LNXHdFA6aFvZq1G7kOzr05fu6JuY1zI97TNaHTCg",
@@ -1516,6 +1666,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 148,
       "type": "Авт. гвинтівка",
       "name": "AUG",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFA957PXNcClK6c6lq4GekMj4OrzZgiVUuZEg0-uUp42mjFCw_xE5N2zwJo7DdgU2NAnVrgTvwem9hcTtvpnB1zI97VRJemoq",
@@ -1526,6 +1677,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 149,
       "type": "Авт. гвинтівка",
       "name": "AUG",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFABz7PLddgJR9diJmYWKk8j5Nr_Yg2Zu5MRjjeyP9NWn3FHs-kc4a2j6IYDEJwI7aFrV-FntkLy81MTu6JWczyMx6ygks2GdwUKNHIUL1Q/360fx360f",
@@ -1536,6 +1688,7 @@
       "condition": "Прямо із заводу"
     },
     {
+      "id": 150,
       "type": "Авт. гвинтівка",
       "name": "AUG",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFA957OfBdjhQ09GzkImemrmhY-PVxWkDsZcp2urC8N2s3lew_0NoMj-lLNKTcA9oNQnU-wO6wLvnm9bi65rZUCs2",
@@ -1546,6 +1699,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 151,
       "type": "Авт. гвинтівка",
       "name": "AUG",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJS_tOxhoWYhP7iDLfYkWNFpsMm27vD9Iqs2gHnqRdvZm6gI4fEcwM8ZAyBqVS_lO3vh5-075TMynd9-n51xJ7ya_c",
@@ -1556,6 +1710,7 @@
       "condition": "Трохи поношене"
     },
     {
+      "id": 152,
       "type": "Авт. гвинтівка",
       "name": "AK-47",
       "image": "https://cdn.csgo.com/item/AK-47+%7C+%D0%A7%D0%B5%D1%80%D0%BD%D1%8B%D0%B9+%D0%B3%D0%BB%D1%8F%D0%BD%D0%B5%D1%86+%28%D0%9F%D0%BE%D1%81%D0%BB%D0%B5+%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D1%85+%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D0%BD%D0%B8%D0%B9%29/300.png",
@@ -1566,6 +1721,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 153,
       "type": "Авт. гвинтівка",
       "name": "AK-47",
       "image": "https://cdn.csgo.com//item/StatTrak%E2%84%A2+AK-47+%7C+Point+Disarray+%28Factory+New%29/300.png",
@@ -1576,6 +1732,7 @@
       "condition": "Загартоване у боях"
     },
     {
+      "id": 154,
       "type": "Авт. гвинтівка",
       "name": "AK-47",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszYcDNW5Nmkq4GAw6DLP7LWnn8fvscmibGTpdSmigGyqRFrYm_wJdfBdQ84YAmD-1S6wrru08W-7ZianWwj5HfSt_Eogg",
@@ -1586,6 +1743,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 155,
       "type": "Авт. гвинтівка",
       "name": "AK-47",
       "image": "https://cdn.csgo.com/item/StatTrak%E2%84%A2+AK-47+%7C+%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F+%D0%BB%D0%B8%D0%BD%D0%B8%D1%8F+%28%D0%9F%D0%BE%D1%81%D0%BB%D0%B5+%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D1%85+%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D0%BD%D0%B8%D0%B9%29/300.png",
@@ -1596,6 +1754,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 156,
       "type": "Авт. гвинтівка",
       "name": "AK-47",
       "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092lnYmGmOHLPr7Vn35c18lwmO7Eu92milbl-BZsZGiiLNKdJFc8Mg7V_1S_xuzshZK97c_In3pruCJx4X_D30vgyZM--n4/360fx360f",
@@ -1606,6 +1765,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 157,
       "type": "Авт. гвинтівка",
       "name": "AK-47",
       "image": "https://cdn.csgo.com/item/AK-47+%7C+%D0%9D%D0%B5%D0%BE%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F+%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D1%8F+%28%D0%9F%D0%BE%D1%81%D0%BB%D0%B5+%D0%BF%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B%D1%85+%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D0%BD%D0%B8%D0%B9%29/300.png",
@@ -1616,6 +1776,7 @@
       "condition": "Поношене"
     },
     {
+      "id": 158,
       "type": "Авт. гвинтівка",
       "name": "AK-47",
       "image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zbYS9D9eO8gY6Mm_LLP7LWnn8f6cMk2L3E9NqkilHm8hI-a2inctSWcAc8Zl-C81nvw-_uhpW06MjKzmwj5Hd9a9y0Zw",
@@ -1645,7 +1806,6 @@
         64, 68, 71, 73, 74
       ]
     },
-
     {
       "name": "Пріоритет",
       "img": "https://ggdorp.me/public/storage/cases/S0kf_prioritet.png",
