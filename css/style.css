@@ -169,6 +169,7 @@ a {
 .logo img {
   width: 30px;
   height: 30px;
+  margin-top: -20px;
 }
 
 @-webkit-keyframes logo {
@@ -201,6 +202,18 @@ a {
   background-size: cover;
 }
 
+@media (max-width: 1000px) {
+  .main {
+    background-position-x: -500px;
+  }
+}
+
+@media (max-width: 630px) {
+  .main {
+    background-position-x: -800px;
+  }
+}
+
 .section-main {
   padding-top: 170px;
   padding-bottom: 100px;
@@ -209,12 +222,6 @@ a {
 @media (max-width: 980px) {
   .section-main {
     padding-bottom: 50px;
-  }
-}
-
-@media (max-width: 500px) {
-  .section-main {
-    background-position: -150px;
   }
 }
 
@@ -685,7 +692,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 80px 15px 20px 20px;
+  padding: 30px 15px 20px 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -695,12 +702,20 @@ a {
 .footer-logo {
   font-size: 40px;
   text-shadow: 0px 0px 5px red;
+  position: relative;
 }
 
 .footer-logo img {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   margin-top: -20px;
+}
+
+.footer-logo__info--text {
+  color: #fff;
+  font-size: 12px;
+  max-width: 250px;
+  text-shadow: none;
 }
 
 .footer .replenishment {
@@ -714,7 +729,7 @@ a {
 .footer__wrap {
   display: block;
   text-align: center;
-  padding: 40px 0px;
+  padding: 20px 0px;
 }
 
 .footer__wrap img {
@@ -728,8 +743,53 @@ a {
 }
 
 @media (max-width: 900px) {
+  .footer-logo__info--text {
+    font-size: 10px;
+  }
+  .footer h5 {
+    font-size: 14px;
+  }
+  .footer p:not(.footer-logo__info--text) {
+    font-size: 14px;
+  }
+  .footer .replenishment {
+    font-size: 14px;
+  }
+  .footer .replenishment img {
+    width: 40px;
+    height: 40px;
+  }
+  .footer__wrap img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 700px) {
   .footer-between {
     display: block;
+  }
+  .footer-logo {
+    text-align: center;
+  }
+  .footer-logo__info {
+    display: block;
+    margin: 0 auto;
+    max-width: none;
+  }
+  .footer-logo__info--text {
+    margin: 0 auto;
+  }
+  .footer .replenishment {
+    text-align: center;
+  }
+  .footer__wrap {
+    margin-top: -10px;
+    padding-top: 0;
+  }
+  .footer__pay p {
+    margin-top: 5px;
+    text-align: center;
   }
 }
 
@@ -832,6 +892,10 @@ a {
   }
 }
 
+.info-item {
+  color: #a2bcbd;
+}
+
 .info-item h3 {
   margin-top: 20px;
   font-size: 20px;
@@ -840,6 +904,13 @@ a {
 
 .info-item p {
   padding-left: 20px;
+}
+
+.info-item__img-popap {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: 25px;
+  height: 25px;
 }
 
 @media (max-width: 400px) {
@@ -1122,10 +1193,6 @@ a {
   .personal-invent h3 img {
     margin-top: -12px;
   }
-}
-
-.invenory-footer {
-  background-color: #131617;
 }
 
 .more-skins {
@@ -1603,6 +1670,18 @@ a {
   }
 }
 
+.check-box-user {
+  width: 198px;
+  position: relative;
+  font-size: 13px;
+}
+
+.check-box-user #option1 {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+
 .inputs-login {
   margin-top: 20px;
 }
@@ -1676,20 +1755,40 @@ a {
   width: 100%;
 }
 
+.fix-height-wrong-login {
+  height: 42px;
+}
+
+.buttons-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 600px) {
+  .buttons-flex {
+    display: block;
+  }
+}
+
 .wrong-login {
   font-size: 14px;
-  max-width: 220px;
-  text-align: center;
+  width: 200px;
   position: absolute;
-  bottom: -55px;
+  bottom: -2px;
+  left: 100px;
   color: #c00;
 }
 
 @media (max-width: 600px) {
   .wrong-login {
+    width: 100% !important;
     position: relative;
     display: block;
-    margin: -30px auto 50px auto;
+    left: 0;
   }
 }
 
@@ -1728,26 +1827,65 @@ a {
   color: #c00;
 }
 
+.login-failed {
+  width: 150px;
+  position: relative;
+  font-size: 13px;
+}
+
+.login-failed__info {
+  position: absolute;
+  right: -10px;
+  font-size: 15px;
+  top: -8px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.login-failed button {
+  position: absolute;
+  width: 200px;
+  right: 0;
+  top: -30px;
+}
+
 @media (max-width: 992px) {
   .login-failed {
+    height: 30px;
+  }
+  .login-failed button {
     margin: 10px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 14px;
+    top: -10px;
+    left: 0;
+  }
+  .login-failed__info {
+    top: 10px;
+    left: 10px;
   }
 }
 
 .header__login-success {
-  width: 258px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 170px;
 }
 
 .header__login-success .ellips-icon {
   margin-left: auto;
   width: 40px;
   height: 40px;
+  min-width: 40px;
   padding-top: 0px;
   font-size: 24px;
   text-align: center;
@@ -1762,7 +1900,7 @@ a {
 
 @media (max-width: 992px) {
   .header__login-success .ellips-icon {
-    margin-left: 10px;
+    margin-left: -10px;
   }
 }
 
@@ -1773,16 +1911,15 @@ a {
 }
 
 .header__balance {
-  margin: 0px;
-  margin-left: auto;
+  position: absolute;
+  top: 20%;
+  left: -20px;
 }
 
 @media (max-width: 992px) {
   .header__balance {
-    margin-left: 10px;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    display: block;
+    margin-left: 60px;
   }
 }
 
@@ -1794,6 +1931,7 @@ a {
   top: 160px;
   background-color: #2e3336;
   right: -600px;
+  z-index: +99;
   border-radius: 10px 0px 0px 10px;
   width: 400px;
   text-align: center;
@@ -1815,7 +1953,7 @@ a {
   text-align: center;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  z-index: 20;
+  z-index: +99;
   cursor: pointer;
 }
 
@@ -1851,12 +1989,6 @@ a {
   position: relative;
 }
 
-@media (max-width: 400px) {
-  .popap-info__wrapper {
-    font-size: 14px;
-  }
-}
-
 .popap-info__wrapper .popap-info-data {
   font-size: 13px;
   position: absolute;
@@ -1874,10 +2006,33 @@ a {
           user-select: none;
 }
 
+@media (max-width: 400px) {
+  .popap-info__wrapper {
+    font-size: 14px;
+  }
+}
+
+@media (max-height: 500px) {
+  .popap-info__wrapper {
+    font-size: 12px;
+    margin-bottom: 5px;
+    padding: 20px 5px 40px 5px;
+  }
+  .popap-info__wrapper .popap-info-data {
+    font-size: 11px;
+  }
+}
+
 .popap-info__list {
   list-style: none;
   font-size: 14px;
   margin-top: 40px;
+}
+
+@media (max-height: 500px) {
+  .popap-info__list {
+    margin-top: 20px;
+  }
 }
 
 .popap-info__list li {
@@ -1894,6 +2049,12 @@ a {
 .popap-info__list li:hover {
   background-color: #536872;
   color: #000;
+}
+
+@media (max-height: 500px) {
+  .popap-info__list li {
+    font-size: 12px;
+  }
 }
 
 .success-container {
@@ -1949,6 +2110,12 @@ a {
     position: absolute;
     bottom: 30px;
     right: 45px;
+  }
+}
+
+@media (max-height: 600px) {
+  .replenishment-popap body {
+    overflow: hidden;
   }
 }
 
@@ -2139,7 +2306,6 @@ a {
 }
 
 .trade__container {
-  width: 90%;
   padding: 15px;
   max-width: 1200px;
   background-color: #32353c;
@@ -2167,6 +2333,20 @@ a {
     display: block;
     margin: 20px auto;
     min-width: 300px;
+  }
+}
+
+.trade__container__with-inventory {
+  width: 90%;
+}
+
+.trade__container__without-inventory {
+  width: 50%;
+}
+
+@media (max-width: 1265px) {
+  .trade__container__without-inventory {
+    width: 90%;
   }
 }
 
@@ -2323,6 +2503,10 @@ a {
   right: 10px;
 }
 
+.buy-inventory__without-inventory {
+  margin-top: 0;
+}
+
 .buy-inventory select {
   position: absolute;
   top: 7px;
@@ -2381,6 +2565,27 @@ a {
 @media (max-width: 1265px) {
   .swap__wrong-balance {
     bottom: -70px;
+  }
+}
+
+.swap__wrong-balance__without-inventory {
+  width: 240px;
+  bottom: -10px;
+}
+
+@media (max-width: 1265px) {
+  .swap__wrong-balance__without-inventory {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 330px;
+    bottom: -85px;
+  }
+}
+
+@media (max-width: 700px) {
+  .swap__wrong-balance__without-inventory {
+    max-width: 300px;
   }
 }
 
@@ -2491,7 +2696,7 @@ a {
   inset: 0;
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.6);
-  z-index: +9;
+  z-index: +5;
 }
 
 .is-participation p {

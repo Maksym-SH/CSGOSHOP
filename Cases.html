@@ -21,68 +21,7 @@
   </head>
   <body>
     <div id="app" class="cases">
-      <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
-            <a href="Main.html" class="navbar-brand logo"
-              ><img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
-                >shop</span
-              ></a
-            >
-            <button
-              class="navbar-toggler bg-light link-info"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mx-auto ml-5">
-                <li>
-                  <a class="nav-link" href="Main.html">До головної</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Questions.html">Питання</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Inventory.html">Інвентар</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Trade.html">Обмін</a>
-                </li>
-              </ul>
-              <template v-cloak>
-                <a href="LoginSteam.html" v-if="!IsLoginSuccess"
-                  ><button type="button" class="btn btn-primary login-failed">
-                    <img src="./img/steam.svg" alt="" /> Увіти за допомогою
-                    STEAM
-                  </button></a
-                >
-                <div
-                  v-else-if="IsLoginSuccess && !isMdWidth"
-                  class="header__login-success"
-                >
-                  <p class="header__balance">Баланс {{balance}}₴</p>
-                  <div class="ellips-icon">{{ savedLogin[0] }}</div>
-                </div>
-              </template>
-            </nav>
-          </div>
-        </nav>
-        <template v-cloak>
-          <div
-            v-if="isMdWidth && IsLoginSuccess"
-            class="header__login-success header__account_fixed"
-          >
-            <p class="header__balance">Баланс {{balance}}₴</p>
-            <div class="ellips-icon">{{ savedLogin[0] }}</div>
-          </div>
-        </template>
-      </header>
+      <header-component :params={login:IsLoginSuccess,isMdWidth:isMdWidth,balance:balance,savedLogin:savedLogin[0],currentPage:'cases'}></header-component>
       <div
         class="show-popap-account"
         v-if="IsLoginSuccess"
@@ -159,7 +98,7 @@
               </div>
               <transition name="fade">
                 <div class="container-skins mt-5">
-                  <div class="w-100 mx-auto">
+                  <div class="w-100 mx-auto" v-if="IsLoginSuccess">
                       <div class="roulette-wrapper">
                         <div id="roulette-container" ref="rouletteContainer"></div>
                       </div>
@@ -183,37 +122,7 @@
           </div>
         </section>
       </main>
-      <footer class="footer invenory-footer">
-        <div class="footer-between">
-          <div class="footer-logo">
-            <img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
-              >shop</span
-            >
-          </div>
-          <div class="footer__wrap">
-            <h5>Зв'язатися з нами</h5>
-            <div>
-              <a href="https://vk.com/max185"
-                ><img src="./img/vk.svg" alt=""
-              /></a>
-              <a href="https://github.com/Maksym-SH/CSGOSHOP"
-                ><img src="./img/github.svg" alt=""
-              /></a>
-            </div>
-          </div>
-          <div class="footer__pay">
-            <div class="replenishment">
-              Ми приймаємо такі способи <br />поповнення рахунку<br />
-              <img src="./img/mastercard.svg" alt="" />
-              <img src="./img/visa.svg" alt="" />
-            </div>
-            <p>
-              Copyright © 2022 CSGOSHOP.<br />
-              Усі права захищені.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <footer-component></footer-component>
       <template v-cloak>
         <transition name="fade">
           <div class="popap-skins-info" v-if="Object.keys(winThing).length !== 0">
@@ -278,7 +187,7 @@
               </p>
             </div>
             <ul class="popap-info__list">
-              <li @click="replenishmentActive = !replenishmentActive">
+              <li @click="replenishmentActive = !replenishmentActive, popapInfoAccountActive = !popapInfoAccountActive">
                 Поповнити баланс
               </li>
               <li>Інвентар виводу</li>

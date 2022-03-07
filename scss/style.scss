@@ -141,6 +141,7 @@ a {
   img {
     width: 30px;
     height: 30px;
+    margin-top: -20px;
   }
 }
 @keyframes logo {
@@ -158,16 +159,18 @@ a {
 .main {
   background: $dark url("../img/background-main.jpeg") no-repeat;
   background-size: cover;
+  @media (max-width: 1000px) {
+    background-position-x: -500px;
+  }
+  @media (max-width: 630px) {
+    background-position-x: -800px;
+  }
 }
 .section-main {
   padding-top: 170px;
-
   padding-bottom: 100px;
   @media (max-width: 980px) {
     padding-bottom: 50px;
-  }
-  @media (max-width: 500px) {
-    background-position: -150px;
   }
 }
 .rating {
@@ -497,23 +500,33 @@ a {
   }
 }
 /* footer */
+
 .footer {
   border-top: 1px solid #3d7a97;
   width: 100%;
   margin-top: auto;
   &-between {
     display: flex;
-    padding: 80px 15px 20px 20px;
+    padding: 30px 15px 20px 20px;
     justify-content: space-between;
     border-bottom: 1px solid #3d7a97;
   }
   &-logo {
     font-size: 40px;
     text-shadow: 0px 0px 5px red;
+    position: relative;
     img {
-      width: 60px;
-      height: 60px;
+      width: 40px;
+      height: 40px;
       margin-top: -20px;
+    }
+    &__info {
+      &--text {
+        color: #fff;
+        font-size: 12px;
+        max-width: 250px;
+        text-shadow: none;
+      }
     }
   }
   .replenishment {
@@ -525,7 +538,7 @@ a {
   &__wrap {
     display: block;
     text-align: center;
-    padding: 40px 0px;
+    padding: 20px 0px;
     img {
       width: 60px;
       height: 60px;
@@ -536,8 +549,61 @@ a {
   }
 
   @media (max-width: 900px) {
+    &-logo {
+      &__info {
+        &--text {
+          font-size: 10px;
+        }
+      }
+    }
+
+    h5 {
+      font-size: 14px;
+    }
+    p:not(.footer-logo__info--text) {
+      font-size: 14px;
+    }
+    .replenishment {
+      font-size: 14px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    &__wrap {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  @media (max-width: 700px) {
     &-between {
       display: block;
+    }
+    &-logo {
+      text-align: center;
+      &__info {
+        display: block;
+        margin: 0 auto;
+        max-width: none;
+        &--text {
+          margin: 0 auto;
+        }
+      }
+    }
+    .replenishment {
+      text-align: center;
+    }
+    &__wrap {
+      margin-top: -10px;
+      padding-top: 0;
+    }
+    &__pay {
+      p {
+        margin-top: 5px;
+        text-align: center;
+      }
     }
   }
   @media (max-width: 900px) {
@@ -614,6 +680,7 @@ a {
   }
 }
 .info-item {
+  color: #a2bcbd;
   h3 {
     margin-top: 20px;
     font-size: 20px;
@@ -621,6 +688,11 @@ a {
   }
   p {
     padding-left: 20px;
+  }
+  &__img-popap {
+    transform: rotate(90deg);
+    width: 25px;
+    height: 25px;
   }
   @media (max-width: 400px) {
     h3 {
@@ -838,9 +910,7 @@ a {
     }
   }
 }
-.invenory-footer {
-  background-color: #131617;
-}
+
 .more-skins {
   margin-top: 50px;
   p a {
@@ -1203,6 +1273,16 @@ a {
     text-align: center;
   }
 }
+.check-box-user {
+  width: 198px;
+  position: relative;
+  font-size: 13px;
+  #option1 {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+  }
+}
 .inputs-login {
   margin-top: 20px;
   label {
@@ -1252,17 +1332,28 @@ a {
     width: 100%;
   }
 }
+.fix-height-wrong-login {
+  height: 42px;
+}
+.buttons-flex {
+  display: flex;
+  align-items: center;
+  @media (max-width: 600px) {
+    display: block;
+  }
+}
 .wrong-login {
   font-size: 14px;
-  max-width: 220px;
-  text-align: center;
+  width: 200px;
   position: absolute;
-  bottom: -55px;
+  bottom: -2px;
+  left: 100px;
   color: #c00;
   @media (max-width: 600px) {
+    width: 100% !important;
     position: relative;
     display: block;
-    margin: -30px auto 50px auto;
+    left: 0;
   }
 }
 .numeric-table {
@@ -1296,21 +1387,50 @@ a {
   color: #c00;
 }
 .login-failed {
+  width: 150px;
+  position: relative;
+  font-size: 13px;
+  &__info {
+    position: absolute;
+    right: -10px;
+    font-size: 15px;
+    top: -8px;
+    user-select: none;
+    width: max-content;
+  }
+  button {
+    position: absolute;
+    width: 200px;
+    right: 0;
+    top: -30px;
+  }
   @media (max-width: 992px) {
-    margin: 10px;
+    button {
+      margin: 10px;
+      width: max-content;
+      font-size: 14px;
+      top: -10px;
+      left: 0;
+    }
+    height: 30px;
+    &__info {
+      top: 10px;
+      left: 10px;
+    }
   }
 }
 .header__login-success {
-  width: 258px;
+  position: relative;
   display: flex;
-  align-items: center;
+  width: 170px;
   .ellips-icon {
     margin-left: auto;
     @media (max-width: 992px) {
-      margin-left: 10px;
+      margin-left: -10px;
     }
     width: 40px;
     height: 40px;
+    min-width: 40px;
     padding-top: 0px;
     font-size: 24px;
     text-align: center;
@@ -1326,11 +1446,12 @@ a {
   }
 }
 .header__balance {
-  margin: 0px;
-  margin-left: auto;
+  position: absolute;
+  top: 20%;
+  left: -20px;
   @media (max-width: 992px) {
-    margin-left: 10px;
-    order: 2;
+    display: block;
+    margin-left: 60px;
   }
 }
 .popap-info-account {
@@ -1340,6 +1461,7 @@ a {
   top: 160px;
   background-color: #2e3336;
   right: -600px;
+  z-index: +99;
   border-radius: 10px 0px 0px 10px;
   width: 400px;
   text-align: center;
@@ -1356,7 +1478,7 @@ a {
   border-radius: 0 0 10px 10px;
   text-align: center;
   transition: all 0.5s ease;
-  z-index: 20;
+  z-index: +99;
   cursor: pointer;
   img {
     transform: rotate(90deg);
@@ -1382,9 +1504,6 @@ a {
   border-bottom: 1px solid #1f2428;
   padding: 30px 5px 50px 5px;
   position: relative;
-  @media (max-width: 400px) {
-    font-size: 14px;
-  }
   .popap-info-data {
     font-size: 13px;
     position: absolute;
@@ -1397,11 +1516,25 @@ a {
     right: 5px;
     user-select: none;
   }
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+  @media (max-height: 500px) {
+    font-size: 12px;
+    margin-bottom: 5px;
+    padding: 20px 5px 40px 5px;
+    .popap-info-data {
+      font-size: 11px;
+    }
+  }
 }
 .popap-info__list {
   list-style: none;
   font-size: 14px;
   margin-top: 40px;
+  @media (max-height: 500px) {
+    margin-top: 20px;
+  }
   li {
     width: 100%;
     margin-left: -16px;
@@ -1413,6 +1546,9 @@ a {
     &:hover {
       background-color: #536872;
       color: #000;
+    }
+    @media (max-height: 500px) {
+      font-size: 12px;
     }
   }
 }
@@ -1457,6 +1593,11 @@ a {
       position: absolute;
       bottom: 30px;
       right: 45px;
+    }
+  }
+  @media (max-height: 600px) {
+    body {
+      overflow: hidden;
     }
   }
   > img {
@@ -1600,7 +1741,6 @@ a {
     padding-top: 180px;
   }
   &__container {
-    width: 90%;
     padding: 15px;
     max-width: 1200px;
     background-color: #32353c;
@@ -1618,6 +1758,15 @@ a {
       display: block;
       margin: 20px auto;
       min-width: 300px;
+    }
+    &__with-inventory {
+      width: 90%;
+    }
+    &__without-inventory {
+      width: 50%;
+      @media (max-width: 1265px) {
+        width: 90%;
+      }
     }
   }
 }
@@ -1732,6 +1881,9 @@ a {
     display: inline;
     right: 10px;
   }
+  &__without-inventory {
+    margin-top: 0;
+  }
   select {
     position: absolute;
     top: 7px;
@@ -1773,6 +1925,18 @@ a {
     transform: translate(-50%);
     @media (max-width: 1265px) {
       bottom: -70px;
+    }
+    &__without-inventory {
+      width: 240px;
+      bottom: -10px;
+      @media (max-width: 1265px) {
+        width: max-content;
+        max-width: 330px;
+        bottom: -85px;
+      }
+      @media (max-width: 700px) {
+        max-width: 300px;
+      }
     }
     span {
       color: #4b69ff;
@@ -1853,7 +2017,7 @@ a {
   inset: 0;
   border-radius: 8px;
   background: rgba(#000, 0.6);
-  z-index: +9;
+  z-index: +5;
   p {
     font-size: 14px;
     text-align: center;

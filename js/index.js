@@ -1,3 +1,141 @@
+Vue.component("footer-component", {
+  template: `<footer class="footer">
+  <div class="footer-between">
+    <div class="footer-logo">
+      <img src="./img/logo.svg" alt="" />
+      Csgo<span class="logo-shop">shop</span>
+      <div class="footer-logo__info">
+        <p class="footer-logo__info--text">
+          Будь-ласка, дотримуйтесь усіх правил при користуванні сайтом, за
+          помилки, які ви допустили під час роботи з сайтом ми
+          відповідальности не несемо.
+        </p>
+      </div>
+    </div>
+    <div class="footer__wrap">
+      <h5>Зв'язатися з нами</h5>
+      <div>
+        <a href="https://vk.com/max185"><img src="./img/vk.svg" alt="" /></a>
+        <a href="https://github.com/Maksym-SH/CSGOSHOP">
+          <img src="./img/github.svg" alt="" />
+        </a>
+      </div>
+    </div>
+    <div class="footer__pay">
+      <div class="replenishment">
+        Ми приймаємо такі способи
+        <br />
+        поповнення рахунку
+        <br />
+        <img src="./img/mastercard.svg" alt="" />
+        <img src="./img/visa.svg" alt="" />
+      </div>
+      <p>
+        Copyright © 2022 CSGOSHOP.
+        <br />
+        Усі права захищені.
+      </p>
+    </div>
+  </div>
+  </footer>`,
+});
+Vue.component("header-component", {
+  data() {
+    return {
+      isEmpty: "",
+      loginPage: this.params.isLoginPage ?? false,
+      headerNav: [
+        {
+          name: "До головної",
+          path: "Main.html",
+          engName: "main",
+        },
+        {
+          name: "Питання",
+          path: "Questions.html",
+          engName: "question",
+        },
+        {
+          name: "Кейси",
+          path: "Cases.html",
+          engName: "cases",
+        },
+        {
+          name: "Інвентар",
+          path: "Inventory.html",
+          engName: "inventory",
+        },
+        {
+          name: "Обмін",
+          path: "Trade.html",
+          engName: "trade",
+        },
+      ],
+    };
+  },
+  props: {
+    params: {
+      type: Object,
+      required: true,
+      default: () => {},
+    },
+  },
+  computed: {
+    showNavigation() {
+      return this.headerNav.filter(
+        (item) => item.engName !== this.params.currentPage
+      );
+    },
+  },
+  template: `
+  <header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a href="Main.html" class="navbar-brand logo"
+        ><img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
+          >shop</span
+        ></a
+      >
+      <button
+        class="navbar-toggler bg-light link-info"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li v-for="link in showNavigation">
+            <a class="nav-link" :href='link.path'>{{link.name}}</a>
+          </li>
+        </ul>
+        <template v-cloak>
+          <div class="login-failed" v-if="params.login ? !params.login : true">
+            <a href="LoginSteam.html" v-if="!loginPage"
+            ><button type="button" class="btn btn-primary">
+              <img src="./img/steam.svg" alt="" /> Увіти за допомогою
+              STEAM
+            </button>
+            </a>
+            <h6 v-else class="login-failed__info">Вхід до акаунту не виконаний</h6>
+          </div>
+          <div
+            v-else-if="params.login && !params.isMdWidth"
+            class="header__login-success"
+          >
+            <p class="header__balance">Баланс {{params.balance ? params.balance : 0}}₴</p>
+            <div class="ellips-icon">{{ params.savedLogin ? params.savedLogin : isEmpty }}</div>
+          </div>
+        </template>
+      </nav>
+    </div>
+  </nav>
+</header>`,
+});
 Vue.directive("filter", {
   bind: function (el, binding) {
     this.inputHandler = function (e) {
@@ -23,6 +161,8 @@ new Vue({
     cases: [],
     popularAccess: false,
     preloader: true,
+    isNewUser: true,
+    isLoginPage: true,
     IsLoginSuccess: false,
     casesLoad: false,
     caseItem: {},
@@ -32,6 +172,7 @@ new Vue({
     insufficientFunds: false,
     popapActive: false,
     password: "",
+    repeatPassword: "",
     login: "",
     imgCT: true,
     valueCheckRobot: "",
@@ -40,7 +181,7 @@ new Vue({
     checkRobotText: "",
     robotValueComparison: false,
     savedLogin: "",
-    balance: 1110,
+    balance: 3213120,
     isMdWidth: false,
     popapInfoAccountActive: false,
     loginTime: "",
@@ -112,11 +253,40 @@ new Vue({
             1
           );
           this.personalInventory.push(this.buySkinForSwap);
-          this.buySkinForSwap = this.ownSkinForSwap = {};
-          localStorage.balance = this.balance;
-          localStorage.personalInventory = JSON.stringify(
-            this.personalInventory
-          );
+          if (Object.keys(this.buySkinForSwap).length) {
+            this.buySkinForSwap.number -= 1;
+            this.ownSkinForSwap.number += 1;
+            this.selectWeaponType.filter(
+              (item) => item.id === this.ownSkinForSwap.id
+            )[0].number += 1;
+            let deleteSkin = fetch(
+              `http://localhost:3000/weapon/${this.buySkinForSwap.id}`,
+              {
+                method: "PUT",
+                body: JSON.stringify(this.buySkinForSwap),
+                headers: {
+                  "Content-type": "application/json; charset=UTF-8",
+                },
+              }
+            ).then((res) => res.json());
+            let addSkin = fetch(
+              `http://localhost:3000/weapon/${this.ownSkinForSwap.id}`,
+              {
+                method: "PUT",
+                body: JSON.stringify(this.ownSkinForSwap),
+                headers: {
+                  "Content-type": "application/json; charset=UTF-8",
+                },
+              }
+            ).then((res) => res.json());
+            Promise.all([addSkin, deleteSkin]).then(() => {
+              this.buySkinForSwap = this.ownSkinForSwap = {};
+              localStorage.balance = this.balance;
+              localStorage.personalInventory = JSON.stringify(
+                this.personalInventory
+              );
+            });
+          }
         }
         this.warningForBuy = false;
       } else if (this.buyChecked === str && str === "buy") {
@@ -124,10 +294,21 @@ new Vue({
           this.balance -= this.buySkinForBuy.price;
           localStorage.balance = this.balance;
           this.personalInventory.push(this.buySkinForBuy);
-          localStorage.personalInventory = JSON.stringify(
-            this.personalInventory
-          );
-          this.buySkinForBuy = {};
+          this.buySkinForBuy.number -= 1;
+          fetch(`http://localhost:3000/weapon/${this.buySkinForBuy.id}`, {
+            method: "PUT",
+            body: JSON.stringify(this.buySkinForBuy),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          })
+            .then((data) => data.json())
+            .then(() => {
+              localStorage.personalInventory = JSON.stringify(
+                this.personalInventory
+              );
+              this.buySkinForBuy = {};
+            });
         } else {
           this.smallBalance = true;
           setTimeout(() => {
@@ -244,9 +425,29 @@ new Vue({
       this.action = "";
       this.balance += this.selectInventorySkin.price;
       localStorage.balance = this.balance;
-      this.personalInventory.splice(this.selectInventoryIndex, 1);
-      localStorage.personalInventory = JSON.stringify(this.personalInventory);
-      this.selectInventorySkin = {};
+      this.personalInventory[this.selectInventoryIndex].number += 1;
+      fetch(
+        `http://localhost:3000/weapon/${
+          this.personalInventory[this.selectInventoryIndex].id
+        }`,
+        {
+          method: "PUT",
+          body: JSON.stringify(
+            this.personalInventory[this.selectInventoryIndex]
+          ),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        }
+      )
+        .then((res) => res.json())
+        .then(() => {
+          this.personalInventory.splice(this.selectInventoryIndex, 1);
+          localStorage.personalInventory = JSON.stringify(
+            this.personalInventory
+          );
+          this.selectInventorySkin = {};
+        });
     },
     withdraw() {},
     inventoryAction() {
@@ -257,53 +458,69 @@ new Vue({
         : null;
     },
     openCase(price) {
-      if (this.balance >= price) {
-        this.balance -= price;
-        localStorage.balance = this.balance;
-        this.disableOpenCase = true;
-        this.unSortedCaseSkins = Array.from(this.caseSkins);
-        this.unSortedCaseSkins.sort(() => Math.random() - 0.5);
-        let rouletteDiv = this.$refs.rouletteContainer;
-        if (rouletteDiv.childNodes.length) {
-          rouletteDiv.removeChild(rouletteDiv.firstChild);
-        }
-        let randomProcent = Math.round(Math.random(0, 100) * 100);
-        let resultRandom;
-        if (randomProcent <= 50) {
-          resultRandom = 50;
-        } else if (randomProcent > 50 && randomProcent <= 70) {
-          resultRandom = 20;
-        } else if (randomProcent > 70 && randomProcent <= 87) {
-          resultRandom = 17;
-        } else if (randomProcent > 87 && randomProcent < 97) {
-          resultRandom = 10;
-        } else if (randomProcent > 97) {
-          resultRandom = 3;
-        } else {
-          resultRandom = 50;
-        }
-        this.unSortedCaseSkins.filter((item) => item.chance === resultRandom);
-        this.personalInventory.push(this.unSortedCaseSkins[0]);
-        localStorage.personalInventory = JSON.stringify(this.personalInventory);
-        setTimeout(() => {
-          this.winThing = this.unSortedCaseSkins[0];
-          this.disableOpenCase = false;
-          if (this.isSmallDisplay) {
+      if (this.IsLoginSuccess) {
+        if (this.balance >= price) {
+          this.balance -= price;
+          localStorage.balance = this.balance;
+          this.disableOpenCase = true;
+          this.unSortedCaseSkins = Array.from(this.caseSkins);
+          this.unSortedCaseSkins.sort(() => Math.random() - 0.5);
+          let rouletteDiv = this.$refs.rouletteContainer;
+          if (rouletteDiv.childNodes.length) {
             rouletteDiv.removeChild(rouletteDiv.firstChild);
           }
-        }, 12500);
-        var elParent = document.getElementById("roulette-container"),
-          roulette = new EvRoulette({
-            weaponPrizeAttrs: this.unSortedCaseSkins[0],
-            weaponActorsAttrs: this.unSortedCaseSkins,
-            elParent: elParent,
-          });
-        roulette.start();
-      } else {
-        this.insufficientFunds = true;
-        setTimeout(() => {
-          this.insufficientFunds = false;
-        }, 2000);
+          let randomProcent = Math.round(Math.random(0, 100) * 100);
+          let resultRandom;
+          if (randomProcent <= 50) {
+            resultRandom = 50;
+          } else if (randomProcent > 50 && randomProcent <= 70) {
+            resultRandom = 20;
+          } else if (randomProcent > 70 && randomProcent <= 87) {
+            resultRandom = 17;
+          } else if (randomProcent > 87 && randomProcent < 97) {
+            resultRandom = 10;
+          } else if (randomProcent > 97) {
+            resultRandom = 3;
+          } else {
+            resultRandom = 50;
+          }
+          this.unSortedCaseSkins.filter((item) => item.chance === resultRandom);
+          this.personalInventory.push(this.unSortedCaseSkins[0]);
+          delete this.unSortedCaseSkins[0].chance;
+          this.unSortedCaseSkins[0].number += 1;
+          fetch(
+            `http://localhost:3000/weapon/${this.unSortedCaseSkins[0].id}`,
+            {
+              method: "PUT",
+              body: JSON.stringify(this.unSortedCaseSkins[0]),
+              headers: {
+                "Content-type": "application/json; charset=UTF-8",
+              },
+            }
+          ).then((res) => res.json());
+          localStorage.personalInventory = JSON.stringify(
+            this.personalInventory
+          );
+          setTimeout(() => {
+            this.winThing = this.unSortedCaseSkins[0];
+            this.disableOpenCase = false;
+            if (this.isSmallDisplay) {
+              rouletteDiv.removeChild(rouletteDiv.firstChild);
+            }
+          }, 12500);
+          var elParent = document.getElementById("roulette-container"),
+            roulette = new EvRoulette({
+              weaponPrizeAttrs: this.unSortedCaseSkins[0],
+              weaponActorsAttrs: this.unSortedCaseSkins,
+              elParent: elParent,
+            });
+          roulette.start();
+        } else {
+          this.insufficientFunds = true;
+          setTimeout(() => {
+            this.insufficientFunds = false;
+          }, 2000);
+        }
       }
     },
     checkLogin(price = 0) {
@@ -373,7 +590,7 @@ new Vue({
         this.resultSwapItems = "back";
         return `Предмет на який ви обмінюєтеся коштує дешевше ніж ваш запропонований, на ваш баланс зарахується сума на ${this.priceForBuy} ₴, ви згодні?`;
       } else if (this.ownSkinForSwap.price === this.buySkinForSwap.price) {
-        return `Запропонований предмет який ви бажаєте обміняти буде замінений на предмет який ви добавили для обмину, ви згодні?`;
+        return `Запропонований предмет який ви бажаєте обміняти буде замінений на предмет який ви добавили для обміну, ви згодні?`;
       }
     },
     checkMethodBuy() {

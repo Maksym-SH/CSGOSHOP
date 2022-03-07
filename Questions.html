@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="./img/favicon/favicon.ico"
+      href="./img/briefcase.svg"
       type="image/x-icon"
     />
     <script
@@ -25,59 +25,7 @@
   </head>
   <body>
     <div id="app" class="questions">
-      <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
-            <a href="Main.html" class="navbar-brand logo"
-              ><img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
-                >shop</span
-              ></a
-            >
-            <button
-              class="navbar-toggler bg-light link-info"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mx-auto">
-                <li>
-                  <a class="nav-link" href="Main.html">До головної</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Inventory.html">Інвентар</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Cases.html">Кейси</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Trade.html">Обмін</a>
-                </li>
-              </ul>
-              <template v-cloak>
-                <a href="LoginSteam.html" v-if="!IsLoginSuccess"
-                  ><button type="button" class="btn btn-primary login-failed">
-                    <img src="./img/steam.svg" alt="" /> Увіти за допомогою
-                    STEAM
-                  </button>
-                </a>
-                <div
-                  v-else-if="IsLoginSuccess && !isMdWidth"
-                  class="header__login-success"
-                >
-                  <p class="header__balance">Баланс {{balance}}₴</p>
-                  <div class="ellips-icon">{{ savedLogin[0] }}</div>
-                </div>
-              </template>
-            </nav>
-          </div>
-        </nav>
-      </header>
+      <header-component :params={login:IsLoginSuccess,isMdWidth:isMdWidth,balance:balance,savedLogin:savedLogin[0],currentPage:'question'}></header-component>
       <template v-cloak>
         <div
           v-if="isMdWidth && IsLoginSuccess"
@@ -118,7 +66,7 @@
             <div class="info-item">
               <h3>Який шанс отримання дорогого скіна з кейсу?</h3>
               <p>
-                Так, наш магазин має велекий вміст віртуальних товарів для
+                Так, наш магазин має великий вміст віртуальних товарів для
                 популярної гри Counter-Strice:Global Offensive, випадання
                 дорогих скинів дещо вище ніж відкриття безпосередньо у самій
                 грі, шанси на випадання: до 100₴ - 50%, більше 100₴ -20%, більше
@@ -156,43 +104,37 @@
                 номера посилає пропозицію на обмін. Все дуже просто :)
               </p>
             </div>
+            <div class="info-item">
+              <h3>Як обміняти предмет або купити безпосередньо?</h3>
+              <p>
+                У шапці навігації є перехід до сторінки обміну "Обмін", після натискання якої відкривається відповідна сторінка, яка відображає ваш інвентар предметів, які ви отримали відкриваючи кейси та купівлі їх безпосередньо, натискаючи відповідну кнопку обміну чи купівлі, після вибору потрібно натиснути на предмет, у випадку якщо ви вибрали обмін, потрібно спочкатку вибрати предмет для обміну зі свого інвентарю потом у інвентарі для купівлі.
+              </p>
+            </div>
+            <div class="info-item">
+              <h3>Як поповнити баланс?</h3>
+              <p>
+                Під шапкою навігації у верхньюму правому кутку є кнопка <img class="info-item__img-popap" src="./img/openPopap.svg" alt=""> натиснув на яку, відривається вікно з інформацією про ваш акаунт та кнопки взаємодії, потрібно натиснути кнопку "Поповнити баланс",  вибрати спосіб поповнення, ввести дані карти та суму поповнення.
+              </p>
+            </div>
+            <div class="info-item">
+              <h3>Яких правил потрібно дотримуватися, які описані у секції з інформацією про магазин та способами зв'язку?</h3>
+              <p>
+                Не робити налаштування у "Інструментах розробника", якщо ви не розумієте для чого вони і як вони працюють, також на даний магазин існує авторське право, у випадку не дотримання правил авторского права, є можливість нести відповідальність.
+              </p>
+            </div>
+            <div class="info-item">
+              <h3>Яких правил потрібно дотримуватися, які описані у секції з інформацією про магазин та способами зв'язку?</h3>
+              <p>
+                Не робити налаштування у "інструментах розробника", якщо ви не розумієте для чого вони і як вони працюють, також на даний магазин існує авторське право, у випадку не дотримання правил авторского права, є можливість нести відповідальність.
+              </p>
+            </div>
           </div>
           <a href="Main.html" class="link-back-main"
             >Повернутися до головної сторінки</a
           >
         </div>
       </section>
-      <footer class="footer">
-        <div class="footer-between">
-          <div class="footer-logo">
-            <img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
-              >shop</span
-            >
-          </div>
-          <div class="footer__wrap">
-            <h5>Зв'язатися з нами</h5>
-            <div>
-              <a href="https://vk.com/max185"
-                ><img src="./img/vk.svg" alt=""
-              /></a>
-              <a href="https://github.com/Maksym-SH/CSGOSHOP"
-                ><img src="./img/github.svg" alt=""
-              /></a>
-            </div>
-          </div>
-          <div class="footer__pay">
-            <div class="replenishment">
-              Ми приймаємо такі способи <br />поповнення рахунку<br />
-              <img src="./img/mastercard.svg" alt="" />
-              <img src="./img/visa.svg" alt="" />
-            </div>
-            <p>
-              Copyright © 2022 CSGOSHOP.<br />
-              Усі права захищені.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <footer-component></footer-component>
       <template v-cloak>
         <transition name="fade">
           <div
@@ -208,7 +150,7 @@
               </p>
             </div>
             <ul class="popap-info__list">
-              <li @click="replenishmentActive = !replenishmentActive">
+              <li @click="replenishmentActive = !replenishmentActive, popapInfoAccountActive = !popapInfoAccountActive">
                 Поповнити баланс
               </li>
               <li>Інвентар виводу</li>

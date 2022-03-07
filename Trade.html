@@ -21,59 +21,7 @@
   </head>
   <body>
     <div id="app" class="trade">
-      <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
-            <a href="Main.html" class="navbar-brand logo"
-              ><img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
-                >shop</span
-              ></a
-            >
-            <button
-              class="navbar-toggler bg-light link-info"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mx-auto ">
-                <li>
-                  <a class="nav-link" href="Main.html">До головної</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Questions.html">Питання</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Cases.html">Кейси</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Inventory.html">Інвентар</a>
-                </li>
-              </ul>
-              <template v-cloak>
-                <a href="LoginSteam.html" v-if="!IsLoginSuccess"
-                  ><button type="button" class="btn btn-primary login-failed">
-                    <img src="./img/steam.svg" alt="" /> Увіти за допомогою
-                    STEAM
-                  </button>
-                </a>
-                <div
-                  v-else-if="IsLoginSuccess && !isMdWidth"
-                  class="header__login-success"
-                >
-                  <p class="header__balance">Баланс {{balance}}₴</p>
-                  <div class="ellips-icon">{{ savedLogin[0] }}</div>
-                </div>
-              </template>
-            </nav>
-          </div>
-        </nav>
-      </header>
+      <header-component :params={login:IsLoginSuccess,isMdWidth:isMdWidth,balance:balance,savedLogin:savedLogin[0],currentPage:'trade'}></header-component>
       <template v-cloak>
         <div
           v-if="isMdWidth && IsLoginSuccess"
@@ -94,15 +42,16 @@
       <main>
         <section class="trade__section">
           <h2 align="center">Сторінка обміну та купівлі предметів</h2>
-          <div class="trade__container" :style="[!isInventoryEmpty ? {width: '90%'} : {width:'50%'}]">
-            <div class="own-inventory" v-if="!isInventoryEmpty">
+          <div class="trade__container" :class="[!isInventoryEmpty ? 'trade__container__with-inventory' : 'trade__container__without-inventory']">
+            <div class="position-relative">
+              <template v-cloak>
+                <transition name="fade">
+                  <div class="is-participation" v-if="buyChecked === 'buy' && !isInventoryEmpty"></div>
+                </transition>
+              </template>
+              <div class="own-inventory" v-if="!isInventoryEmpty">
                 <h6 class="own-inventory__personal-info">Ваш інвентар</h6>
                 <p class="own-inventory__price" >Ціна інвентарю: {{summarCost}} ₴</p>
-                <template v-cloak>
-                  <transition name="fade">
-                    <div class="is-participation" v-if="buyChecked === 'buy' && !isInventoryEmpty"></div>
-                  </transition>
-                </template>
                 <div class="own-inventory__wrapper">
                   <template v-cloak>
                     <div class="own-inventory__item"  v-for="(item, index) in personalInventory" @click="swapItems('own', index)" :key="index" >
@@ -116,6 +65,7 @@
                     </div>
                   </template>
                 </div>
+            </div>
             </div>
             <div class="swap">
               <div class="btn-group btn-group-toggle swap__button-wrapper" data-toggle="buttons" v-if="personalInventory.length">
@@ -144,13 +94,12 @@
                   <p v-show="Object.keys(buySkinForBuy).length !== 0">Ціна: {{buySkinForBuy.price}} ₴</p>
                   <button v-show="Object.keys(buySkinForBuy).length !== 0" @click="buySkinForBuy = {}"><img src="./img/close.svg" alt=""></button>
                 </div>
-                <button class="d-block mx-auto btn btn-primary swap__button" @click="warningForBuy = !warningForBuy" :disabled="!disabledButtonToBuy" @click="actionBuy('yes')" >{{buyChecked === "buy" ? "Купити" :
-                  "Обміняти"}}</button>
-                <p class="swap__wrong-balance" v-show="smallBalance">На вашому балансі недостатньо коштів, щоб перейти до поповнення натисніть <span @click="replenishmentActive = true">тут</span>
+                <button class="d-block mx-auto btn btn-primary swap__button" @click="warningForBuy = !warningForBuy" :disabled="!disabledButtonToBuy" @click="actionBuy('yes')" >{{buyChecked === "buy" ? "Купити" : "Обміняти"}}</button>
+                <p v-if="smallBalance" class="swap__wrong-balance" :class="{'swap__wrong-balance__without-inventory': isInventoryEmpty }">На вашому балансі недостатньо коштів, щоб перейти до поповнення натисніть <span @click="replenishmentActive = true">тут</span>
                 </p>
               </div>
             </div>
-              <div class="own-inventory buy-inventory">
+              <div class="own-inventory buy-inventory" :class="{'buy-inventory__without-inventory': isInventoryEmpty }">
                 <select class="own-inventory__select" @change="selectType = $event.target.value">
                   <option v-for="item in weaponType" :value="item">
                     {{item}}
@@ -161,7 +110,6 @@
                   <div
                   class="spinner-border text-light "
                   role="status"
-                  class=""
                   >
                   <span class="sr-only"></span>
                 </div>
@@ -180,37 +128,7 @@
           </div>
         </section>
       </main>
-      <footer class="footer invenory-footer">
-        <div class="footer-between">
-          <div class="footer-logo">
-            <img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
-              >shop</span
-            >
-          </div>
-          <div class="footer__wrap">
-            <h5>Зв'язатися з нами</h5>
-            <div>
-              <a href="https://vk.com/max185"
-                ><img src="./img/vk.svg" alt=""
-              /></a>
-              <a href="https://github.com/Maksym-SH/CSGOSHOP"
-                ><img src="./img/github.svg" alt=""
-              /></a>
-            </div>
-          </div>
-          <div class="footer__pay">
-            <div class="replenishment">
-              Ми приймаємо такі способи <br />поповнення рахунку<br />
-              <img src="./img/mastercard.svg" alt="" />
-              <img src="./img/visa.svg" alt="" />
-            </div>
-            <p>
-              Copyright © 2022 CSGOSHOP.<br />
-              Усі права захищені.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <footer-component></footer-component>
       <template v-cloak>
         <transition name="fade">
           <div class="popap-skins-info" v-if="warningForBuy">
@@ -241,7 +159,7 @@
               </p>
             </div>
             <ul class="popap-info__list">
-              <li @click="replenishmentActive = !replenishmentActive">
+              <li @click="replenishmentActive = !replenishmentActive, popapInfoAccountActive = !popapInfoAccountActive">
                 Поповнити баланс
               </li>
               <li>Інвентар виводу</li>

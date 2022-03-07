@@ -21,56 +21,7 @@
   </head>
   <body>
     <div id="app" class="login-steam">
-      <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
-            <a href="Main.html" class="navbar-brand logo"
-              ><img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
-                >shop</span
-              ></a
-            >
-            <button
-              class="navbar-toggler bg-light link-info"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mx-auto">
-                <li>
-                  <a class="nav-link" href="Main.html">До головної</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Questions.html">Питання</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Inventory.html">Інвентар</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Trade.html">Обмін</a>
-                </li>
-              </ul>
-              <template v-cloak>
-                <h6 v-if="!IsLoginSuccess" class="login-failed">
-                  Вхід до акаунту не виконаний
-                </h6>
-                <div
-                  v-else-if="IsLoginSuccess && !isMdWidth"
-                  class="header__login-success"
-                >
-                  <p class="header__balance">Баланс {{balance}}₴</p>
-                  <div class="ellips-icon">{{ savedLogin[0] }}</div>
-                </div>
-              </template>
-            </nav>
-          </div>
-        </nav>
-      </header>
+      <header-component :params={login:IsLoginSuccess,isLoginPage:isLoginPage,isMdWidth:isMdWidth,balance:balance,savedLogin:savedLogin[0],currentPage:'question'}></header-component>
       <template v-cloak>
         <div
           v-if="isMdWidth && IsLoginSuccess"
@@ -94,6 +45,16 @@
             <div class="login-container" v-if="!IsLoginSuccess">
               <div class="block-login position-relative">
                 <template v-cloak>
+                  <div>
+                    <label class="btn btn-success mb-3 check-box-user" >
+                      <input type="radio" name="options" id="option1" v-model="isNewUser" value="true">Новий користувач
+                    </label>
+                  </div>
+                  <div >
+                    <label class="btn btn-warning check-box-user" >
+                      <input type="radio" name="options" id="option1" v-model="isNewUser" value="false">Вже є акаунт
+                    </label>
+                  </div>
                   <form action="#" class="inputs-login">
                     <label for="login">Ім'я акаунта Steam</label>
                     <input type="text" name="login" v-model="login" />
@@ -119,18 +80,31 @@
                           />
                         </transition>
                       </template>
+                      <div class="block-password" v-if="isNewUser">
+                        <label for="repeatPassword">Повторіть пароль</label>
+                        <input
+                          type="password"
+                          name="repeatPassword"
+                          v-model="repeatPassword"
+                          maxlength="26"
+                        />
+                      </div>
                     </div>
-                    <button
+                    <div class="buttons-flex">
+                      <button
                       type="button"
                       class="btn btn-primary my-3"
                       @click="checkForRobot()"
                     >
-                      Увійти
+                      {{isNewUser === 'true'? "Реєстрація" : "Увійти"}}
                     </button>
                   </form>
-                  <p class="wrong-login" v-if="wrongLogin">
-                    Невірний логін або пароль, повторіть спробу
-                  </p>
+                  <div class="fix-height-wrong-login">
+                    <p class="wrong-login" v-if="wrongLogin">
+                      Невірний логін або пароль, повторіть спробу
+                    </p>
+                  </div>
+                    </div>
                 </template>
               </div>
               <template v-cloak>
@@ -156,37 +130,7 @@
           </div>
         </section>
       </main>
-      <footer class="footer">
-        <div class="footer-between">
-          <div class="footer-logo">
-            <img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
-              >shop</span
-            >
-          </div>
-          <div class="footer__wrap">
-            <h5>Зв'язатися з нами</h5>
-            <div>
-              <a href="https://vk.com/max185"
-                ><img src="./img/vk.svg" alt=""
-              /></a>
-              <a href="https://github.com/Maksym-SH/CSGOSHOP"
-                ><img src="./img/github.svg" alt=""
-              /></a>
-            </div>
-          </div>
-          <div class="footer__pay">
-            <div class="replenishment">
-              Ми приймаємо такі способи <br />поповнення рахунку<br />
-              <img src="./img/mastercard.svg" alt="" />
-              <img src="./img/visa.svg" alt="" />
-            </div>
-            <p>
-              Copyright © 2022 CSGOSHOP.<br />
-              Усі права захищені.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <footer-component></footer-component>
       <template v-cloak>
         <transition name="fade">
           <div
@@ -234,7 +178,7 @@
               </p>
             </div>
             <ul class="popap-info__list">
-              <li @click="replenishmentActive = !replenishmentActive">
+              <li @click="replenishmentActive = !replenishmentActive, popapInfoAccountActive = !popapInfoAccountActive">
                 Поповнити баланс
               </li>
               <li>Інвентар виводу</li>
