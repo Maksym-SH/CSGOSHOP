@@ -21,59 +21,7 @@
   </head>
   <body>
     <div id="app" class="inventory">
-      <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
-            <a href="Main.html" class="navbar-brand logo"
-              ><img src="./img/logo.svg" alt="" /> Csgo<span class="logo-shop"
-                >shop</span
-              ></a
-            >
-            <button
-              class="navbar-toggler bg-light link-info"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <nav class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mx-auto">
-                <li>
-                  <a class="nav-link" href="Main.html">До головної</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Questions.html">Питання</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Cases.html">Кейси</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="Trade.html">Обмін</a>
-                </li>
-              </ul>
-              <template v-cloak>
-                <a href="LoginSteam.html" v-if="!IsLoginSuccess"
-                  ><button type="button" class="btn btn-primary login-failed">
-                    <img src="./img/steam.svg" alt="" /> Увіти за допомогою
-                    STEAM
-                  </button>
-                </a>
-                <div
-                  v-else-if="IsLoginSuccess && !isMdWidth"
-                  class="header__login-success"
-                >
-                  <p class="header__balance">Баланс {{balance}}₴</p>
-                  <div class="ellips-icon">{{ savedLogin[0] }}</div>
-                </div>
-              </template>
-            </nav>
-          </div>
-        </nav>
-      </header>
+      <header-component :params={login:IsLoginSuccess,isLoginPage:isLoginPage,isMdWidth:isMdWidth,balance:balance,savedLogin:savedLogin[0],currentPage:'inventory'}></header-component>
       <template v-cloak>
         <div
           v-if="isMdWidth && IsLoginSuccess"
@@ -82,8 +30,7 @@
           <p class="header__balance">Баланс {{balance}}₴</p>
           <div class="ellips-icon">{{ savedLogin[0] }}</div>
         </div>
-      </template>
-      <div
+        <div
         class="show-popap-account"
         v-if="IsLoginSuccess"
         @click="popapInfoAccountActive = !popapInfoAccountActive"
@@ -91,6 +38,7 @@
       >
         <img draggable="false" src="./img/openPopap.svg" alt="" />
       </div>
+      </template>
       <main>
         <section class="inventory-section">
           <div class="container-lg">
@@ -186,7 +134,7 @@
               <li @click="replenishmentActive = !replenishmentActive, popapInfoAccountActive = !popapInfoAccountActive">
                 Поповнити баланс
               </li>
-              <li>Інвентар виводу</li>
+              <a href="WithdrawInventory.html"><li>Інвентар виводу</li></a>
               <li @click="singOut()">Вийти з акаунту</li>
             </ul>
           </div>

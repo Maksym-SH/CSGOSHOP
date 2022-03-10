@@ -288,8 +288,8 @@ a {
 .more-info-content {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: flex-start;
   @media (max-width: 720px) {
     display: block;
   }
@@ -299,8 +299,13 @@ a {
   width: 33%;
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
+  color: #f4ca16;
+  text-shadow: 0 0 10px #f4ca16;
   margin-top: 100px;
+  @media (max-width: 850px) {
+    font-size: 15px;
+  }
   @media (max-width: 720px) {
     font-size: 12px;
     margin: 0 auto;
@@ -468,6 +473,21 @@ a {
     .popap__desc {
       p {
         font-size: 16px;
+      }
+      input {
+        width: 100%;
+      }
+      &__button-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
+        button {
+          width: 150px;
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
       }
     }
   }
@@ -1133,38 +1153,11 @@ a {
     left: 35px;
   }
 }
-
-.ev-weapon-rarity {
-  width: 5px;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.ev-weapon-rarity-milspec {
-  background: #4b69ff;
-}
-.ev-weapon-rarity-restricted {
-  background: #8847ff;
-}
-.ev-weapon-rarity-classified {
-  background: #d32ce6;
-}
-.ev-weapon-rarity-covert {
-  background: #eb4b4b;
-}
-.ev-weapon-rarity-rare {
-  background: #ffd700;
-}
-.ev-weapon-rarity-uncommon {
-  background: #ddd;
-}
 .ev-weapon-text {
   position: absolute;
   top: 90px;
-  left: 5px;
-  width: 185px;
+  left: 0;
+  width: 190px;
   height: 50px;
   background: #242531;
   p {
@@ -1304,6 +1297,12 @@ a {
     }
   }
 }
+.fix-height-input {
+  height: 80px;
+}
+.checkout-method-user {
+  max-width: 220px;
+}
 .block-password {
   position: relative;
   max-width: 220px;
@@ -1313,6 +1312,11 @@ a {
     top: 10px;
     right: 10px;
     user-select: none !important;
+  }
+  .eye-repeat {
+    position: absolute;
+    top: 55px;
+    right: 10px;
   }
   @media (max-width: 600px) {
     margin: 0 auto;
@@ -1332,6 +1336,15 @@ a {
     width: 100%;
   }
 }
+.chage-position-login {
+  left: 0 !important;
+  bottom: 60px !important;
+  @media (max-width: 600px) {
+    position: relative;
+    display: block;
+    bottom: 120px !important;
+  }
+}
 .fix-height-wrong-login {
   height: 42px;
 }
@@ -1344,10 +1357,10 @@ a {
 }
 .wrong-login {
   font-size: 14px;
-  width: 200px;
+  width: 220px;
   position: absolute;
-  bottom: -2px;
-  left: 100px;
+  bottom: -20px;
+  left: 140px;
   color: #c00;
   @media (max-width: 600px) {
     width: 100% !important;
@@ -2045,5 +2058,220 @@ a {
   }
   &__info {
     text-align: start;
+  }
+}
+/* withdrow */
+.withdrow {
+  background: $dark url("../img/withdraw-bg.jpeg") no-repeat;
+  background-size: cover;
+  &__empty-item {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #536872;
+    margin-bottom: 20px;
+    h4 {
+      a {
+        color: #2f87de !important;
+      }
+    }
+  }
+  &__section {
+    padding-top: 170px;
+  }
+  &__item {
+    width: 96%;
+    margin: 0px auto 40px auto;
+    background-color: #36363c;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    height: 120px;
+    padding: 0 15px 0 15px;
+    user-select: none;
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(3, 1fr);
+    justify-items: center;
+    &__number-trade {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+      color: #fff;
+      background-color: #36363c;
+      border-top: 1px solid #536872;
+      font-size: 13px;
+      border-radius: 0 0 8px 8px;
+    }
+    &__name__recipient {
+      width: 170px;
+      color: #fff;
+      font-size: 14px;
+      position: relative;
+      &::after {
+        content: "Отримувач";
+        position: absolute;
+        font-size: 14px;
+        top: -35px;
+        left: 0;
+        color: #3d7a97;
+      }
+    }
+    &__time {
+      font-style: italic;
+      position: relative;
+      max-width: 82px;
+      font-size: 14px;
+      &::after {
+        content: "Дата/Час";
+        position: absolute;
+        font-size: 14px;
+        top: -35px;
+        left: 0;
+        width: max-content;
+        color: #3d7a97;
+      }
+    }
+    p {
+      margin-top: 45px;
+      word-wrap: break-word;
+    }
+    &__image {
+      height: 100%;
+      position: relative;
+      width: 150px;
+      img {
+        position: absolute;
+        inset: 0;
+        margin: 35px auto auto auto;
+        max-height: 78px;
+        width: auto;
+      }
+      &::after {
+        content: "Предмет";
+        position: absolute;
+        font-size: 14px;
+        top: 10px;
+        left: 10px;
+        width: max-content;
+        color: #3d7a97;
+      }
+    }
+    &__status {
+      font-size: 80px;
+      font-size: 15px;
+      color: #4ab96f;
+      position: relative;
+      &::after {
+        content: "Статус";
+        position: absolute;
+        font-size: 14px;
+        top: -35px;
+        left: -2px;
+        width: max-content;
+        color: #3d7a97;
+      }
+    }
+    &__name {
+      width: 140px;
+      font-size: 15px;
+      margin-top: 46px !important;
+      color: #fff;
+      position: relative;
+      &::after {
+        content: "Назва предмету";
+        position: absolute;
+        font-size: 14px;
+        top: -36px;
+        left: 0px;
+        width: max-content;
+        color: #3d7a97;
+      }
+    }
+    @media (max-width: 770px) {
+      height: auto;
+      &__name__recipient {
+        font-size: 12px;
+        width: 130px;
+        &::after {
+          font-size: 12px;
+        }
+      }
+      &__time {
+        font-size: 12px;
+        &::after {
+          font-size: 12px;
+        }
+      }
+      &__image {
+        &::after {
+          font-size: 12px;
+        }
+      }
+      &__load {
+        grid-row: 3;
+        grid-column: 1;
+        div {
+          margin-top: 10px;
+          margin-left: 13px;
+        }
+        &::after {
+          font-size: 13px;
+        }
+      }
+      &__status {
+        font-size: 12px;
+        &::after {
+          font-size: 12px;
+        }
+      }
+      &__name {
+        grid-column-gap: 1fr;
+        font-size: 12px;
+        &::after {
+          font-size: 12px;
+        }
+      }
+    }
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr 1fr;
+      padding: 5px;
+      &__name__recipient {
+        grid-column: 1fr;
+        margin-left: -10px;
+        grid-row: 2;
+        grid-column: 2;
+      }
+      &__image {
+        width: 125px;
+        margin-left: -5px;
+        &::after {
+          left: 0;
+        }
+      }
+      &__status {
+        grid-row: 3;
+        grid-template-columns: 2fr;
+        margin-left: -60px;
+      }
+      &__time {
+        grid-row: 3;
+        margin-left: -60px;
+        grid-column: 2;
+        max-width: none;
+        margin-left: -40px !important;
+      }
+      &__number-trade {
+        bottom: -27px;
+        font-size: 11px;
+      }
+      &__name {
+        grid-row: 1;
+        grid-column: 2;
+      }
+    }
   }
 }

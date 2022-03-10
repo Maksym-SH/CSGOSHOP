@@ -71,20 +71,7 @@ EvRoulette.prototype.render = function () {
     elWeaponTextSkin.textContent = weapon.skin;
     elWeapon.className = "ev-weapon";
     elWeaponInner.className = "ev-weapon-inner";
-    let raritySkin =
-      weapon.chance === 50
-        ? "milspec"
-        : weapon.chance === 20
-        ? "restricted"
-        : weapon.chance === 17
-        ? "classified"
-        : weapon.chance === 10
-        ? "covert"
-        : weapon.chance === 3
-        ? "rare"
-        : "uncommon";
-    elWeaponRarity.className =
-      "ev-weapon-rarity " + "ev-weapon-rarity-" + raritySkin;
+    elWeaponRarity.className = "ev-weapon-rarity ";
     elWeaponText.className = "ev-weapon-text";
     elWeaponText.appendChild(elWeaponTextName);
     elWeaponText.appendChild(elWeaponTextSkin);

@@ -30,8 +30,7 @@
           <p class="header__balance">Баланс {{balance}}₴</p>
           <div class="ellips-icon">{{ savedLogin[0] }}</div>
         </div>
-      </template>
-      <div
+        <div
         class="show-popap-account"
         v-if="IsLoginSuccess"
         @click="popapInfoAccountActive = !popapInfoAccountActive"
@@ -39,6 +38,7 @@
       >
         <img draggable="false" src="./img/openPopap.svg" alt="" />
       </div>
+      </template>
       <main>
         <section class="login-section">
           <div class="container-lg">
@@ -46,14 +46,10 @@
               <div class="block-login position-relative">
                 <template v-cloak>
                   <div>
-                    <label class="btn btn-success mb-3 check-box-user" >
-                      <input type="radio" name="options" id="option1" v-model="isNewUser" value="true">Новий користувач
-                    </label>
+                    <button class="btn btn-success w-100 mb-2 checkout-method-user" :disabled="isNewUser" @click="isNewUser = true">Новий користувач</button>
                   </div>
-                  <div >
-                    <label class="btn btn-warning check-box-user" >
-                      <input type="radio" name="options" id="option1" v-model="isNewUser" value="false">Вже є акаунт
-                    </label>
+                  <div>
+                    <button class="btn btn-primary w-100 mb-2 checkout-method-user" :disabled="!isNewUser" @click="isNewUser = false">Вже є акаунт</button>
                   </div>
                   <form action="#" class="inputs-login">
                     <label for="login">Ім'я акаунта Steam</label>
@@ -80,31 +76,38 @@
                           />
                         </transition>
                       </template>
-                      <div class="block-password" v-if="isNewUser">
-                        <label for="repeatPassword">Повторіть пароль</label>
-                        <input
-                          type="password"
-                          name="repeatPassword"
-                          v-model="repeatPassword"
-                          maxlength="26"
-                        />
-                      </div>
                     </div>
+                    <template v-cloak>
+                      <div class="fix-height-input">
+                        <transition name="fade">
+                          <div class="block-password" v-if="isNewUser">
+                            <label for="repeatPassword">Повторіть пароль</label>
+                            <input
+                              type="password"
+                              name="repeatPassword"
+                              v-model="repeatPassword"
+                              maxlength="26"
+                            />
+                          </div>
+                        </transition>
+                      </div>
+                    </template>
                     <div class="buttons-flex">
                       <button
                       type="button"
                       class="btn btn-primary my-3"
                       @click="checkForRobot()"
                     >
-                      {{isNewUser === 'true'? "Реєстрація" : "Увійти"}}
+                      {{isNewUser === true? "Реєстрація" : "Увійти"}}
                     </button>
                   </form>
                   <div class="fix-height-wrong-login">
-                    <p class="wrong-login" v-if="wrongLogin">
-                      Невірний логін або пароль, повторіть спробу
-                    </p>
+                    <transition name="fade">
+                      <p class="wrong-login" v-if="wrongLogin" :class="{'chage-position-login': !isNewUser}">
+                        Допущена помилка при авторизації, повторіть спробу.
+                      </p>
+                    </transition>
                   </div>
-                    </div>
                 </template>
               </div>
               <template v-cloak>
@@ -150,12 +153,15 @@
                     name="enter-data"
                     v-model="valueCheckRobot"
                   />
-                  <button
-                    class="btn btn-success p-1 mt-3"
+                  <div class="popap__desc__button-wrapper">
+                    <button
+                    class="btn btn-success"
                     @click="comparisonValues()"
                   >
                     Підтвердити
                   </button>
+                  <button class="btn btn-danger" @click="checkRobot = false">Скасувати</button>
+                  </div>
                   <h6 class="wrong-enter-code" v-if="robotValueComparison">
                     Ви неправильно ввели код
                   </h6>
@@ -181,7 +187,7 @@
               <li @click="replenishmentActive = !replenishmentActive, popapInfoAccountActive = !popapInfoAccountActive">
                 Поповнити баланс
               </li>
-              <li>Інвентар виводу</li>
+              <a href="./WithdrawInventory.html"><li>Інвентар виводу</li></a>
               <li @click="singOut()">Вийти з акаунту</li>
             </ul>
           </div>

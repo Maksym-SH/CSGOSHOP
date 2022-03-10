@@ -392,11 +392,11 @@ a {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media (max-width: 720px) {
@@ -410,8 +410,16 @@ a {
   width: 33%;
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
+  color: #f4ca16;
+  text-shadow: 0 0 10px #f4ca16;
   margin-top: 100px;
+}
+
+@media (max-width: 850px) {
+  .more-info-item {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -645,6 +653,29 @@ a {
 
 .popap-skins-info .popap-skins-window .popap__desc p {
   font-size: 16px;
+}
+
+.popap-skins-info .popap-skins-window .popap__desc input {
+  width: 100%;
+}
+
+.popap-skins-info .popap-skins-window .popap__desc__button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+
+.popap-skins-info .popap-skins-window .popap__desc__button-wrapper button {
+  width: 150px;
+}
+
+.popap-skins-info .popap-skins-window .popap__desc__button-wrapper button:first-child {
+  margin-right: 10px;
 }
 
 .horizontal-line {
@@ -1486,44 +1517,11 @@ a {
   left: 35px;
 }
 
-.ev-weapon-rarity {
-  width: 5px;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.ev-weapon-rarity-milspec {
-  background: #4b69ff;
-}
-
-.ev-weapon-rarity-restricted {
-  background: #8847ff;
-}
-
-.ev-weapon-rarity-classified {
-  background: #d32ce6;
-}
-
-.ev-weapon-rarity-covert {
-  background: #eb4b4b;
-}
-
-.ev-weapon-rarity-rare {
-  background: #ffd700;
-}
-
-.ev-weapon-rarity-uncommon {
-  background: #ddd;
-}
-
 .ev-weapon-text {
   position: absolute;
   top: 90px;
-  left: 5px;
-  width: 185px;
+  left: 0;
+  width: 190px;
   height: 50px;
   background: #242531;
 }
@@ -1709,6 +1707,14 @@ a {
   }
 }
 
+.fix-height-input {
+  height: 80px;
+}
+
+.checkout-method-user {
+  max-width: 220px;
+}
+
 .block-password {
   position: relative;
   max-width: 220px;
@@ -1723,6 +1729,12 @@ a {
      -moz-user-select: none !important;
       -ms-user-select: none !important;
           user-select: none !important;
+}
+
+.block-password .eye-repeat {
+  position: absolute;
+  top: 55px;
+  right: 10px;
 }
 
 @media (max-width: 600px) {
@@ -1755,6 +1767,19 @@ a {
   width: 100%;
 }
 
+.chage-position-login {
+  left: 0 !important;
+  bottom: 60px !important;
+}
+
+@media (max-width: 600px) {
+  .chage-position-login {
+    position: relative;
+    display: block;
+    bottom: 120px !important;
+  }
+}
+
 .fix-height-wrong-login {
   height: 42px;
 }
@@ -1776,10 +1801,10 @@ a {
 
 .wrong-login {
   font-size: 14px;
-  width: 200px;
+  width: 220px;
   position: absolute;
-  bottom: -2px;
-  left: 100px;
+  bottom: -20px;
+  left: 140px;
   color: #c00;
 }
 
@@ -2733,5 +2758,265 @@ a {
 
 .warning-for-buy__info {
   text-align: start;
+}
+
+/* withdrow */
+.withdrow {
+  background: #212126 url("../img/withdraw-bg.jpeg") no-repeat;
+  background-size: cover;
+}
+
+.withdrow__empty-item {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #536872;
+  margin-bottom: 20px;
+}
+
+.withdrow__empty-item h4 a {
+  color: #2f87de !important;
+}
+
+.withdrow__section {
+  padding-top: 170px;
+}
+
+.withdrow__item {
+  width: 96%;
+  margin: 0px auto 40px auto;
+  background-color: #36363c;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  height: 120px;
+  padding: 0 15px 0 15px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr (1fr)[3];
+      grid-template-columns: 1fr 2fr repeat(3, 1fr);
+  justify-items: center;
+}
+
+.withdrow__item__number-trade {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+  background-color: #36363c;
+  border-top: 1px solid #536872;
+  font-size: 13px;
+  border-radius: 0 0 8px 8px;
+}
+
+.withdrow__item__name__recipient {
+  width: 170px;
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+}
+
+.withdrow__item__name__recipient::after {
+  content: "Отримувач";
+  position: absolute;
+  font-size: 14px;
+  top: -35px;
+  left: 0;
+  color: #3d7a97;
+}
+
+.withdrow__item__time {
+  font-style: italic;
+  position: relative;
+  max-width: 82px;
+  font-size: 14px;
+}
+
+.withdrow__item__time::after {
+  content: "Дата/Час";
+  position: absolute;
+  font-size: 14px;
+  top: -35px;
+  left: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #3d7a97;
+}
+
+.withdrow__item p {
+  margin-top: 45px;
+  word-wrap: break-word;
+}
+
+.withdrow__item__image {
+  height: 100%;
+  position: relative;
+  width: 150px;
+}
+
+.withdrow__item__image img {
+  position: absolute;
+  inset: 0;
+  margin: 35px auto auto auto;
+  max-height: 78px;
+  width: auto;
+}
+
+.withdrow__item__image::after {
+  content: "Предмет";
+  position: absolute;
+  font-size: 14px;
+  top: 10px;
+  left: 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #3d7a97;
+}
+
+.withdrow__item__status {
+  font-size: 80px;
+  font-size: 15px;
+  color: #4ab96f;
+  position: relative;
+}
+
+.withdrow__item__status::after {
+  content: "Статус";
+  position: absolute;
+  font-size: 14px;
+  top: -35px;
+  left: -2px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #3d7a97;
+}
+
+.withdrow__item__name {
+  width: 140px;
+  font-size: 15px;
+  margin-top: 46px !important;
+  color: #fff;
+  position: relative;
+}
+
+.withdrow__item__name::after {
+  content: "Назва предмету";
+  position: absolute;
+  font-size: 14px;
+  top: -36px;
+  left: 0px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #3d7a97;
+}
+
+@media (max-width: 770px) {
+  .withdrow__item {
+    height: auto;
+  }
+  .withdrow__item__name__recipient {
+    font-size: 12px;
+    width: 130px;
+  }
+  .withdrow__item__name__recipient::after {
+    font-size: 12px;
+  }
+  .withdrow__item__time {
+    font-size: 12px;
+  }
+  .withdrow__item__time::after {
+    font-size: 12px;
+  }
+  .withdrow__item__image::after {
+    font-size: 12px;
+  }
+  .withdrow__item__load {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .withdrow__item__load div {
+    margin-top: 10px;
+    margin-left: 13px;
+  }
+  .withdrow__item__load::after {
+    font-size: 13px;
+  }
+  .withdrow__item__status {
+    font-size: 12px;
+  }
+  .withdrow__item__status::after {
+    font-size: 12px;
+  }
+  .withdrow__item__name {
+    grid-column-gap: 1fr;
+    font-size: 12px;
+  }
+  .withdrow__item__name::after {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .withdrow__item {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding: 5px;
+  }
+  .withdrow__item__name__recipient {
+    -ms-grid-column: 1;
+    grid-column: 1fr;
+    margin-left: -10px;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  .withdrow__item__image {
+    width: 125px;
+    margin-left: -5px;
+  }
+  .withdrow__item__image::after {
+    left: 0;
+  }
+  .withdrow__item__status {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-columns: 2fr;
+        grid-template-columns: 2fr;
+    margin-left: -60px;
+  }
+  .withdrow__item__time {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    margin-left: -60px;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    max-width: none;
+    margin-left: -40px !important;
+  }
+  .withdrow__item__number-trade {
+    bottom: -27px;
+    font-size: 11px;
+  }
+  .withdrow__item__name {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
 }
 /*# sourceMappingURL=style.css.map */

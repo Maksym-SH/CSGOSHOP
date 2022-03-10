@@ -22,7 +22,15 @@
   <body>
     <div id="app" class="cases">
       <header-component :params={login:IsLoginSuccess,isMdWidth:isMdWidth,balance:balance,savedLogin:savedLogin[0],currentPage:'cases'}></header-component>
-      <div
+      <template v-cloak>
+        <div
+          v-if="isMdWidth && IsLoginSuccess"
+          class="header__login-success header__account_fixed"
+        >
+          <p class="header__balance">Баланс {{balance}}₴</p>
+          <div class="ellips-icon">{{ savedLogin[0] }}</div>
+        </div>
+        <div
         class="show-popap-account"
         v-if="IsLoginSuccess"
         @click="popapInfoAccountActive = !popapInfoAccountActive"
@@ -30,6 +38,7 @@
       >
         <img draggable="false" src="./img/openPopap.svg" alt="" />
       </div>
+      </template>
       <main>
         <div
           v-if="!casesLoad"
@@ -78,7 +87,7 @@
                 <transition name="fade">
                   <div v-if="!Object.keys(caseItem).length == 0">
                     <img :src="caseItem.img" alt="" class="img-case-item" />
-                    <h5 align="center">{{ caseItem.name}}</h5>
+                    <h5 align="center">{{caseItem.name}}</h5>
                     <p align="center">{{+caseItem.price}}₴</p>
                     <div class="position-relative ">
                       <button
@@ -109,8 +118,6 @@
                   <div
                     v-for="(skins, index) in caseSkins"
                     class="personal-invent-item"
-                    style="border: 1px solid transparent"
-                    :style="[skins.type === 'knife' ? {borderColor: '#F4CA16'} : {borderColor:'transparent'}]"
                     @click="shopPopapSkin(index, 'cases')"
                   >
                     <img :src="skins.image" alt="" />
@@ -190,7 +197,7 @@
               <li @click="replenishmentActive = !replenishmentActive, popapInfoAccountActive = !popapInfoAccountActive">
                 Поповнити баланс
               </li>
-              <li>Інвентар виводу</li>
+              <a href="WithdrawInventory.html"><li>Інвентар виводу</li></a>
               <li @click="singOut()">Вийти з акаунту</li>
             </ul>
           </div>

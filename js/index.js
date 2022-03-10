@@ -161,7 +161,8 @@ new Vue({
     cases: [],
     popularAccess: false,
     preloader: true,
-    isNewUser: true,
+    isNewUser: null,
+    isOldUser: null,
     isLoginPage: true,
     IsLoginSuccess: false,
     casesLoad: false,
@@ -174,6 +175,7 @@ new Vue({
     password: "",
     repeatPassword: "",
     login: "",
+    userInfo: {},
     imgCT: true,
     valueCheckRobot: "",
     checkRobot: false,
@@ -181,7 +183,7 @@ new Vue({
     checkRobotText: "",
     robotValueComparison: false,
     savedLogin: "",
-    balance: 3213120,
+    balance: 0,
     isMdWidth: false,
     popapInfoAccountActive: false,
     loginTime: "",
@@ -220,6 +222,8 @@ new Vue({
     warningForSwapText: "",
     priceForBuy: 0,
     resultSwapItems: "",
+    skinsForWithdrow: [],
+    loadWithdrowPreloader: false,
   },
   methods: {
     checkDataValidation(event) {
@@ -379,7 +383,49 @@ new Vue({
       let randWord =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789";
       let text = "";
-      if (this.login.length >= 5 && this.password.length >= 5) {
+      if (!this.isNewUser) {
+        let response = async () => {
+          return fetch("http://localhost:3000/users");
+        };
+        response()
+          .then((data) => data.json())
+          .then((item) => {
+            let userData =
+              Array.from(item).find(
+                (item) =>
+                  item.login === this.login && item.password === this.password
+              ) ?? {};
+            if (Object.keys(userData).length) {
+              this.isOldUser = true;
+              for (let i = 0; i < 6; i++) {
+                text += randWord.charAt(
+                  Math.floor(Math.random() * randWord.length)
+                );
+              }
+              this.balance = userData.balance;
+              localStorage.balance = this.balance;
+              localStorage.storyWithdrow = JSON.stringify(
+                userData.storyWithdrow
+              );
+              localStorage.personalInventory = JSON.stringify(
+                userData.personalInventory
+              );
+              this.checkRobot = true;
+              this.checkRobotText = text;
+            } else {
+              this.wrongLogin = true;
+              setTimeout(() => {
+                this.wrongLogin = false;
+              }, 2500);
+            }
+          });
+      } else if (
+        this.isNewUser &&
+        this.login.length >= 5 &&
+        this.password.length >= 5 &&
+        this.repeatPassword === this.password
+      ) {
+        this.isOldUser = false;
         for (let i = 0; i < 6; i++) {
           text += randWord.charAt(Math.floor(Math.random() * randWord.length));
         }
@@ -387,19 +433,35 @@ new Vue({
         this.checkRobotText = text;
       } else {
         this.wrongLogin = true;
+        setTimeout(() => {
+          this.wrongLogin = false;
+        }, 2000);
       }
     },
     singOut() {
-      /*       let user = {
-        balance:
+      this.userInfo = {
+        ...this.userInfo,
+        balance: this.balance,
+        personalInventory: this.personalInventory,
+        storyWithdrow: this.skinsForWithdrow,
+        personalInventory: this.personalInventory,
+      };
+      this.personalInventory = {};
+      this.skinsForWithdrow = {};
+      this.needLogin = true;
+      if (!this.isOldUser) {
+        fetch("http://localhost:3000/users", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json;charset=utf-8",
+          },
+          body: JSON.stringify(this.userInfo),
+        });
       }
-      fetch('http://localhost:3000/users'{
-        method:'POST',
-        body:
-      }) */
       localStorage.clear();
       this.IsLoginSuccess = false;
       this.savedLogin = "";
+      this.checkRobot = false;
       this.popapInfoAccountActive = false;
     },
     comparisonValues() {
@@ -407,6 +469,11 @@ new Vue({
         localStorage.login = this.login;
         localStorage.IsLoginSuccess = this.IsLoginSuccess = true;
         this.savedLogin = this.login;
+        this.userInfo = {
+          login: this.login,
+          password: this.password,
+        };
+        localStorage.userInfo = JSON.stringify(this.userInfo);
         this.login = "";
         this.password = "";
         let data = new Date();
@@ -418,6 +485,7 @@ new Vue({
         localStorage.loginTime = this.loginTime;
       } else {
         this.checkForRobot();
+        this.valueCheckRobot = "";
         this.robotValueComparison = true;
       }
     },
@@ -449,7 +517,35 @@ new Vue({
           this.selectInventorySkin = {};
         });
     },
-    withdraw() {},
+    withdraw() {
+      console.log(this.selectInventoryIndex);
+      let data = new Date();
+      let dataField = `${
+        data.getDate() <= 9 ? "0" + data.getDate() : data.getDate()
+      }.${
+        data.getUTCMonth() <= 9
+          ? "0" + (data.getMonth() + 1)
+          : data.getMonth() + 1
+      }.${data.getFullYear()}\ ${
+        data.getHours() <= 9 ? "0" + data.getHours() : data.getHours()
+      }:${
+        data.getMinutes() <= 9 ? "0" + data.getMinutes() : data.getMinutes()
+      }`;
+      this.action = "";
+      this.personalInventory[this.selectInventoryIndex] = {
+        ...this.personalInventory[this.selectInventoryIndex],
+        date: dataField,
+        trade: Date.now(),
+        status: "Cхвалено",
+      };
+      this.skinsForWithdrow.push(
+        this.personalInventory[this.selectInventoryIndex]
+      );
+      this.personalInventory.splice(this.selectInventoryIndex, 1);
+      this.selectInventorySkin = {};
+      localStorage.personalInventory = JSON.stringify(this.personalInventory);
+      localStorage.skinsForWithdrow = JSON.stringify(this.skinsForWithdrow);
+    },
     inventoryAction() {
       this.action === "продати"
         ? this.sell()
@@ -559,6 +655,7 @@ new Vue({
       this.cases[index].inside.forEach((item) => {
         this.caseSkins.push(this.weapon[item]);
       });
+      console.log(this.caseItem);
       this.caseSkins.forEach((item) => {
         item.price <= 100
           ? (item.chance = 50)
@@ -623,18 +720,13 @@ new Vue({
         ? this.weapon
         : this.weapon.filter((item) => item.type === this.selectType);
     },
-    compareData() {
-      return new Date().getFullYear() > this.cardDate.year
-        ? new Date().getMonth() > this.cardDate.month
-        : false;
-    },
+
     fieldsIsCorrect() {
       return (
-        this.compareData &&
         this.paySum !== "" &&
         this.paySum <= 40000 &&
         this.cardOwner !== "" &&
-        this.cvvCard !== ""
+        this.cvvCard.length === 3
       );
     },
     deleteChangeField() {
@@ -651,29 +743,16 @@ new Vue({
         : null;
       return +cost;
     },
-    raritySkin() {
-      this.personalInventory.forEach((item) => {
-        let raritySkinLine =
-          item.chance === 50
-            ? "milspec"
-            : item.chance === 20
-            ? "restricted"
-            : item.chance === 17
-            ? "classified"
-            : item.chance === 10
-            ? "covert"
-            : item.chance === 3
-            ? "rare"
-            : "uncommon";
-        document
-          .querySelector(".personal-invent-item__rarity")
-          .classList.add("ev-weapon-rarity-" + raritySkinLine);
-      });
-    },
   },
   mounted() {
     this.checkWidth();
     this.checkLogin();
+    if (localStorage.userInfo) {
+      this.userInfo = JSON.parse(localStorage.userInfo);
+    }
+    if (localStorage.skinsForWithdrow) {
+      this.skinsForWithdrow = JSON.parse(localStorage.skinsForWithdrow);
+    }
     if (localStorage.balance) {
       this.balance = Number(localStorage.balance);
     }
