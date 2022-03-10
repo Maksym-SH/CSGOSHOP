@@ -176,6 +176,7 @@ new Vue({
     insufficientFunds: false,
     popapActive: false,
     password: "",
+    loadDataServer: false,
     repeatPassword: "",
     login: "",
     userInfo: {},
@@ -750,6 +751,10 @@ new Vue({
   mounted() {
     this.checkWidth();
     this.checkLogin();
+    this.loadDataServer = true;
+    setTimeout(() => {
+      this.loadDataServer = false;
+    }, 50);
     if (localStorage.userInfo) {
       this.userInfo = JSON.parse(localStorage.userInfo);
     }

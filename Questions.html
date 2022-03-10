@@ -25,7 +25,16 @@
   </head>
   <body>
     <div id="app" class="questions">
-      <header-component :params={login:IsLoginSuccess,isMdWidth:isMdWidth,balance:balance,savedLogin:savedLogin[0],currentPage:'question'}></header-component>
+      <div
+      class="spinner-border text-light spinner-loader"
+      role="status"
+      v-if="loadDataServer"
+      class=""
+    >
+      <span class="sr-only"></span>
+    </div>
+    <div v-if="!loadDataServer" >
+      <header-component :params={login:IsLoginSuccess,isMdWidth:isMdWidth,balance:balance,savedLogin:savedLogin[0],currentPage:'question'} v-if="!loadDataServer"></header-component>
       <template v-cloak>
         <div
           v-if="isMdWidth && IsLoginSuccess"
@@ -43,6 +52,7 @@
         <img draggable="false" src="./img/openPopap.svg" alt="" />
       </div>
       </template>
+
       <section class="section-about">
         <div class="container-lg">
           <div class="info-wrapper">
@@ -291,6 +301,7 @@
           </div>
         </transition>
       </template>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="./js/index.js"></script>
