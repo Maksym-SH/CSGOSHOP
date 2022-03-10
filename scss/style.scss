@@ -3,6 +3,7 @@ $media-lg: 1200px;
 $media-md: 992px;
 $media-sm: 480px;
 $media-em: 320px;
+@import "_popap-win.scss";
 @font-face {
   font-family: monserat;
   src: url("../font/Montserrat-Black.ttf");
@@ -241,8 +242,11 @@ a {
     width: 100%;
     min-width: 300px;
     height: auto;
+    @media (max-width: 340px) {
+      min-width: 290px !important;
+    }
   }
-  @media (max-width: 830px) {
+  @media (max-width: 992px) {
     width: 60%;
   }
   @media (max-width: 700px) {
@@ -251,9 +255,6 @@ a {
     }
   }
   .karambit {
-    @media (max-width: $media-md) {
-      margin-top: 200px;
-    }
     @media (max-width: 830px) {
       margin-top: 10px;
     }
@@ -278,6 +279,12 @@ a {
     transform: rotate(-50deg);
     @media (min-width: 1200px) {
       bottom: 80px;
+    }
+    @media (max-width: 992px) {
+      bottom: 135px !important;
+    }
+    @media (max-width: 830px) {
+      bottom: 25% !important;
     }
     @media (max-width: 1200px) {
       bottom: 40px;
@@ -439,10 +446,9 @@ a {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: +90;
+  z-index: 1000;
   .popap-skins-window {
     position: fixed;
-    z-index: +99;
     width: 30%;
     padding: 10px;
     min-width: 300px;
@@ -487,6 +493,22 @@ a {
           &:first-child {
             margin-right: 10px;
           }
+        }
+      }
+    }
+    @media (max-height: 480px) {
+      width: max-content;
+      top: 62%;
+      .popap__img {
+        img {
+          height: 100px;
+          width: auto;
+          margin-top: -20px;
+        }
+      }
+      .popap__desc {
+        p {
+          font-size: 13px;
         }
       }
     }
@@ -1109,7 +1131,6 @@ a {
 }
 #roulette-container {
   width: 100%;
-  height: 180px;
   display: block;
   margin: 0 auto;
   position: absolute;
@@ -1182,50 +1203,7 @@ a {
     }
   }
 }
-.popap-win-weapon {
-  background-color: #32353c;
-  border-radius: 10px;
-  width: 50%;
-  color: #fff;
-  max-width: 500px;
-  min-width: 300px;
-  position: fixed;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
-  h4 {
-    text-align: center;
-    padding: 5px 0;
-    border-bottom: 1px solid #000;
-  }
-  &__wrapper {
-    padding: 20px;
-  }
-  &__skin-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    img {
-      width: 50%;
-      height: auto;
-    }
-    padding-top: 20px;
-    div {
-      p {
-        font-size: 15px;
-        display: block;
-      }
-    }
-    @media (max-width: 750px) {
-      display: block;
-      img {
-        display: block;
-        margin: 0 auto;
-        width: 70%;
-      }
-    }
-  }
-}
+
 .wrong-open-case {
   color: #c00 !important;
   position: absolute;
@@ -1249,6 +1227,9 @@ a {
   background-color: #1c1f21;
   p {
     width: 100%;
+  }
+  @media (max-width: 340px) {
+    padding: 10px 5px 10px 5px;
   }
 }
 .skin-price {
@@ -1480,13 +1461,31 @@ a {
   padding-top: 20px;
   top: 160px;
   background-color: #2e3336;
-  right: -600px;
+  right: -1000px;
   z-index: +99;
   border-radius: 10px 0px 0px 10px;
   width: 400px;
   text-align: center;
   @media (max-width: 500px) {
     width: 80%;
+  }
+  @media (max-height: 455px) {
+    width: 100%;
+    .popap-info__wrapper {
+      padding-bottom: 5px;
+      text-align: end;
+    }
+    ul {
+      padding: 5px;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      li {
+        width: 170px;
+        font-size: 11px;
+        white-space: nowrap;
+      }
+    }
   }
 }
 .show-popap-account {

@@ -186,7 +186,7 @@ new Vue({
     checkRobotText: "",
     robotValueComparison: false,
     savedLogin: "",
-    balance: 0,
+    balance: 66660,
     isMdWidth: false,
     popapInfoAccountActive: false,
     loginTime: "",

@@ -1,0 +1,44 @@
+.skins-win {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: block;
+  .skin-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__img {
+      margin-right: 10px;
+    }
+  }
+  &__wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  &__window {
+    display: inline-block;
+    padding: 20px;
+    max-width: 50em;
+    background: #333140;
+    border-radius: 8px;
+    color: #fff;
+    text-align: left;
+    img {
+      width: 100%;
+      height: auto;
+      min-width: 100px;
+      min-height: 90px;
+    }
+  }
+  &__cell {
+    display: table-cell;
+    padding: 0 1em;
+    vertical-align: middle;
+    text-align: center;
+  }
+}

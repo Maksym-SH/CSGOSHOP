@@ -1,4 +1,60 @@
 @charset "UTF-8";
+.skins-win {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: block;
+}
+
+.skins-win .skin-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skins-win .skin-wrapper__img {
+  margin-right: 10px;
+}
+
+.skins-win__wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.skins-win__window {
+  display: inline-block;
+  padding: 20px;
+  max-width: 50em;
+  background: #333140;
+  border-radius: 8px;
+  color: #fff;
+  text-align: left;
+}
+
+.skins-win__window img {
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  min-height: 90px;
+}
+
+.skins-win__cell {
+  display: table-cell;
+  padding: 0 1em;
+  vertical-align: middle;
+  text-align: center;
+}
+
 @font-face {
   font-family: monserat;
   src: url("../font/Montserrat-Black.ttf");
@@ -324,7 +380,13 @@ a {
   height: auto;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 340px) {
+  .image-skins-item img {
+    min-width: 290px !important;
+  }
+}
+
+@media (max-width: 992px) {
   .image-skins-item {
     width: 60%;
   }
@@ -335,12 +397,6 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media (max-width: 992px) {
-  .image-skins-item .karambit {
-    margin-top: 200px;
   }
 }
 
@@ -376,6 +432,18 @@ a {
 @media (min-width: 1200px) {
   .image-skins-item .line-gun {
     bottom: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .image-skins-item .line-gun {
+    bottom: 135px !important;
+  }
+}
+
+@media (max-width: 830px) {
+  .image-skins-item .line-gun {
+    bottom: 25% !important;
   }
 }
 
@@ -612,12 +680,11 @@ a {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: +90;
+  z-index: 1000;
 }
 
 .popap-skins-info .popap-skins-window {
   position: fixed;
-  z-index: +99;
   width: 30%;
   padding: 10px;
   min-width: 300px;
@@ -676,6 +743,23 @@ a {
 
 .popap-skins-info .popap-skins-window .popap__desc__button-wrapper button:first-child {
   margin-right: 10px;
+}
+
+@media (max-height: 480px) {
+  .popap-skins-info .popap-skins-window {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    top: 62%;
+  }
+  .popap-skins-info .popap-skins-window .popap__img img {
+    height: 100px;
+    width: auto;
+    margin-top: -20px;
+  }
+  .popap-skins-info .popap-skins-window .popap__desc p {
+    font-size: 13px;
+  }
 }
 
 .horizontal-line {
@@ -1462,7 +1546,6 @@ a {
 
 #roulette-container {
   width: 100%;
-  height: 180px;
   display: block;
   margin: 0 auto;
   position: absolute;
@@ -1548,64 +1631,6 @@ a {
   margin-top: 10px;
 }
 
-.popap-win-weapon {
-  background-color: #32353c;
-  border-radius: 10px;
-  width: 50%;
-  color: #fff;
-  max-width: 500px;
-  min-width: 300px;
-  position: fixed;
-  left: 50%;
-  top: 60%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.popap-win-weapon h4 {
-  text-align: center;
-  padding: 5px 0;
-  border-bottom: 1px solid #000;
-}
-
-.popap-win-weapon__wrapper {
-  padding: 20px;
-}
-
-.popap-win-weapon__skin-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 20px;
-}
-
-.popap-win-weapon__skin-info img {
-  width: 50%;
-  height: auto;
-}
-
-.popap-win-weapon__skin-info div p {
-  font-size: 15px;
-  display: block;
-}
-
-@media (max-width: 750px) {
-  .popap-win-weapon__skin-info {
-    display: block;
-  }
-  .popap-win-weapon__skin-info img {
-    display: block;
-    margin: 0 auto;
-    width: 70%;
-  }
-}
-
 .wrong-open-case {
   color: #c00 !important;
   position: absolute;
@@ -1639,6 +1664,12 @@ a {
 
 .container-skins p {
   width: 100%;
+}
+
+@media (max-width: 340px) {
+  .container-skins {
+    padding: 10px 5px 10px 5px;
+  }
 }
 
 .skin-price {
@@ -1961,7 +1992,7 @@ a {
   padding-top: 20px;
   top: 160px;
   background-color: #2e3336;
-  right: -600px;
+  right: -1000px;
   z-index: +99;
   border-radius: 10px 0px 0px 10px;
   width: 400px;
@@ -1971,6 +2002,31 @@ a {
 @media (max-width: 500px) {
   .popap-info-account {
     width: 80%;
+  }
+}
+
+@media (max-height: 455px) {
+  .popap-info-account {
+    width: 100%;
+  }
+  .popap-info-account .popap-info__wrapper {
+    padding-bottom: 5px;
+    text-align: end;
+  }
+  .popap-info-account ul {
+    padding: 5px;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .popap-info-account ul li {
+    width: 170px;
+    font-size: 11px;
+    white-space: nowrap;
   }
 }
 

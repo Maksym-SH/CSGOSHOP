@@ -132,31 +132,30 @@
       <footer-component></footer-component>
       <template v-cloak>
         <transition name="fade">
-          <div class="popap-skins-info" v-if="Object.keys(winThing).length !== 0">
-            <div class="popap-win-weapon">
-              <h4>Вітаємо</h4>
-              <div class="popap-win-weapon__wrapper">
-                <p>
-                  Ви відкрили кейс "{{caseItem.name}}" та отримали наступний предмет:
-                </p>
-                <div class="popap-win-weapon__skin-info">
-                  <img :src="winThing.image" alt="">
-                  <div class="px-2">
-                    <p>
-                      Назва: {{winThing.name}} | {{winThing.skin}}
-                    </p>
-                    <p>
-                      Стан: {{winThing.condition}}
-                    </p>
-                    <p>
-                      Stattrack: {{winThing.statrack === 'no' ? 'ні' : 'так'}}
-                    </p>
-                    <p>Ціна: {{winThing.price}} ₴</p>
-                  </div>
+          <div class="skins-win" v-if="Object.keys(winThing).length !== 0">
+            <div class="skins-win__wrapper">
+                <div class="skins-win__cell">
+                    <div class="skins-win__window">
+                        <h4>Вітаємо</h4>
+                        <p>
+                          Ви відкрили кейс "{{caseItem.name}}" та отримали наступний предмет:
+                        </p>
+                        <div class="skin-wrapper">
+                          <div class="skin-wrapper__img">
+                            <img :src="winThing.image" alt="">
+                          </div>
+                          <div class="skin-wrapper__text">
+                            <p>
+                              Назва: {{winThing.name}} | {{winThing.skin}} <br>
+                              Стан: {{winThing.condition}} <br>
+                              Stattrack: {{winThing.statrack === 'no' ? 'ні' : 'так'}} <br>
+                              Ціна: {{winThing.price}} ₴
+                            </p>
+                            <button class="btn btn-success d-block  my-2" @click="winThing ={}">Гаразд</button>
+                          </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <h6 align="center">Ваш приз був поміщений до вашого інвентарю</h6>
-              <button class="btn btn-success d-block mx-auto my-2" @click="winThing ={}">Гаразд</button>
             </div>
           </div>
         </transition>
