@@ -763,14 +763,20 @@ a {
   padding: 20px 0px;
 }
 
-.footer__wrap img {
+.footer__wrap div img {
   width: 60px;
   height: 60px;
 }
 
-.footer__wrap img:hover {
+.footer__wrap div img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.footer__wrap div .small-icon {
+  margin-left: 5px;
+  width: 37px;
+  height: 37px;
 }
 
 @media (max-width: 900px) {
@@ -796,7 +802,7 @@ a {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
   .footer-between {
     display: block;
   }

@@ -15,10 +15,13 @@ Vue.component("footer-component", {
     <div class="footer__wrap">
       <h5>Зв'язатися з нами</h5>
       <div>
-        <a href="https://vk.com/max185"><img src="./img/vk.svg" alt="" /></a>
-        <a href="https://github.com/Maksym-SH/CSGOSHOP">
+        <a href="https://vk.com/max185" target="_blank"><img src="./img/vk.svg" alt="" /></a>
+        <a href="https://github.com/Maksym-SH/CSGOSHOP" target="_blank">
           <img src="./img/github.svg" alt="" />
         </a>
+        <a href="https://www.instagram.com/_mak.s0n/" target="_blank">
+        <img src="./img/instagram.svg" alt="" class="small-icon" />
+      </a>
       </div>
     </div>
     <div class="footer__pay">
