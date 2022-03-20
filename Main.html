@@ -21,15 +21,7 @@
   </head>
   <body>
     <div id="app" class="main">
-      <div
-      class="spinner-border text-light spinner-loader"
-      role="status"
-      v-if="loadDataServer"
-      class=""
-    >
-      <span class="sr-only"></span>
-    </div>
-    <div v-if="!loadDataServer" >
+    <div v-if="!loadDataServer" class="full-height">
       <header-component :params={login:IsLoginSuccess,isMdWidth:isMdWidth,balance:balance,savedLogin:savedLogin[0],currentPage:'main'}></header-component>
       <template v-cloak>
         <div

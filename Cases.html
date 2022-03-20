@@ -29,7 +29,7 @@
       >
         <span class="sr-only"></span>
       </div>
-      <div v-if="!loadDataServer" >
+      <div v-if="!loadDataServer" class="full-height">
         <header-component :params={login:IsLoginSuccess,isMdWidth:isMdWidth,balance:balance,savedLogin:savedLogin[0],currentPage:'cases'}></header-component>
         <template v-cloak>
           <div

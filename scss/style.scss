@@ -52,9 +52,11 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: monserat;
+  background-color: #000;
   color: #c2c5cc !important;
 }
-#app {
+
+.full-height {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -546,7 +548,7 @@ a {
 .footer {
   border-top: 1px solid #3d7a97;
   width: 100%;
-  margin-top: auto;
+  margin-top: auto !important;
   &-between {
     display: flex;
     padding: 30px 15px 20px 20px;
