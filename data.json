@@ -31,7 +31,7 @@
     {
       "type": "Ніж",
       "name": "Ніж-метелик | Африканська сітка",
-      "image": "https://cs-site.ru/uploads/posts/2020-07/1595079984_nozh-babochka-afrikanskaja-setka.png",
+      "image": "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf0ebcZThQ6tCvq5ObqPrxILPugmpf1810i__YyoD0mlOx5RBua2yncICUJ1c5ZAvQ8wDsx-jog8Xu7p3IzSdivSEk433ayxOyg0pSLrs4wakn6Ws/360fx360f",
       "condition": "Загартоване у боях",
       "price": 9302
     },
@@ -261,7 +261,7 @@
       "skin": "Пори року",
       "price": 54,
       "statrack": "yes",
-      "number": 17,
+      "number": 18,
       "condition": "Загартоване у боях"
     },
     {
@@ -283,7 +283,7 @@
       "skin": "Жахлива суміш",
       "price": 545,
       "statrack": "no",
-      "number": 25,
+      "number": 24,
       "condition": "Трохи поношене"
     },
     {
@@ -305,7 +305,7 @@
       "skin": "Кровавий тигр",
       "price": 90,
       "statrack": "yes",
-      "number": 24,
+      "number": 25,
       "condition": "Трохи поношене"
     },
     {
@@ -338,7 +338,7 @@
       "skin": "Сажа",
       "price": 8,
       "statrack": "no",
-      "number": 46,
+      "number": 47,
       "condition": "Поношене"
     },
     {
@@ -371,7 +371,7 @@
       "skin": "Токсичність",
       "price": 167,
       "statrack": "no",
-      "number": 34,
+      "number": 35,
       "condition": "Прямо із заводу"
     },
     {
@@ -459,9 +459,8 @@
       "skin": "Тропічна блискавка",
       "price": 117,
       "statrack": "no",
-      "number": 27,
-      "condition": "Загартоване у боях",
-      "chance": 50
+      "number": 28,
+      "condition": "Загартоване у боях"
     },
     {
       "id": 39,
@@ -482,7 +481,7 @@
       "skin": "Смерч",
       "price": 50,
       "statrack": "no",
-      "number": 38,
+      "number": 39,
       "condition": "Поношене"
     },
     {
@@ -537,7 +536,7 @@
       "skin": "Калька",
       "price": 50,
       "statrack": "yes",
-      "number": 38,
+      "number": 39,
       "condition": "Прямо із заводу"
     },
     {
@@ -758,7 +757,7 @@
       "skin": "Тиск",
       "price": 21,
       "statrack": "no",
-      "number": 20,
+      "number": 21,
       "condition": "Поношене"
     },
     {
@@ -791,7 +790,7 @@
       "skin": "Лісове листя",
       "price": 25,
       "statrack": "no",
-      "number": 38,
+      "number": 39,
       "condition": "Поношене"
     },
     {
@@ -979,9 +978,8 @@
       "skin": "Сопроцесор",
       "price": 11,
       "statrack": "no",
-      "number": 34,
-      "condition": "Поношене",
-      "chance": 50
+      "number": 35,
+      "condition": "Поношене"
     },
     {
       "id": 86,
@@ -1013,7 +1011,7 @@
       "skin": "Чайка",
       "price": 84,
       "statrack": "no",
-      "number": 23,
+      "number": 24,
       "condition": "Прямо із заводу"
     },
     {
@@ -1321,7 +1319,7 @@
       "skin": "Падальщик",
       "price": 86,
       "statrack": "yes",
-      "number": 34,
+      "number": 35,
       "condition": "Прямо із заводу"
     },
     {
@@ -1790,7 +1788,7 @@
   "cases": [
     {
       "name": "Богатирський",
-      "img": "https://procheat.ru/_sf/0/s82518774.png",
+      "img": "https://epic-games.org/modules_extra/cases/templates/_cases_images/6.png",
       "price": 399,
       "inside": [
         1,
@@ -1914,7 +1912,7 @@
     },
     {
       "name": "Геймерський",
-      "img": "https://cscase.com/files/38vac.webp",
+      "img": "https://klanovski.com/upload/iblock/7a1/7a12417113809f89719984d098779670.png",
       "price": 59,
       "inside": [
         13,
@@ -1945,7 +1943,7 @@
     },
     {
       "name": "Звичайний",
-      "img": "https://cscase.com/files/1051csgoskins.webp",
+      "img": "https://static.wikia.nocookie.net/counterstrike/images/1/1c/Csgo-gamma-case-1-.png/revision/latest/scale-to-width-down/250?cb=20160719004007&path-prefix=ru",
       "price": 59,
       "inside": [
         12,
@@ -1975,5 +1973,49 @@
       ]
     }
   ],
-  "users": []
+  "users": [
+    {
+      "login": "maxim2002sherba4yk@mail.ru",
+      "password": "qwertyui",
+      "balance": 66461,
+      "storyWithdrow": [
+        {
+          "id": 20,
+          "type": "Дробовик",
+          "name": "XM1014",
+          "image": "https://cdn.csgo.com//item/XM1014+%7C+Seasons+%28Field-Tested%29/300.png",
+          "skin": "Пори року",
+          "price": 54,
+          "statrack": "yes",
+          "number": 18,
+          "condition": "Загартоване у боях",
+          "date": "06.04.2022 12:29",
+          "trade": 1649237382012,
+          "status": "Cхвалено"
+        }
+      ],
+      "personalInventory": [],
+      "id": 1
+    },
+    {
+      "login": "dadasd",
+      "password": "11111111",
+      "balance": 66461,
+      "storyWithdrow": [],
+      "personalInventory": [
+        {
+          "id": 30,
+          "type": "Пістолет",
+          "name": "Tec-9",
+          "image": "https://s-wiki.cs.money/wiki_mew0pUP_large_preview.png",
+          "skin": "Токсичність",
+          "price": 167,
+          "statrack": "no",
+          "number": 35,
+          "condition": "Прямо із заводу"
+        }
+      ],
+      "id": 2
+    }
+  ]
 }
